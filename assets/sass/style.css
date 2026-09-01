@@ -738,8 +738,18 @@ img {
   box-sizing: border-box;
   display: inline-block;
   vertical-align: middle;
-  text-align: left;
+  text-align: center;
   font-size: 0;
+}
+.preloader .vertical-centered-box .content img {
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+  border-radius: 50%;
+  background: #fff;
+  padding: 12px;
+  box-shadow: 0 0 40px rgba(255, 255, 255, 0.15);
+  animation: fade-in 0.5s ease;
 }
 .preloader * {
   transition: all 0.3s;
