@@ -23,6 +23,7 @@
     <link href="assets/css/jquery.fancybox.css" rel="stylesheet">
     <link href="assets/css/odometer-theme-default.css" rel="stylesheet">
     <link href="assets/sass/style.css" rel="stylesheet">
+    <link href="assets/css/ac-overrides.css?v=3" rel="stylesheet">
 </head>
 
 <body>
@@ -45,7 +46,7 @@
 
         <!-- Start header -->
         <header id="header">
-            <div class="wpo-site-header wpo-site-header-s5">
+            <div class="wpo-site-header wpo-site-header-s1">
                 <nav class="navigation navbar navbar-expand-lg navbar-light">
                     <div class="container-fluid">
                         <div class="row align-items-center">
@@ -61,53 +62,44 @@
                             </div>
                             <div class="col-lg-3 col-md-4 col-6">
                                 <div class="navbar-header">
-                                    <a class="navbar-brand" href="index.html"><img src="https://scontent.fhph1-3.fna.fbcdn.net/v/t39.30808-6/774322659_2458904257950812_9130355363764638357_n.jpg?stp=dst-jpg_tt6&cstp=mx1254x1254&ctp=s1254x1254&_nc_cat=105&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeFvU2-Hq1trtXMCTaK5cXAb4_Fd9JzaaZTj8V30nNpplKHjb6eKYC2ePBlVHlgboL4EKNS067oZrFRqRhkbu_BU&_nc_ohc=hKt4xm0Jt58Q7kNvwHFsCAd&_nc_oc=Adp9-aW23cVjJlcz7ot_dfwJrvRyZz8ZeaRG2Ll_oK0jmN4OG75QzhiilWtstkvSfJuu_K0x54NOTsvUJtTh0sdS&_nc_zt=23&_nc_ht=scontent.fhph1-3.fna&_nc_gid=FXNjOL5glzcQxdp36uvnHw&_nc_ss=7b2a8&oh=00_AQJlAuinXCb16qU85fy_hrt-F4dlP4paBgG-rAzleKPKiQ&oe=6A9B30FB" style="height:55px;width:auto;object-fit:contain;border-radius:50%;"
-                                            alt="logo"></a>
+                                    <a class="navbar-brand" href="index.html" aria-label="Anna Clerk Foundation — Home">
+                                        <img src="assets/images/logo.png" style="height:55px;width:auto;object-fit:contain;" alt="Anna Clerk Foundation logo">
+                                    </a>
                                 </div>
                             </div>
                             <div class="col-lg-6 col-md-1 col-1">
                                 <div id="navbar" class="collapse navbar-collapse navigation-holder">
                                     <button class="menu-close"><i class="ti-close"></i></button>
                                     <ul class="nav navbar-nav mb-2 mb-lg-0">
-                                        <li><a href="index.html">Home</a></li>
-                                        <li><a class="active" href="event.html">Events</a></li>
-                                        <li><a href="donate.html">Funding</a></li>
-                                        <li><a href="about.html">About Us</a></li>
+                                        <li><a class="active" href="index.html">Home</a></li>
+                                        <li class="has-dropdown">
+                                            <a href="about.html" class="nav-dropdown-toggle">About Us</a>
+                                            <ul class="ac-dropdown">
+                                                <li><a href="about.html">About the Foundation</a></li>
+                                            <li><a href="faq.html">Foundation FAQ</a></li>
+                                                <li class="dropdown-divider"></li>
+                                                <li class="dropdown-label">Explore</li>
+                                                <li><a href="our-work.html">Our Work</a></li>
+                                                <li><a href="how-we-work.html">How We Work</a></li>
+                                                <li><a href="event.html">Event</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="has-dropdown">
+                                            <a href="our-funding.html" class="nav-dropdown-toggle">Funding Approach</a>
+                                            <ul class="ac-dropdown">
+                                                <li><a href="our-funding.html">Our Funding</a></li>
+                                                <li><a href="supporting-our-work.html">Supporting Our Work</a></li>
+                                            </ul>
+                                        </li>
                                     </ul>
                                 </div>
                             </div>
                             <div class="col-lg-3 col-md-3 col-2">
                                 <div class="header-right">
-                                    <div class="header-search-form-wrapper">
-                                        <div class="cart-search-contact">
-                                            <button class="search-toggle-btn"><i
-                                                    class="fi flaticon-search"></i></button>
-                                            <div class="header-search-form">
-                                                <form>
-                                                    <div>
-                                                        <input type="text" class="form-control"
-                                                            placeholder="Search here...">
-                                                        <button type="submit"><i
-                                                                class="fi flaticon-search"></i></button>
-                                                    </div>
-                                                </form>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="header-profile-form-wrapper">
-                                        <button class="profile-toggle-btn"><i class="fi flaticon-profile"></i></button>
-                                        <div class="header-profile-content">
-                                            <ul>
-                                                <li><a href="#">Profile</a></li>
-                                                <li><a href="index.html">Login</a></li>
-                                                <li><a href="index.html">Register</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
                                     <div class="close-form">
-                                        <a class="theme-btn" href="donate.html"><span class="mobile"><i
-                                                    class="fi fa fa-heart"></i></span><span class="text"> Donate
-                                                Now</span> </a>
+                                        <a class="theme-btn" href="our-work.html">
+                                            <span class="text">Explore our work</span>
+                                        </a>
                                     </div>
                                 </div>
                             </div>
@@ -519,3 +511,9 @@
 
 
 </html>
+
+
+
+
+
+

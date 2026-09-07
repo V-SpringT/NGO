@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Anna Clerk Foundation">
+    <meta name="description" content="Learn how the Anna Clerk Foundation works — four principles guiding our approach: listen locally, partner thoughtfully, follow evidence, and invest for the long term.">
+    <link rel="shortcut icon" type="image/png" href="assets/images/favicon.png">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="How We Work — Anna Clerk Foundation">
+    <meta property="og:description" content="Four principles that shape our approach: listening, partnership, evidence, and long-term commitment.">
+
+    <title>How We Work — Anna Clerk Foundation</title>
+
+    <link href="assets/css/themify-icons.css" rel="stylesheet">
+    <link href="assets/css/flaticon.css" rel="stylesheet">
+    <link href="assets/css/font-awesome.min.css" rel="stylesheet">
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/animate.css" rel="stylesheet">
+    <link href="assets/css/owl.carousel.css" rel="stylesheet">
+    <link href="assets/css/owl.theme.css" rel="stylesheet">
+    <link href="assets/css/slick.css" rel="stylesheet">
+    <link href="assets/css/slick-theme.css" rel="stylesheet">
+    <link href="assets/css/swiper.min.css" rel="stylesheet">
+    <link href="assets/css/owl.transitions.css" rel="stylesheet">
+    <link href="assets/css/jquery.fancybox.css" rel="stylesheet">
+    <link href="assets/css/odometer-theme-default.css" rel="stylesheet">
+    <link href="assets/sass/style.css" rel="stylesheet">
+    <link href="assets/css/ac-overrides.css?v=3" rel="stylesheet">
+
+    <style>
+        /* How We Work page styles */
+        .ac-hww-hero {
+            padding: 80px 0 60px;
+            background: var(--ac-ivory);
+            border-bottom: 1px solid var(--ac-border);
+        }
+        .ac-hww-hero .eyebrow {
+            font-size: 0.8rem;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--ac-teal);
+            margin-bottom: 16px;
+            display: block;
+        }
+        .ac-hww-hero h1 {
+            font-family: var(--font-display);
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            color: var(--ac-navy);
+            line-height: 1.1;
+            margin-bottom: 20px;
+        }
+        .ac-hww-hero p {
+            font-size: 1.15rem;
+            line-height: 1.75;
+            color: var(--ac-muted);
+            max-width: 600px;
+        }
+        /* Principles numbered list */
+        .ac-principles-section {
+            padding: 80px 0;
+        }
+        .ac-principle-item {
+            display: grid;
+            grid-template-columns: 72px 1fr;
+            gap: 32px;
+            padding: 48px 0;
+            border-bottom: 1px solid var(--ac-border);
+            align-items: start;
+        }
+        .ac-principle-item:last-child { border-bottom: none; }
+        .ac-principle-num {
+            font-family: var(--font-display);
+            font-size: 3.5rem;
+            color: var(--ac-teal);
+            line-height: 1;
+            opacity: 0.35;
+            padding-top: 4px;
+        }
+        .ac-principle-item h2 {
+            font-family: var(--font-display);
+            font-size: clamp(1.5rem, 2.5vw, 2rem);
+            color: var(--ac-navy);
+            margin-bottom: 16px;
+        }
+        .ac-principle-item .lead {
+            font-size: 1.05rem;
+            color: var(--ac-ink);
+            line-height: 1.75;
+            margin-bottom: 16px;
+        }
+        .ac-principle-item p {
+            color: var(--ac-muted);
+            line-height: 1.75;
+        }
+        /* Operational loop */
+        .ac-loop-section {
+            background: var(--ac-navy);
+            padding: 80px 0;
+            color: var(--ac-ivory);
+        }
+        .ac-loop-section h2 {
+            font-family: var(--font-display);
+            font-size: clamp(1.5rem, 3vw, 2rem);
+            color: var(--ac-ivory);
+            margin-bottom: 40px;
+        }
+        .ac-loop {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0;
+            counter-reset: loop-counter;
+        }
+        .ac-loop-step {
+            flex: 1 1 120px;
+            text-align: center;
+            padding: 20px 12px;
+            position: relative;
+        }
+        .ac-loop-step::after {
+            content: '→';
+            position: absolute;
+            right: -12px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--ac-teal);
+            font-size: 1.2rem;
+        }
+        .ac-loop-step:last-child::after { display: none; }
+        .ac-loop-step .step-num {
+            font-size: 0.7rem;
+            color: var(--ac-teal-light);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 6px;
+        }
+        .ac-loop-step .step-label {
+            font-family: var(--font-display);
+            font-size: 1rem;
+            color: var(--ac-ivory);
+        }
+        /* What this means in practice */
+        .ac-practice-section {
+            padding: 80px 0;
+            background: var(--ac-ivory);
+        }
+        .ac-practice-section h2 {
+            font-family: var(--font-display);
+            font-size: clamp(1.5rem, 3vw, 2rem);
+            color: var(--ac-navy);
+            margin-bottom: 40px;
+        }
+        .ac-practice-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 32px;
+        }
+        .ac-practice-card {
+            background: white;
+            padding: 32px;
+            border-radius: 4px;
+            border-top: 3px solid var(--ac-orange);
+        }
+        .ac-practice-card h4 {
+            font-family: var(--font-display);
+            font-size: 1.1rem;
+            color: var(--ac-navy);
+            margin-bottom: 12px;
+        }
+        .ac-practice-card p {
+            color: var(--ac-muted);
+            font-size: 0.95rem;
+            line-height: 1.65;
+        }
+        @media (max-width: 576px) {
+            .ac-principle-item { grid-template-columns: 1fr; }
+            .ac-principle-num { font-size: 2.5rem; }
+            .ac-loop-step::after { display: none; }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- start page-wrapper -->
+    <div class="page-wrapper">
+        <!-- start preloader -->
+        <div class="preloader">
+            <div class="vertical-centered-box">
+                <div class="content">
+                    <div class="loader-circle"></div>
+                    <div class="loader-line-mask">
+                        <div class="loader-line"></div>
+                    </div>
+                    <img src="assets/images/preloader.png" alt="">
+                </div>
+            </div>
+        </div>
+        <!-- end preloader -->
+
+        <!-- Start header -->
+        <header id="header">
+            <div class="wpo-site-header wpo-site-header-s1">
+                <nav class="navigation navbar navbar-expand-lg navbar-light">
+                    <div class="container-fluid">
+                        <div class="row align-items-center">
+                            <div class="col-lg-3 col-md-4 col-3 d-lg-none dl-block">
+                                <div class="mobail-menu">
+                                    <button type="button" class="navbar-toggler open-btn">
+                                        <span class="sr-only">Toggle navigation</span>
+                                        <span class="icon-bar first-angle"></span>
+                                        <span class="icon-bar middle-angle"></span>
+                                        <span class="icon-bar last-angle"></span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-4 col-6">
+                                <div class="navbar-header">
+                                    <a class="navbar-brand" href="index.html" aria-label="Anna Clerk Foundation — Home">
+                                        <img src="assets/images/logo.png" style="height:55px;width:auto;object-fit:contain;" alt="Anna Clerk Foundation logo">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-1 col-1">
+                                <div id="navbar" class="collapse navbar-collapse navigation-holder">
+                                    <button class="menu-close"><i class="ti-close"></i></button>
+                                    <ul class="nav navbar-nav mb-2 mb-lg-0">
+                                        <li><a class="active" href="index.html">Home</a></li>
+                                        <li class="has-dropdown">
+                                            <a href="about.html" class="nav-dropdown-toggle">About Us</a>
+                                            <ul class="ac-dropdown">
+                                                <li><a href="about.html">About the Foundation</a></li>
+                                            <li><a href="faq.html">Foundation FAQ</a></li>
+                                                <li class="dropdown-divider"></li>
+                                                <li class="dropdown-label">Explore</li>
+                                                <li><a href="our-work.html">Our Work</a></li>
+                                                <li><a href="how-we-work.html">How We Work</a></li>
+                                                <li><a href="event.html">Event</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="has-dropdown">
+                                            <a href="our-funding.html" class="nav-dropdown-toggle">Funding Approach</a>
+                                            <ul class="ac-dropdown">
+                                                <li><a href="our-funding.html">Our Funding</a></li>
+                                                <li><a href="supporting-our-work.html">Supporting Our Work</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-3 col-2">
+                                <div class="header-right">
+                                    <div class="close-form">
+                                        <a class="theme-btn" href="our-work.html">
+                                            <span class="text">Explore our work</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </header>
+        <!-- end of header -->
+
+        <!-- Page Hero -->
+        <section class="ac-hww-hero">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-md-10 col-12">
+                        <span class="eyebrow">How We Work</span>
+                        <h1>Good intentions need a way of working.</h1>
+                        <p>Four commitments guide how we make decisions, build partnerships, and stay engaged over time. They are not rules — they are the discipline we hold ourselves to.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Four Principles -->
+        <section class="ac-principles-section">
+            <div class="container">
+
+                <div class="ac-principle-item">
+                    <div class="ac-principle-num">01</div>
+                    <div>
+                        <h2>Listen locally.</h2>
+                        <p class="lead">The people closest to a challenge understand its context, constraints, and possibilities better than anyone working from a distance.</p>
+                        <p>Before making decisions about what to fund or how to help, we invest time in listening — to community members, local practitioners, and organizations already working in a place. We visit, ask questions, and try to understand what is actually needed, not what looks right from the outside. This takes more time than starting from a theory or a spreadsheet, but it produces better decisions.</p>
+                    </div>
+                </div>
+
+                <div class="ac-principle-item">
+                    <div class="ac-principle-num">02</div>
+                    <div>
+                        <h2>Partner thoughtfully.</h2>
+                        <p class="lead">Durable progress depends on organizations with local trust, practical expertise, and clear accountability — not on any single donor's vision.</p>
+                        <p>We do not implement programs ourselves. We look for partners who are already trusted by the communities they serve, who have the operational depth to use support well, and who are honest about what they do not know. We prefer long-term relationships over one-off grants, and we try to give partners the flexibility to adapt as conditions change.</p>
+                    </div>
+                </div>
+
+                <div class="ac-principle-item">
+                    <div class="ac-principle-num">03</div>
+                    <div>
+                        <h2>Follow evidence.</h2>
+                        <p class="lead">Bring together data, lived experience, and continuous learning. Measure carefully. Adapt when needed. Publish what we find — including what did not work.</p>
+                        <p>We do not treat metrics as a substitute for judgment, and we do not publish numbers without a date, unit, scope, and source. We set out to understand what is working, what is not, and why — and we share that learning publicly so it is useful to others. We separate goals and intentions from verified results, and we are honest about what we still do not know.</p>
+                    </div>
+                </div>
+
+                <div class="ac-principle-item">
+                    <div class="ac-principle-num">04</div>
+                    <div>
+                        <h2>Invest for the long term.</h2>
+                        <p class="lead">Stronger systems and community capacity take time and require sustained attention — well beyond the horizon of a single campaign or grant cycle.</p>
+                        <p>The changes that matter most — in education access, ecosystem health, family well-being, or civic participation — rarely happen quickly. We try to make commitments that reflect that reality: multi-year relationships, patient funding, and a genuine interest in staying engaged when things are difficult as well as when they are going well.</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Operational Loop -->
+        <section class="ac-loop-section">
+            <div class="container">
+                <h2>The operational loop</h2>
+                <p style="color: rgba(244,240,231,0.75); margin-bottom: 48px; max-width: 540px; line-height: 1.7;">
+                    In practice, these four principles work together in a continuous cycle — not a linear process.
+                </p>
+                <div class="ac-loop">
+                    <div class="ac-loop-step">
+                        <div class="step-num">01</div>
+                        <div class="step-label">Listen</div>
+                    </div>
+                    <div class="ac-loop-step">
+                        <div class="step-num">02</div>
+                        <div class="step-label">Define</div>
+                    </div>
+                    <div class="ac-loop-step">
+                        <div class="step-num">03</div>
+                        <div class="step-label">Partner</div>
+                    </div>
+                    <div class="ac-loop-step">
+                        <div class="step-num">04</div>
+                        <div class="step-label">Support</div>
+                    </div>
+                    <div class="ac-loop-step">
+                        <div class="step-num">05</div>
+                        <div class="step-label">Measure</div>
+                    </div>
+                    <div class="ac-loop-step">
+                        <div class="step-num">06</div>
+                        <div class="step-label">Learn</div>
+                    </div>
+                    <div class="ac-loop-step">
+                        <div class="step-num">07</div>
+                        <div class="step-label">Adapt</div>
+                    </div>
+                    <div class="ac-loop-step">
+                        <div class="step-num">08</div>
+                        <div class="step-label">Share</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- What this means in practice -->
+        <section class="ac-practice-section">
+            <div class="container">
+                <h2>What this looks like in practice</h2>
+                <div class="ac-practice-grid">
+                    <div class="ac-practice-card">
+                        <h4>We do not fund cold applications.</h4>
+                        <p>We build relationships before making grants. If you are doing work we are interested in, the path begins with a conversation — not a form.</p>
+                    </div>
+                    <div class="ac-practice-card">
+                        <h4>We separate our role from the work.</h4>
+                        <p>Partner organizations lead the work. Our role is to provide patient support and useful resources — not to take credit or direct implementation.</p>
+                    </div>
+                    <div class="ac-practice-card">
+                        <h4>We publish our learning.</h4>
+                        <p>What we learn from each area — including what surprised us and what did not work — is shared through our field notes and case studies.</p>
+                    </div>
+                    <div class="ac-practice-card">
+                        <h4>We stay when it is hard.</h4>
+                        <p>Long-term commitment means being present through setbacks, not just successes. We try to be the kind of partner that does not disappear when things get difficult.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="wpo-cta-section">
+            <div class="shape-1"><img src="assets/images/cta/shape-1.png" alt=""></div>
+            <div class="bg-overlay">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-8">
+                            <div class="cta-wrap">
+                                <div class="icon"><img src="assets/images/cta/top-icon.png" alt=""></div>
+                                <span>Interested in working together?</span>
+                                <h2>See our current funding approach and what we are looking for in partners.</h2>
+                                <a href="donate.html" class="theme-btn-cta">Read our funding approach</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="shape-2"><img src="assets/images/cta/shape-2.png" alt=""></div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="wpo-site-footer">
+            <div class="wpo-top-footer">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-12">
+                            <div class="widget">
+                                <div class="logo">
+                                    <a class="navbar-brand" href="index.html" aria-label="Anna Clerk Foundation — Home">
+                                        <img src="assets/images/logo.png" style="height:55px;width:auto;object-fit:contain;" alt="Anna Clerk Foundation logo">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-12">
+                            <div class="widget">
+                                <div class="social">
+                                    <ul>
+                                        <li><a href="#" aria-label="Facebook"><i class="fi flaticon-facebook-app-symbol"></i></a></li>
+                                        <li><a href="#" aria-label="Twitter"><i class="fi flaticon-twitter"></i></a></li>
+                                        <li><a href="#" aria-label="LinkedIn"><i class="fi flaticon-linkedin"></i></a></li>
+                                        <li><a href="#" aria-label="Instagram"><i class="fi flaticon-instagram"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="wpo-upper-footer">
+                <div class="container">
+                    <div class="row">
+                        <div class="col col-lg-3 col-md-6 col-sm-12 col-12">
+                            <div class="widget about-widget">
+                                <div class="widget-title"><h3>Anna Clerk Foundation</h3></div>
+                                <p>A private philanthropic foundation backing practical ideas, trusted local organizations, and communities working toward progress that lasts.</p>
+                            </div>
+                        </div>
+                        <div class="col col-lg-3 col-md-6 col-sm-12 col-12">
+                            <div class="widget link-widget">
+                                <div class="widget-title"><h3>Explore</h3></div>
+                                <ul>
+                                    <li><a href="index.html">Home</a></li>
+                                    <li><a href="about.html">About Us</a></li>
+                                    <li><a href="our-work.html">Our Work</a></li>
+                                    <li><a href="how-we-work.html">How We Work</a></li>
+                                    <li><a href="event.html">Event</a></li>
+                                    <li><a href="donate.html">Funding Approach</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col col-lg-3 col-md-6 col-sm-12 col-12">
+                            <div class="widget link-widget s2">
+                                <div class="widget-title"><h3>Focus Areas</h3></div>
+                                <ul>
+                                    <li><a href="our-work.html#learning">Learning &amp; Opportunity</a></li>
+                                    <li><a href="our-work.html#climate">Climate &amp; Resilience</a></li>
+                                    <li><a href="our-work.html#health">Health &amp; Well-being</a></li>
+                                    <li><a href="our-work.html#arts">Arts &amp; Civic Life</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col col-lg-3 col-md-6 col-sm-12 col-12">
+                            <div class="widget newsletter-widget">
+                                <div class="widget-title"><h3>Contact</h3></div>
+                                <p>Contact details will be listed here once verified and approved for publication.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="wpo-lower-footer">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col col-lg-8 col-md-12 col-12">
+                            <ul><li>&copy; 2026 Anna Clerk Foundation. All rights reserved.</li></ul>
+                        </div>
+                        <div class="col col-lg-4 col-md-12 col-12">
+                            <div class="link">
+                                <ul>
+                                    <li><a href="#">Privacy &amp; Policy</a></li>
+                                    <li><a href="#">Terms</a></li>
+                                    <li><a href="about.html">About</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- end of wpo-site-footer-section -->
+
+    </div>
+    <!-- end of page-wrapper -->
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/modernizr.custom.js"></script>
+    <script src="assets/js/jquery.dlmenu.js"></script>
+    <script src="assets/js/jquery-plugin-collection.js"></script>
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>
+
+
+
+
+

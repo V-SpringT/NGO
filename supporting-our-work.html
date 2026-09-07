@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Anna Clerk Foundation">
+    <meta name="description" content="How individuals and organizations can support the work of the Anna Clerk Foundation — co-funding, partnerships, and how to get involved.">
+    <link rel="shortcut icon" type="image/png" href="assets/images/favicon.png">
+    <title>Supporting Our Work — Anna Clerk Foundation</title>
+    <link href="assets/css/themify-icons.css" rel="stylesheet">
+    <link href="assets/css/flaticon.css" rel="stylesheet">
+    <link href="assets/css/font-awesome.min.css" rel="stylesheet">
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/animate.css" rel="stylesheet">
+    <link href="assets/css/owl.carousel.css" rel="stylesheet">
+    <link href="assets/css/owl.theme.css" rel="stylesheet">
+    <link href="assets/css/slick.css" rel="stylesheet">
+    <link href="assets/css/slick-theme.css" rel="stylesheet">
+    <link href="assets/css/swiper.min.css" rel="stylesheet">
+    <link href="assets/css/owl.transitions.css" rel="stylesheet">
+    <link href="assets/css/jquery.fancybox.css" rel="stylesheet">
+    <link href="assets/css/odometer-theme-default.css" rel="stylesheet">
+    <link href="assets/sass/style.css" rel="stylesheet">
+    <link href="assets/css/ac-overrides.css?v=3" rel="stylesheet">
+    <style>
+        .ac-sow-hero {
+            background: var(--ac-ivory);
+            border-bottom: 1px solid var(--ac-border);
+            padding: 80px 0 60px;
+        }
+        .ac-sow-hero .eyebrow {
+            font-size: 0.78rem; font-weight: 700; text-transform: uppercase;
+            letter-spacing: 0.1em; color: var(--ac-teal); margin-bottom: 16px; display: block;
+        }
+        .ac-sow-hero h1 {
+            font-family: var(--font-display); font-size: clamp(2rem,5vw,3.5rem);
+            color: var(--ac-navy); line-height: 1.1; margin-bottom: 20px;
+        }
+        .ac-sow-hero p { font-size: 1.1rem; line-height: 1.75; color: var(--ac-muted); max-width: 580px; }
+
+        .ac-section { padding: 72px 0; }
+        .ac-section-alt { padding: 72px 0; background: var(--ac-ivory); }
+        .ac-section h2, .ac-section-alt h2 {
+            font-family: var(--font-display); font-size: clamp(1.6rem,3vw,2.2rem);
+            color: var(--ac-navy); margin-bottom: 24px;
+        }
+        .ac-eyebrow {
+            font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em;
+            color: var(--ac-teal); margin-bottom: 12px; display: block;
+        }
+
+        /* Way to support cards */
+        .ac-support-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 28px; margin-top: 36px; }
+        .ac-support-card {
+            background: #fff; border-radius: 4px; padding: 32px;
+            box-shadow: 0 2px 16px rgba(20,43,53,0.07);
+            border-top: 4px solid var(--ac-orange);
+            display: flex; flex-direction: column;
+        }
+        .ac-support-card .icon {
+            width: 48px; height: 48px; background: rgba(249,145,38,0.1);
+            border-radius: 50%; display: flex; align-items: center; justify-content: center;
+            margin-bottom: 18px; font-size: 1.4rem;
+        }
+        .ac-support-card h4 {
+            font-family: var(--font-display); font-size: 1.15rem; color: var(--ac-navy); margin-bottom: 12px;
+        }
+        .ac-support-card p { font-size: 0.9rem; color: var(--ac-muted); line-height: 1.65; flex: 1; margin: 0 0 20px; }
+        .ac-support-card a.ac-card-link {
+            font-size: 0.82rem; font-weight: 700; color: var(--ac-teal); text-decoration: none;
+            letter-spacing: 0.04em; text-transform: uppercase;
+        }
+        .ac-support-card a.ac-card-link::after { content: " →"; }
+
+        /* Co-funding principles */
+        .ac-co-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 24px; margin-top: 36px; }
+        .ac-co-card {
+            padding: 24px; border-top: 2px solid var(--ac-teal);
+        }
+        .ac-co-card h5 { font-size: 0.88rem; text-transform: uppercase; letter-spacing: 0.07em; color: var(--ac-teal); margin-bottom: 8px; }
+        .ac-co-card p { font-size: 0.88rem; color: var(--ac-muted); line-height: 1.65; margin: 0; }
+
+        /* Callout / testimonial */
+        .ac-feature-quote {
+            background: var(--ac-navy); color: var(--ac-ivory); padding: 72px 0;
+        }
+        .ac-feature-quote blockquote {
+            font-family: var(--font-display); font-size: clamp(1.3rem, 2.5vw, 1.8rem);
+            line-height: 1.4; color: var(--ac-ivory); border: none; padding: 0; margin: 0 0 24px;
+        }
+        .ac-feature-quote cite { font-size: 0.82rem; color: var(--ac-teal-light); font-style: normal; text-transform: uppercase; letter-spacing: 0.08em; }
+
+        /* Contact form placeholder */
+        .ac-contact-bar {
+            background: var(--ac-ivory); border: 1px solid var(--ac-border);
+            border-radius: 6px; padding: 40px; text-align: center; margin-top: 40px;
+        }
+        .ac-contact-bar h4 { font-family: var(--font-display); color: var(--ac-navy); margin-bottom: 12px; }
+        .ac-contact-bar p { color: var(--ac-muted); font-size: 0.95rem; max-width: 480px; margin: 0 auto 24px; }
+
+        @media (max-width: 576px) {
+            .ac-support-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <div class="page-wrapper">
+        <!-- preloader -->
+        <div class="preloader">
+            <div class="vertical-centered-box">
+                <div class="content">
+                    <div class="loader-circle"></div>
+                    <div class="loader-line-mask"><div class="loader-line"></div></div>
+                    <img src="assets/images/preloader.png" alt="">
+                </div>
+            </div>
+        </div>
+
+        <!-- Header -->
+        <header id="header">
+            <div class="wpo-site-header wpo-site-header-s5">
+                <nav class="navigation navbar navbar-expand-lg navbar-light">
+                    <div class="container-fluid">
+                        <div class="row align-items-center">
+                            <div class="col-lg-3 col-md-4 col-3 d-lg-none dl-block">
+                                <div class="mobail-menu">
+                                    <button type="button" class="navbar-toggler open-btn">
+                                        <span class="sr-only">Toggle navigation</span>
+                                        <span class="icon-bar first-angle"></span>
+                                        <span class="icon-bar middle-angle"></span>
+                                        <span class="icon-bar last-angle"></span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-4 col-6">
+                                <div class="navbar-header">
+                                    <a class="navbar-brand" href="index.html" aria-label="Anna Clerk Foundation — Home">
+                                        <img src="assets/images/logo.png" style="height:55px;width:auto;object-fit:contain;" alt="Anna Clerk Foundation logo">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-1 col-1">
+                                <div id="navbar" class="collapse navbar-collapse navigation-holder">
+                                    <button class="menu-close"><i class="ti-close"></i></button>
+                                    <ul class="nav navbar-nav mb-2 mb-lg-0">
+                                        <li><a href="index.html">Home</a></li>
+                                        <li class="has-dropdown">
+                                            <a href="about.html" class="nav-dropdown-toggle">About Us</a>
+                                            <ul class="ac-dropdown">
+                                                <li><a href="about.html">About the Foundation</a></li>
+                                            <li><a href="faq.html">Foundation FAQ</a></li>
+                                                <li class="dropdown-divider"></li>
+                                                <li class="dropdown-label">Explore</li>
+                                                <li><a href="our-work.html">Our Work</a></li>
+                                                <li><a href="how-we-work.html">How We Work</a></li>
+                                                <li><a href="event.html">Event</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="has-dropdown">
+                                            <a href="our-funding.html" class="active nav-dropdown-toggle">Funding Approach</a>
+                                            <ul class="ac-dropdown">
+                                                <li><a href="our-funding.html">Our Funding</a></li>
+                                                <li><a href="supporting-our-work.html">Supporting Our Work</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-3 col-2">
+                                <div class="header-right">
+                                    <div class="close-form">
+                                        <a class="theme-btn" href="our-work.html"><span class="text">Explore our work</span></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </header>
+
+        <!-- Hero -->
+        <section class="ac-sow-hero">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-md-10 col-12">
+                        <span class="eyebrow">Funding Approach</span>
+                        <h1>Supporting Our Work</h1>
+                        <p>We are a small private foundation. Our capacity to fund is finite. But we believe in the value of collaboration — whether through co-funding, knowledge-sharing, or partnership. Here is how you can be part of this work.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Three ways to engage -->
+        <section class="ac-section">
+            <div class="container">
+                <span class="ac-eyebrow">Three ways to engage</span>
+                <h2>How you can be involved.</h2>
+                <p class="col-lg-7 col-12" style="padding:0; color: var(--ac-muted);">We welcome connection from individuals, organizations, and other funders who share our values and want to explore collaboration. The right form of engagement depends on who you are and what you bring.</p>
+                <div class="ac-support-grid">
+                    <div class="ac-support-card">
+                        <div class="icon">🤝</div>
+                        <h4>Co-funders &amp; Peer Foundations</h4>
+                        <p>If you are a foundation or institutional funder working in Vietnam's social sector, we welcome conversations about shared learning, co-investment in specific partners, or joint field visits. We do not pursue co-funding as a fundraising goal — we pursue it when it serves the partner better than solo funding would.</p>
+                        <a href="#contact" class="ac-card-link">Start a conversation</a>
+                    </div>
+                    <div class="ac-support-card">
+                        <div class="icon">💡</div>
+                        <h4>Knowledge Partners &amp; Advisors</h4>
+                        <p>We are interested in connecting with researchers, practitioners, and sector experts whose work overlaps with our focus areas. If you are doing rigorous work on education access, ecosystem restoration, rare disease navigation, or related fields in Vietnam — we want to know about it.</p>
+                        <a href="#contact" class="ac-card-link">Share your work</a>
+                    </div>
+                    <div class="ac-support-card">
+                        <div class="icon">❤️</div>
+                        <h4>Individual Supporters</h4>
+                        <p>We currently do not accept individual donations to the Foundation directly. However, many of the partner organizations we fund do accept public donations. If you are looking for a way to contribute, we encourage you to explore them directly through our Event section.</p>
+                        <a href="event.html" class="ac-card-link">Explore partner organizations</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Co-funding principles -->
+        <section class="ac-section-alt">
+            <div class="container">
+                <span class="ac-eyebrow">Our principles for collaboration</span>
+                <h2>When we co-fund, this is how we do it.</h2>
+                <p style="color: var(--ac-muted); max-width: 580px;">Co-funding works best when both parties share the same values about how funding relationships should work. Here is what we bring to a collaboration — and what we ask of peers.</p>
+                <div class="ac-co-grid">
+                    <div class="ac-co-card">
+                        <h5>Partner-centered</h5>
+                        <p>Co-funding arrangements should simplify life for the partner, not create additional reporting burdens. We will work to align requirements where possible.</p>
+                    </div>
+                    <div class="ac-co-card">
+                        <h5>Transparent</h5>
+                        <p>We share what we know about a partner with any co-funder they consent to us sharing with. We expect the same in return.</p>
+                    </div>
+                    <div class="ac-co-card">
+                        <h5>Non-directive</h5>
+                        <p>Neither funder should use joint funding as leverage to redirect a partner's strategy. We each fund the same work — we do not create confusion about who is in charge.</p>
+                    </div>
+                    <div class="ac-co-card">
+                        <h5>Honest about limits</h5>
+                        <p>We are clear about what we can and cannot commit to. We expect peers to be the same. No funder should imply more than they can deliver.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pull quote -->
+        <section class="ac-feature-quote">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8 col-12 text-center">
+                        <blockquote>"The best thing we can do as funders is stay honest, stay engaged, and get out of the way of the people who actually know how to do the work."</blockquote>
+                        <cite>— Anna Clerk, Founder</cite>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact anchor -->
+        <section class="ac-section" id="contact">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-7 col-12">
+                        <span class="ac-eyebrow">Get in touch</span>
+                        <h2>Start a conversation.</h2>
+                        <p style="color: var(--ac-muted);">If you are a funder, researcher, or practitioner interested in connecting with us, we welcome your message. Please include a brief description of your work or the nature of your interest — we read everything, though we cannot promise a quick response.</p>
+
+                        <div class="ac-contact-bar">
+                            <h4>Contact information coming soon.</h4>
+                            <p>Our contact details are being finalized. Once confirmed, they will appear here. In the meantime, if you know someone connected to the Foundation, a warm introduction is the best way to reach us.</p>
+                            <a href="about.html" class="theme-btn">Learn more about us</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="wpo-site-footer">
+            <div class="wpo-top-footer">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-12">
+                            <div class="widget">
+                                <div class="logo">
+                                    <a class="navbar-brand" href="index.html" aria-label="Anna Clerk Foundation — Home">
+                                        <img src="assets/images/logo.png" style="height:55px;width:auto;object-fit:contain;" alt="Anna Clerk Foundation logo">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-12">
+                            <div class="widget">
+                                <div class="social">
+                                    <ul>
+                                        <li><a href="#" aria-label="Facebook"><i class="fi flaticon-facebook-app-symbol"></i></a></li>
+                                        <li><a href="#" aria-label="Twitter"><i class="fi flaticon-twitter"></i></a></li>
+                                        <li><a href="#" aria-label="LinkedIn"><i class="fi flaticon-linkedin"></i></a></li>
+                                        <li><a href="#" aria-label="Instagram"><i class="fi flaticon-instagram"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="wpo-upper-footer">
+                <div class="container">
+                    <div class="row">
+                        <div class="col col-lg-3 col-md-6 col-sm-12 col-12">
+                            <div class="widget about-widget">
+                                <div class="widget-title"><h3>Anna Clerk Foundation</h3></div>
+                                <p>A private philanthropic foundation backing practical ideas, trusted local organizations, and communities working toward progress that lasts.</p>
+                            </div>
+                        </div>
+                        <div class="col col-lg-3 col-md-6 col-sm-12 col-12">
+                            <div class="widget link-widget">
+                                <div class="widget-title"><h3>Explore</h3></div>
+                                <ul>
+                                    <li><a href="index.html">Home</a></li>
+                                    <li><a href="about.html">About Us</a></li>
+                                    <li><a href="our-work.html">Our Work</a></li>
+                                    <li><a href="how-we-work.html">How We Work</a></li>
+                                    <li><a href="event.html">Event</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col col-lg-3 col-md-6 col-sm-12 col-12">
+                            <div class="widget link-widget s2">
+                                <div class="widget-title"><h3>Funding</h3></div>
+                                <ul>
+                                    <li><a href="our-funding.html">Our Funding</a></li>
+                                    <li><a href="supporting-our-work.html">Supporting Our Work</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col col-lg-3 col-md-6 col-sm-12 col-12">
+                            <div class="widget newsletter-widget">
+                                <div class="widget-title"><h3>Contact</h3></div>
+                                <p>Contact details will be listed here once verified and approved for publication.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="wpo-lower-footer">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col col-lg-8 col-md-12 col-12">
+                            <ul><li>&copy; 2026 Anna Clerk Foundation. All rights reserved.</li></ul>
+                        </div>
+                        <div class="col col-lg-4 col-md-12 col-12">
+                            <div class="link">
+                                <ul>
+                                    <li><a href="#">Privacy &amp; Policy</a></li>
+                                    <li><a href="#">Terms</a></li>
+                                    <li><a href="about.html">About</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/modernizr.custom.js"></script>
+    <script src="assets/js/jquery.dlmenu.js"></script>
+    <script src="assets/js/jquery-plugin-collection.js"></script>
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
+
+
+
+
+

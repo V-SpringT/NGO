@@ -6,9 +6,16 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="author" content="wpOceans">
+    <meta name="author" content="Anna Clerk Foundation">
     <link rel="shortcut icon" type="image/png" href="assets/images/favicon.png">
-    <title>Home</title>
+    
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Anna Clerk Foundation — Backing progress that lasts">
+    <meta property="og:description" content="A private philanthropic foundation backing practical ideas, committed partners, and communities building a more hopeful future.">
+
+    <title>Anna Clerk Foundation — Backing progress that lasts</title>
+
     <link href="assets/css/themify-icons.css" rel="stylesheet">
     <link href="assets/css/flaticon.css" rel="stylesheet">
     <link href="assets/css/font-awesome.min.css" rel="stylesheet">
@@ -22,7 +29,21 @@
     <link href="assets/css/owl.transitions.css" rel="stylesheet">
     <link href="assets/css/jquery.fancybox.css" rel="stylesheet">
     <link href="assets/css/odometer-theme-default.css" rel="stylesheet">
+    
+    <!-- Template base + Foundation overrides -->
     <link href="assets/sass/style.css" rel="stylesheet">
+    <link href="assets/css/ac-overrides.css?v=3" rel="stylesheet">
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Anna Clerk Foundation",
+      "url": "https://v-springt.github.io/NGO/",
+      "description": "A private philanthropic foundation supporting long-term, partnership-led initiatives in education, conservation, health, and community resilience."
+    }
+    </script>
 </head>
 
 <body>
@@ -61,10 +82,9 @@
                             </div>
                             <div class="col-lg-3 col-md-4 col-6">
                                 <div class="navbar-header">
-                                    <a class="navbar-brand" href="index.html"><img
-                                            src="https://scontent.fhph1-3.fna.fbcdn.net/v/t39.30808-6/774322659_2458904257950812_9130355363764638357_n.jpg?stp=dst-jpg_tt6&cstp=mx1254x1254&ctp=s1254x1254&_nc_cat=105&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeFvU2-Hq1trtXMCTaK5cXAb4_Fd9JzaaZTj8V30nNpplKHjb6eKYC2ePBlVHlgboL4EKNS067oZrFRqRhkbu_BU&_nc_ohc=hKt4xm0Jt58Q7kNvwHFsCAd&_nc_oc=Adp9-aW23cVjJlcz7ot_dfwJrvRyZz8ZeaRG2Ll_oK0jmN4OG75QzhiilWtstkvSfJuu_K0x54NOTsvUJtTh0sdS&_nc_zt=23&_nc_ht=scontent.fhph1-3.fna&_nc_gid=FXNjOL5glzcQxdp36uvnHw&_nc_ss=7b2a8&oh=00_AQJlAuinXCb16qU85fy_hrt-F4dlP4paBgG-rAzleKPKiQ&oe=6A9B30FB"
-                                            style="height:55px;width:auto;object-fit:contain;border-radius:50%;"
-                                            alt="logo"></a>
+                                    <a class="navbar-brand" href="index.html" aria-label="Anna Clerk Foundation — Home">
+                                        <img src="assets/images/logo.png" style="height:55px;width:auto;object-fit:contain;" alt="Anna Clerk Foundation logo">
+                                    </a>
                                 </div>
                             </div>
                             <div class="col-lg-6 col-md-1 col-1">
@@ -72,46 +92,33 @@
                                     <button class="menu-close"><i class="ti-close"></i></button>
                                     <ul class="nav navbar-nav mb-2 mb-lg-0">
                                         <li><a class="active" href="index.html">Home</a></li>
-                                        <li><a href="event.html">Events</a></li>
-                                        <li><a href="donate.html">Funding</a></li>
-                                        <li><a href="about.html">About Us</a></li>
+                                        <li class="has-dropdown">
+                                            <a href="about.html" class="nav-dropdown-toggle">About Us</a>
+                                            <ul class="ac-dropdown">
+                                                <li><a href="about.html">About the Foundation</a></li>
+                                            <li><a href="faq.html">Foundation FAQ</a></li>
+                                                <li class="dropdown-divider"></li>
+                                                <li class="dropdown-label">Explore</li>
+                                                <li><a href="our-work.html">Our Work</a></li>
+                                                <li><a href="how-we-work.html">How We Work</a></li>
+                                                <li><a href="event.html">Event</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="has-dropdown">
+                                            <a href="our-funding.html" class="nav-dropdown-toggle">Funding Approach</a>
+                                            <ul class="ac-dropdown">
+                                                <li><a href="our-funding.html">Our Funding</a></li>
+                                                <li><a href="supporting-our-work.html">Supporting Our Work</a></li>
+                                            </ul>
+                                        </li>
                                     </ul>
                                 </div>
                             </div>
                             <div class="col-lg-3 col-md-3 col-2">
                                 <div class="header-right">
-                                    <div class="header-search-form-wrapper">
-                                        <div class="cart-search-contact">
-                                            <button class="search-toggle-btn"><i
-                                                    class="fi flaticon-search"></i></button>
-                                            <div class="header-search-form">
-                                                <form>
-                                                    <div>
-                                                        <input type="text" class="form-control"
-                                                            placeholder="Search here...">
-                                                        <button type="submit"><i
-                                                                class="fi flaticon-search"></i></button>
-                                                    </div>
-                                                </form>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="header-profile-form-wrapper">
-                                        <button class="profile-toggle-btn"><i class="fi flaticon-profile"></i></button>
-                                        <div class="header-profile-content">
-                                            <ul>
-                                                <li><a href="#">Profile</a></li>
-                                                <li><a href="index.html">Login</a></li>
-                                                <li><a href="index.html">Register</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
                                     <div class="close-form">
-                                        <a class="theme-btn" href="donate.html">
-                                            <span class="mobile">
-                                                <i class="fi fa fa-heart"></i>
-                                            </span>
-                                            <span class="text">Fund a Cause</span>
+                                        <a class="theme-btn" href="our-work.html">
+                                            <span class="text">Explore our work</span>
                                         </a>
                                     </div>
                                 </div>
@@ -130,59 +137,38 @@
                     <div class="container-fluid">
                         <div class="hero-content">
                             <div data-swiper-parallax="300" class="slide-title-sub">
-                                <span>Give them a chance.</span>
+                                <span>Anna Clerk Foundation</span>
                             </div>
                             <div data-swiper-parallax="300" class="slide-title">
-                                <h2>Believe in The Better Future of Others.</h2>
+                                <h2>Backing progress that lasts.</h2>
                             </div>
                             <div data-swiper-parallax="400" class="slide-text">
-                                <p>Lorem ipsum dolor sit amet consectetur. Quisque quisque cursus tellus dui gravida.
-                                    Sed at a massa nunc at.</p>
+                                <p>We support locally led, evidence-informed work that expands opportunity and helps communities build stronger futures.</p>
                             </div>
                             <div class="clearfix"></div>
-                            <div data-swiper-parallax="500" class="slide-video-content">
-                                <div class="slide-video-img">
-                                    <img src="assets/images/slider/video.png" alt="">
-                                    <a href="https://www.youtube.com/embed/VqmFKnHG5q8" class="video-btn"
-                                        data-type="iframe"><i class="fi flaticon-play"></i></a>
-                                </div>
-                                <div class="slide-video-text">
-                                    <h4>Join Our Upcoming Campaign</h4>
-                                    <p>Make an impact one piece of clothing at a time to need of others.</p>
-                                </div>
+                            
+                            <div class="hero-cta-group" style="margin-top: 30px; display: flex; gap: 15px; flex-wrap: wrap;">
+                                <a href="our-work.html" class="theme-btn">Explore our work</a>
+                                <a href="how-we-work.html" class="theme-btn" style="background: transparent; color: var(--ac-navy); border: 2px solid var(--ac-navy);">How we work</a>
                             </div>
+
                             <div class="charius-pic">
                                 <div class="charius-pic-main">
                                     <img src="https://nld.mediacdn.vn/zoom/700_438/2020/10/19/h-hen-nie-03-copy-1-1603068834426360394220.jpg"
-                                        alt="H'Hen Niê" style="width:100%;height:100%;object-fit:cover;">
+                                        alt="Foundation work" style="width:100%;height:100%;object-fit:cover;">
                                 </div>
                                 <div class="charius-inner">
                                     <img src="https://media.thuonghieucongluan.vn/uploads/2018_05_07/hen-nie-16-1525682346.jpg"
-                                        alt="H'Hen Niê" style="width:100%;height:100%;object-fit:cover;">
+                                        alt="Community support" style="width:100%;height:100%;object-fit:cover;">
                                 </div>
 
                                 <div class="wpo-supporter">
                                     <div class="wpo-supporter-text">
                                         <div class="icon"><i><img src="assets/images/slider/stick-man.svg" alt=""></i>
                                         </div>
-                                        <div class="content">
-                                            <h3>120+</h3>
-                                            <p>Happy Volunteer</p>
+                                        <div class="content" style="padding-top: 10px;">
+                                            <p style="font-weight: 600; font-family: var(--font-body); color: var(--ac-navy); margin: 0; line-height: 1.4;">People and partnerships<br>make progress possible.</p>
                                         </div>
-                                    </div>
-                                    <div class="wpo-supporter-img">
-                                        <ul class="wpo-supporter-slide owl-carousel">
-                                            <li data-bs-toggle="tooltip" data-bs-html="true" title="Aliza Anny"><img
-                                                    src="assets/images/slider/client1.png" alt=""></li>
-                                            <li data-bs-toggle="tooltip" data-bs-html="true" title="David Miller"><img
-                                                    src="assets/images/slider/client2.png" alt=""></li>
-                                            <li data-bs-toggle="tooltip" data-bs-html="true" title="Maria Silva"><img
-                                                    src="assets/images/slider/client3.png" alt=""></li>
-                                            <li data-bs-toggle="tooltip" data-bs-html="true" title="Takila Mas"><img
-                                                    src="assets/images/slider/client4.png" alt=""></li>
-                                            <li data-bs-toggle="tooltip" data-bs-html="true" title="Jenny Lawba"><img
-                                                    src="assets/images/slider/client5.png" alt=""></li>
-                                        </ul>
                                     </div>
                                 </div>
                             </div>
@@ -207,8 +193,8 @@
                                         </div>
                                     </div>
                                     <div class="feature-text">
-                                        <h2><a href="donate.html">Join as a Volunteer</a></h2>
-                                        <p>Together, we empower organizations that change lives.</p>
+                                        <h2><a href="about.html">Understand our role</a></h2>
+                                        <p>See what the foundation can fund, connect, and learn.</p>
                                     </div>
                                 </div>
                             </div>
@@ -222,8 +208,8 @@
                                         </div>
                                     </div>
                                     <div class="feature-text">
-                                        <h2><a href="donate.html">Fund an Organization</a></h2>
-                                        <p>Support nonprofits that are making a real difference.</p>
+                                        <h2><a href="our-work.html">Explore focus areas</a></h2>
+                                        <p>Learning, health, climate, and civic life.</p>
                                     </div>
                                 </div>
                             </div>
@@ -237,8 +223,8 @@
                                         </div>
                                     </div>
                                     <div class="feature-text">
-                                        <h2><a href="donate.html">Support Their Mission</a></h2>
-                                        <p>Every contribution helps us reach more communities in need.</p>
+                                        <h2><a href="event.html">Read partner stories</a></h2>
+                                        <p>Sourced stories about people and organizations leading the work.</p>
                                     </div>
                                 </div>
                             </div>
@@ -269,15 +255,10 @@
                         <div class="col-lg-6 col-md-12 col-12">
                             <div class="wpo-about-text">
                                 <div class="wpo-section-title">
-                                    <span>Welcome to Charius</span>
-                                    <h2>You’re the Hope of Others.</h2>
+                                    <span>About the Foundation</span>
+                                    <h2>Opportunity should not depend on where someone is born.</h2>
                                 </div>
-                                <p>Lorem ipsum dolor sit amet consectetur. Volutpat proin id turpis eu neque sit etiam
-                                    nec quisque. Cras quam dignissim blandit metus laoreet mi ut. Eget diam volutpat
-                                    ultrices massa morbi sed nibh. Sodales diam eu etiam eu quam nisl viverra. Eget
-                                    egestas orci felis nisl. Sit diam morbi amet viverra auctor nunc. Feugiat ac amet
-                                    aliquet euismod ut vel. Mi lectus nisl augue commodo vitae nisi blandit. Venenatis
-                                    netus suscipit tempus fringilla varius feugiat nulla proin.</p>
+                                <p>We believe the people closest to a challenge should help shape the solution. Our role is to listen, support trusted partners, invest with patience, and share what the work teaches us.</p>
 
                                 <div class="about-info-wrap">
                                     <div class="about-info-item">
@@ -287,8 +268,8 @@
                                             </div>
                                         </div>
                                         <div class="about-info-text">
-                                            <h4>Our Mission</h4>
-                                            <p>We believe charity is a lifetime investment.</p>
+                                            <h4>Our Belief</h4>
+                                            <p>Lasting progress begins when communities have the resources, trust, and room to lead.</p>
                                         </div>
                                     </div>
                                     <div class="about-info-item">
@@ -298,13 +279,13 @@
                                             </div>
                                         </div>
                                         <div class="about-info-text">
-                                            <h4>Our Vision</h4>
-                                            <p>We believe charity is a lifetime investment.</p>
+                                            <h4>Our Role</h4>
+                                            <p>To fund, partner, convene, advocate, and keep learning alongside the communities we serve.</p>
                                         </div>
                                     </div>
                                 </div>
 
-                                <a href="about.html" class="theme-btn">Discover More</a>
+                                <a href="about.html" class="theme-btn">More about the foundation</a>
                             </div>
                         </div>
                     </div>
@@ -399,15 +380,14 @@
         <!-- end of wpo-causes-section -->
 
 
-        <!-- start of wpo-service-section -->
+        <!-- start of wpo-service-section (Focus Areas) -->
         <section class="wpo-service-section section-padding">
             <div class="container">
                 <div class="row justify-content-center">
-                    <div class="col-lg-6 col-md-12 col-12">
+                    <div class="col-lg-8 col-md-12 col-12">
                         <div class="wpo-section-title">
-                            <span>What We Do</span>
-                            <h2>We Fund Organizations
-                                That Change Lives.</h2>
+                            <span>Our Focus Areas</span>
+                            <h2>Where we direct our attention and resources.</h2>
                         </div>
                     </div>
                 </div>
@@ -416,44 +396,44 @@
                         <div class="col col-lg-3 col-md-6 col-sm-6 col-12">
                             <div class="service-item">
                                 <div class="icon">
-                                    <img src="assets/images/service/1.svg" alt="">
+                                    <img src="assets/images/service/1.svg" alt="Learning and Opportunity icon">
                                 </div>
                                 <div class="text">
-                                    <h2><a href="about.html">Kids Education</a></h2>
-                                    <p>Accumsan phallus lorem tortor koielit eget. Placat tortor sede pharetra eget.</p>
+                                    <h2><a href="our-work.html#learning">Learning &amp; Opportunity</a></h2>
+                                    <p>Build access into a lasting culture of learning — books, spaces, educators, and the confidence to ask questions.</p>
                                 </div>
                             </div>
                         </div>
                         <div class="col col-lg-3 col-md-6 col-sm-6 col-12">
                             <div class="service-item">
                                 <div class="icon">
-                                    <img src="assets/images/service/2.svg" alt="">
+                                    <img src="assets/images/service/2.svg" alt="Climate and Community icon">
                                 </div>
                                 <div class="text">
-                                    <h2><a href="about.html">Pure Water</a></h2>
-                                    <p>Accumsan phallus lorem tortor koielit eget. Placat tortor sede pharetra eget.</p>
+                                    <h2><a href="our-work.html#climate">Climate &amp; Community Resilience</a></h2>
+                                    <p>Support living systems beyond planting day — restoration, monitoring, clean water, and long-term stewardship.</p>
                                 </div>
                             </div>
                         </div>
                         <div class="col col-lg-3 col-md-6 col-sm-6 col-12">
                             <div class="service-item">
                                 <div class="icon">
-                                    <img src="assets/images/service/3.svg" alt="">
+                                    <img src="assets/images/service/3.svg" alt="Health and Wellbeing icon">
                                 </div>
                                 <div class="text">
-                                    <h2><a href="about.html">Healthy Food</a></h2>
-                                    <p>Accumsan phallus lorem tortor koielit eget. Placat tortor sede pharetra eget.</p>
+                                    <h2><a href="our-work.html#health">Health &amp; Well-being</a></h2>
+                                    <p>Begin care by listening to families — connecting local expertise and practical support to the people who need it.</p>
                                 </div>
                             </div>
                         </div>
                         <div class="col col-lg-3 col-md-6 col-sm-6 col-12">
                             <div class="service-item">
                                 <div class="icon">
-                                    <img src="assets/images/service/4.svg" alt="">
+                                    <img src="assets/images/service/4.svg" alt="Arts and Civic Life icon">
                                 </div>
                                 <div class="text">
-                                    <h2><a href="about.html">Medical Care</a></h2>
-                                    <p>Accumsan phallus lorem tortor koielit eget. Placat tortor sede pharetra eget.</p>
+                                    <h2><a href="our-work.html#arts">Arts &amp; Civic Life</a></h2>
+                                    <p>Create room for culture, identity, and community voice — a focus area we are building with care and evidence.</p>
                                 </div>
                             </div>
                         </div>
@@ -461,7 +441,7 @@
                 </div>
             </div>
         </section>
-        <!-- end of wpo-service-section -->
+        <!-- end of wpo-service-section (Focus Areas) -->
 
         <!-- start of wpo-cta-section -->
         <section class="wpo-cta-section">
@@ -476,10 +456,9 @@
                                 <div class="icon">
                                     <img src="assets/images/cta/top-icon.png" alt="">
                                 </div>
-                                <span>Together, we lift them up.</span>
-                                <h2>Your support funds organizations
-                                    making real impact.</h2>
-                                <a href="donate.html" class="theme-btn-cta">Support an Organization</a>
+                                <span>Good intentions need a way of working.</span>
+                                <h2>See how listening, partnership, evidence, and long-term commitment guide our decisions.</h2>
+                                <a href="how-we-work.html" class="theme-btn-cta">Explore how we work</a>
                             </div>
                         </div>
                     </div>
@@ -491,15 +470,14 @@
         </section>
         <!-- end of wpo-cta-section -->
 
-        <!-- start of wpo-event-section -->
+        <!-- start of wpo-event-section (Field Notes) -->
         <section class="wpo-event-section section-padding">
             <div class="container">
                 <div class="row justify-content-center">
-                    <div class="col-lg-6 col-md-12 col-12">
+                    <div class="col-lg-8 col-md-12 col-12">
                         <div class="wpo-section-title">
-                            <span>Let’s Help Them together!</span>
-                            <h2>Join Our Upcoming
-                                Events</h2>
+                            <span>Field Notes &amp; Stories</span>
+                            <h2>Learning from the work, alongside the people doing it.</h2>
                         </div>
                     </div>
                 </div>
@@ -508,8 +486,8 @@
                         <div class="col col-lg-4 col-md-6 col-12">
                             <div class="event-card">
                                 <div class="top-date">
-                                    <span>25</span>
-                                    jun
+                                    <span>15</span>
+                                    Libraries
                                     <div class="shape">
                                         <svg width="19" height="14" viewBox="0 0 19 14" fill="none">
                                             <path d="M18.9999 14L0.5 14L18.9999 -3.6902e-05L18.9999 14Z" />
@@ -517,14 +495,13 @@
                                     </div>
                                 </div>
                                 <div class="image">
-                                    <img src="assets/images/event/1.jpg" alt="">
+                                    <img src="https://static-images.vnncdn.net/vps_images_publish/000001/000003/2025/7/17/hoa-hau-hhen-nie-va-hanh-trinh-xay-dung-15-thu-vien-cho-tre-em-vung-cao-113164.jpg?width=0&s=4z1x21Oa7ivtS1quxEZG1g" alt="Highland children in a library" style="width:100%;height:220px;object-fit:cover;">
                                 </div>
                                 <div class="text">
-                                    <h3><a href="event-single.html">School For African Poor
-                                            Children</a></h3>
+                                    <h3><a href="events/event-2-15-thu-vien-vung-cao.html">15 Libraries for Highland Children</a></h3>
                                     <div class="event-info">
-                                        <span><i class="ti-time"></i>4:00pm-6:00pm</span>
-                                        <span><i class="ti-location-pin"></i>New York</span>
+                                        <span><i class="ti-tag"></i>Learning &amp; Opportunity</span>
+                                        <span><i class="ti-location-pin"></i>Vietnam Highlands</span>
                                     </div>
                                 </div>
                             </div>
@@ -532,8 +509,8 @@
                         <div class="col col-lg-4 col-md-6 col-12">
                             <div class="event-card">
                                 <div class="top-date">
-                                    <span>05</span>
-                                    Sep
+                                    <span>Forest</span>
+                                    Restoration
                                     <div class="shape">
                                         <svg width="19" height="14" viewBox="0 0 19 14" fill="none">
                                             <path d="M18.9999 14L0.5 14L18.9999 -3.6902e-05L18.9999 14Z" />
@@ -541,14 +518,13 @@
                                     </div>
                                 </div>
                                 <div class="image">
-                                    <img src="assets/images/event/2.jpg" alt="">
+                                    <img src="https://media-cdn-v2.laodong.vn/storage/newsportal/2024/8/30/1387186/_19A2856.jpeg?w=800&h=420&crop=auto&scale=both" alt="Nature conservation work" style="width:100%;height:220px;object-fit:cover;">
                                 </div>
                                 <div class="text">
-                                    <h3><a href="event-single.html">Solve the Water Problem
-                                            of World </a></h3>
+                                    <h3><a href="events/event-3-bao-ton-thien-nhien.html">Nature Conservation &amp; Anti-Poaching</a></h3>
                                     <div class="event-info">
-                                        <span><i class="ti-time"></i>4:00pm-6:00pm</span>
-                                        <span><i class="ti-location-pin"></i>New York</span>
+                                        <span><i class="ti-tag"></i>Climate &amp; Resilience</span>
+                                        <span><i class="ti-location-pin"></i>Xuan Lien Reserve</span>
                                     </div>
                                 </div>
                             </div>
@@ -556,8 +532,8 @@
                         <div class="col col-lg-4 col-md-6 col-12">
                             <div class="event-card">
                                 <div class="top-date">
-                                    <span>12</span>
-                                    Jan
+                                    <span>Rare</span>
+                                    Disease
                                     <div class="shape">
                                         <svg width="19" height="14" viewBox="0 0 19 14" fill="none">
                                             <path d="M18.9999 14L0.5 14L18.9999 -3.6902e-05L18.9999 14Z" />
@@ -565,14 +541,13 @@
                                     </div>
                                 </div>
                                 <div class="image">
-                                    <img src="assets/images/event/3.jpg" alt="">
+                                    <img src="https://brandledsustainability.com/wp-content/uploads/2023/01/45718238811173415564248824081908181038730215n-1730915984839717465276.webp" alt="Community health support event" style="width:100%;height:220px;object-fit:cover;">
                                 </div>
                                 <div class="text">
-                                    <h3><a href="event-single.html">Your Old Clothes are
-                                            Their Happiness.</a></h3>
+                                    <h3><a href="events/event-4-trong-rung-phu-xanh.html">Supporting Families of Children with Rare Diseases</a></h3>
                                     <div class="event-info">
-                                        <span><i class="ti-time"></i>4:00pm-6:00pm</span>
-                                        <span><i class="ti-location-pin"></i>New York</span>
+                                        <span><i class="ti-tag"></i>Health &amp; Well-being</span>
+                                        <span><i class="ti-location-pin"></i>Vietnam</span>
                                     </div>
                                 </div>
                             </div>
@@ -581,40 +556,37 @@
                 </div>
             </div>
         </section>
-        <!-- end of wpo-event-section -->
+        <!-- end of wpo-event-section (Field Notes) -->
 
         <!-- start of wpo-fun-fact-section-->
         <section class="wpo-fun-fact-section section-padding">
             <div class="container">
-                <div class="fun-fact-wrap">
-                    <div class="row">
-                        <div class="col-lg-3 col-md-6 col-sm-6 col-12">
-                            <div class="info">
-                                <h3><span class="odometer" data-count="326">00</span></h3>
-                                <p>Total
-                                    Campaigns</p>
-                            </div>
+                <div class="ac-stats-card">
+                    <div class="ac-stats-header">
+                        <div class="left">
+                            <h2>Foundation facts</h2>
+                            <p>For the year ended December 31, 2025.</p>
                         </div>
-                        <div class="col-lg-3 col-md-6 col-sm-6 col-12">
-                            <div class="info">
-                                <h3><span class="odometer" data-count="25">00</span>M</h3>
-                                <p>Total
-                                    Fund Raised</p>
-                            </div>
+                        <div class="right">
+                            <a href="about.html">More about the foundation ➔</a>
                         </div>
-                        <div class="col-lg-3 col-md-6 col-sm-6 col-12">
-                            <div class="info">
-                                <h3><span class="odometer" data-count="120">00</span></h3>
-                                <p>Happy
-                                    Volunteers</p>
-                            </div>
+                    </div>
+                    <div class="ac-stats-body">
+                        <div class="stat-item">
+                            <h3><span class="odometer" data-count="15">00</span></h3>
+                            <p>Libraries Built</p>
                         </div>
-                        <div class="col-lg-3 col-md-6 col-sm-6 col-12">
-                            <div class="info">
-                                <h3><span class="odometer" data-count="15">00</span></h3>
-                                <p>Years of
-                                    Fund Raising</p>
-                            </div>
+                        <div class="stat-item">
+                            <h3><span class="odometer" data-count="4">00</span></h3>
+                            <p>Focus Areas</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3><span class="odometer" data-count="120">00</span></h3>
+                            <p>Partner Organizations</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3><span class="odometer" data-count="8">00</span></h3>
+                            <p>Years of Partnership</p>
                         </div>
                     </div>
                 </div>
@@ -622,32 +594,31 @@
         </section>
         <!-- end of wpo-fun-fact-section-->
 
-        <!-- start of wpo-testimonial-section-->
+        <!-- start of wpo-testimonial-section (What We Are Learning) -->
         <section class="wpo-testimonial-section">
             <div class="container">
+                <div class="wpo-section-title" style="text-align:center; margin-bottom: 40px; padding-top: 20px;">
+                    <span>What We Are Learning</span>
+                    <h2>Progress takes time — and honesty.</h2>
+                </div>
                 <div class="wpo-testimonial-slider owl-carousel">
                     <div class="testimonial-item">
                         <div class="content">
                             <div class="icon">
                                 <i class="flaticon-quote"></i>
                             </div>
-                            <p>
-                                This is the best agency for non profit activities.
-                                I love their work so much.
-                                I wish one day they would remove all the poverty from the world.
-                                I will be there when they need.
-                            </p>
+                            <p>Access to books and a quiet place to read changes how children think about their own potential. Learning spaces work best when communities help design and maintain them.</p>
                             <div class="shape">
                                 <img src="assets/images/testimonial/bg.png" alt="">
                             </div>
                         </div>
                         <div class="bottom-content">
                             <div class="image">
-                                <img src="assets/images/testimonial/1.jpg" alt="">
+                                <img src="assets/images/testimonial/1.jpg" alt="Learning & Opportunity">
                             </div>
                             <div class="text">
-                                <h3>Elizabeth Joe</h3>
-                                <span>Founder of ADRF </span>
+                                <h3>Learning &amp; Opportunity</h3>
+                                <span>Field observation, Highland Communities</span>
                             </div>
                         </div>
                     </div>
@@ -656,23 +627,18 @@
                             <div class="icon">
                                 <i class="flaticon-quote"></i>
                             </div>
-                            <p>
-                                This is the best agency for non profit activities.
-                                I love their work so much.
-                                I wish one day they would remove all the poverty from the world.
-                                I will be there when they need.
-                            </p>
+                            <p>Reforestation that sticks requires long-term monitoring, not just planting days. The organizations doing this well measure survival rates, adapt species, and stay engaged for years.</p>
                             <div class="shape">
                                 <img src="assets/images/testimonial/bg.png" alt="">
                             </div>
                         </div>
                         <div class="bottom-content">
                             <div class="image">
-                                <img src="assets/images/testimonial/2.jpg" alt="">
+                                <img src="assets/images/testimonial/2.jpg" alt="Climate and Resilience">
                             </div>
                             <div class="text">
-                                <h3>Esther Howard</h3>
-                                <span>Web Designer</span>
+                                <h3>Climate &amp; Resilience</h3>
+                                <span>Field note, Xuan Lien Forest Reserve</span>
                             </div>
                         </div>
                     </div>
@@ -681,30 +647,25 @@
                             <div class="icon">
                                 <i class="flaticon-quote"></i>
                             </div>
-                            <p>
-                                This is the best agency for non profit activities.
-                                I love their work so much.
-                                I wish one day they would remove all the poverty from the world.
-                                I will be there when they need.
-                            </p>
+                            <p>Families navigating rare diseases rarely need a single intervention. What helps most is a steady point of contact who listens, connects, and follows through over time.</p>
                             <div class="shape">
                                 <img src="assets/images/testimonial/bg.png" alt="">
                             </div>
                         </div>
                         <div class="bottom-content">
                             <div class="image">
-                                <img src="assets/images/testimonial/3.jpg" alt="">
+                                <img src="assets/images/testimonial/3.jpg" alt="Health and Wellbeing">
                             </div>
                             <div class="text">
-                                <h3>Albert Flores</h3>
-                                <span>President of Sales</span>
+                                <h3>Health &amp; Well-being</h3>
+                                <span>Learning note, Community health programs</span>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        <!-- end of wpo-testimonial-section-->
+        <!-- end of wpo-testimonial-section (What We Are Learning) -->
 
         <!-- start of wpo-instagram-section-->
         <section class="wpo-instagram-section section-padding">
@@ -804,15 +765,14 @@
         </section>
         <!-- end of wpo-instagram-section-->
 
-        <!-- start of wpo-blog-section-->
+        <!-- start of wpo-blog-section (Stories & Ideas) -->
         <section class="wpo-blog-section">
             <div class="container">
                 <div class="row justify-content-center">
-                    <div class="col-lg-6 col-md-12 col-12">
+                    <div class="col-lg-8 col-md-12 col-12">
                         <div class="wpo-section-title">
-                            <span>From The Blog</span>
-                            <h2>Our Latest News and
-                                Articles</h2>
+                            <span>Event</span>
+                            <h2>Case studies, field notes, and explainers from the work.</h2>
                         </div>
                     </div>
                 </div>
@@ -835,36 +795,27 @@
                                 <div class="content">
                                     <ul class="top-content">
                                         <li>
-                                            <div class="image-single">
-                                                <img src="assets/images/blog/single/img-1.jpg" alt="">
-                                            </div>
-                                            Jenny Wilson
+                                            <span style="font-size: 0.72rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; color: var(--ac-teal);">Case Study</span>
                                         </li>
-                                        <li>
-                                            <i class="flaticon-chatting"></i>
-                                            03 Comments
-                                        </li>
+                                        <li style="font-size: 0.8rem; color: var(--ac-muted);">2024 &middot; 5 min read</li>
                                     </ul>
-                                    <h2><a href="index.html">Your clothes give them a warm hug.</a></h2>
-                                    <p>Proin convallis placerat volutpat molestie of integer. Vitae venenatis habitasse
-                                    </p>
+                                    <h2><a href="events/event-2-15-thu-vien-vung-cao.html">15 Libraries Bringing Learning to the Highlands</a></h2>
+                                    <p>How a grassroots library initiative is building reading culture across remote highland communities in Vietnam.</p>
                                 </div>
                                 <div class="blog-btn">
-                                    <a href="index.html"><span>Read More...</span><i
-                                            class="flaticon-right-arrow-2"></i></a>
+                                    <a href="events/event-2-15-thu-vien-vung-cao.html"><span>Read the case study</span><i class="flaticon-right-arrow-2"></i></a>
                                 </div>
                             </div>
                         </div>
                         <div class="col col-lg-4 col-md-6 col-12">
                             <div class="blog-single-card">
                                 <div class="image">
-                                    <img src="assets/images/blog/img-2.jpg" alt="">
+                                    <img src="assets/images/blog/img-2.jpg" alt="Forest conservation field work">
                                     <div class="top-date">
-                                        25 Jan, 22
+                                        2023
                                         <div class="shape">
                                             <svg width="8" height="9" viewBox="0 0 8 9" fill="none">
-                                                <path
-                                                    d="M7.99999 9.0001L-9.79769e-05 9.00023L8.00005 0.500149L7.99999 9.0001Z" />
+                                                <path d="M7.99999 9.0001L-9.79769e-05 9.00023L8.00005 0.500149L7.99999 9.0001Z" />
                                             </svg>
                                         </div>
                                     </div>
@@ -872,33 +823,27 @@
                                 <div class="content">
                                     <ul class="top-content">
                                         <li>
-                                            <div class="image-single">
-                                                <img src="assets/images/blog/single/img-2.jpg" alt="">
-                                            </div>
-                                            Robert Fox
+                                            <span style="font-size: 0.72rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; color: var(--ac-teal);">Field Note</span>
                                         </li>
-                                        <li> <i class="flaticon-chatting"></i> 03 Comments</li>
+                                        <li style="font-size: 0.8rem; color: var(--ac-muted);">2023 &middot; 4 min read</li>
                                     </ul>
-                                    <h2><a href="index.html">They also deserve proper education as you.</a></h2>
-                                    <p>Proin convallis placerat volutpat molestie of integer. Vitae venenatis habitasse
-                                    </p>
+                                    <h2><a href="events/event-3-bao-ton-thien-nhien.html">What Sustained Reforestation Actually Requires</a></h2>
+                                    <p>Monitoring survival rates, adapting to conditions, and staying engaged long after planting day.</p>
                                 </div>
                                 <div class="blog-btn">
-                                    <a href="index.html"><span>Read More...</span><i
-                                            class="flaticon-right-arrow-2"></i></a>
+                                    <a href="events/event-3-bao-ton-thien-nhien.html"><span>Read the field note</span><i class="flaticon-right-arrow-2"></i></a>
                                 </div>
                             </div>
                         </div>
                         <div class="col col-lg-4 col-md-6 col-12">
                             <div class="blog-single-card">
                                 <div class="image">
-                                    <img src="assets/images/blog/img-3.jpg" alt="">
+                                    <img src="assets/images/blog/img-3.jpg" alt="Community health program">
                                     <div class="top-date">
-                                        25 Jan, 22
+                                        2026
                                         <div class="shape">
                                             <svg width="8" height="9" viewBox="0 0 8 9" fill="none">
-                                                <path
-                                                    d="M7.99999 9.0001L-9.79769e-05 9.00023L8.00005 0.500149L7.99999 9.0001Z" />
+                                                <path d="M7.99999 9.0001L-9.79769e-05 9.00023L8.00005 0.500149L7.99999 9.0001Z" />
                                             </svg>
                                         </div>
                                     </div>
@@ -906,20 +851,15 @@
                                 <div class="content">
                                     <ul class="top-content">
                                         <li>
-                                            <div class="image-single">
-                                                <img src="assets/images/blog/single/img-3.jpg" alt="">
-                                            </div>
-                                            Jerome Bell
+                                            <span style="font-size: 0.72rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; color: var(--ac-teal);">Explainer</span>
                                         </li>
-                                        <li> <i class="flaticon-chatting"></i> 03 Comments</li>
+                                        <li style="font-size: 0.8rem; color: var(--ac-muted);">2026 &middot; 6 min read</li>
                                     </ul>
-                                    <h2><a href="index.html">Help make their dreams come true.</a></h2>
-                                    <p>Proin convallis placerat volutpat molestie of integer. Vitae venenatis habitasse
-                                    </p>
+                                    <h2><a href="events/event-1-nha-thue-thien-nguyen.html">Why Listening Comes Before Funding</a></h2>
+                                    <p>How patient, relationship-first philanthropy produces better outcomes than transactional grantmaking.</p>
                                 </div>
                                 <div class="blog-btn">
-                                    <a href="index.html"><span>Read More...</span><i
-                                            class="flaticon-right-arrow-2"></i></a>
+                                    <a href="events/event-1-nha-thue-thien-nguyen.html"><span>Read the explainer</span><i class="flaticon-right-arrow-2"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -930,32 +870,19 @@
         <!-- end of wpo-blog-section-->
 
         <!-- start wpo-partners-section -->
-        <section class="wpo-partners-section">
-            <h2>partners</h2>
+        <section class="wpo-partners-section" style="padding: 60px 0;">
             <div class="container">
-                <div class="row">
-                    <div class="col col-xs-12">
-                        <div class="partner-grids partners-slider owl-carousel">
-                            <div class="grid">
-                                <img src="assets/images/partners/img-1.png" alt="">
-                            </div>
-                            <div class="grid">
-                                <img src="assets/images/partners/img-2.png" alt="">
-                            </div>
-                            <div class="grid">
-                                <img src="assets/images/partners/img-3.png" alt="">
-                            </div>
-                            <div class="grid">
-                                <img src="assets/images/partners/img-4.png" alt="">
-                            </div>
-                            <div class="grid">
-                                <img src="assets/images/partners/img-5.png" alt="">
-                            </div>
+                <div class="row justify-content-center">
+                    <div class="col-lg-8 col-md-10 col-12" style="text-align: center;">
+                        <div class="wpo-section-title">
+                            <span>Working alongside</span>
+                            <h2>Partners in the work</h2>
                         </div>
+                        <p style="color: var(--ac-muted); font-size: 1rem; line-height: 1.7; margin-top: 16px;">We partner with organizations that bring local trust, practical expertise, and clear accountability. Partner names and logos are listed only when a verified relationship and logo permission are in place. We are currently building those relationships and will update this section as they are confirmed.</p>
+                        <a href="how-we-work.html" class="theme-btn" style="margin-top: 24px; display: inline-block;">Our partnership principles</a>
                     </div>
                 </div>
             </div>
-            <!-- end container -->
         </section>
         <!-- end wpo-partners-section -->
 
@@ -967,10 +894,9 @@
                         <div class="col-lg-6 col-md-6 col-sm-6 col-12">
                             <div class="widget">
                                 <div class="logo">
-                                    <a class="navbar-brand" href="index.html"><img
-                                            src="https://scontent.fhph1-3.fna.fbcdn.net/v/t39.30808-6/774322659_2458904257950812_9130355363764638357_n.jpg?stp=dst-jpg_tt6&cstp=mx1254x1254&ctp=s1254x1254&_nc_cat=105&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeFvU2-Hq1trtXMCTaK5cXAb4_Fd9JzaaZTj8V30nNpplKHjb6eKYC2ePBlVHlgboL4EKNS067oZrFRqRhkbu_BU&_nc_ohc=hKt4xm0Jt58Q7kNvwHFsCAd&_nc_oc=Adp9-aW23cVjJlcz7ot_dfwJrvRyZz8ZeaRG2Ll_oK0jmN4OG75QzhiilWtstkvSfJuu_K0x54NOTsvUJtTh0sdS&_nc_zt=23&_nc_ht=scontent.fhph1-3.fna&_nc_gid=FXNjOL5glzcQxdp36uvnHw&_nc_ss=7b2a8&oh=00_AQJlAuinXCb16qU85fy_hrt-F4dlP4paBgG-rAzleKPKiQ&oe=6A9B30FB"
-                                            style="height:55px;width:auto;object-fit:contain;border-radius:50%;"
-                                            alt=""></a>
+                                    <a class="navbar-brand" href="index.html" aria-label="Anna Clerk Foundation — Home">
+                                        <img src="assets/images/logo.png" style="height:55px;width:auto;object-fit:contain;" alt="Anna Clerk Foundation logo">
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -978,26 +904,10 @@
                             <div class="widget">
                                 <div class="social">
                                     <ul>
-                                        <li>
-                                            <a href="#">
-                                                <i class="fi flaticon-facebook-app-symbol"></i>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <i class="fi flaticon-twitter"></i>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <i class="fi flaticon-linkedin"></i>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <i class="fi flaticon-instagram"></i>
-                                            </a>
-                                        </li>
+                                        <li><a href="#" aria-label="Facebook"><i class="fi flaticon-facebook-app-symbol"></i></a></li>
+                                        <li><a href="#" aria-label="Twitter"><i class="fi flaticon-twitter"></i></a></li>
+                                        <li><a href="#" aria-label="LinkedIn"><i class="fi flaticon-linkedin"></i></a></li>
+                                        <li><a href="#" aria-label="Instagram"><i class="fi flaticon-instagram"></i></a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -1008,76 +918,67 @@
             <div class="wpo-upper-footer">
                 <div class="container">
                     <div class="row">
-                        <div class="col col-lg-3 col-md-6 col-12 col-md-6 col-sm-12 col-12">
+                        <div class="col col-lg-3 col-md-6 col-sm-12 col-12">
                             <div class="widget about-widget">
                                 <div class="widget-title">
-                                    <h3>About Charius</h3>
+                                    <h3>Anna Clerk Foundation</h3>
                                 </div>
-                                <p>Purus tellus arcu consequat neque nisl integer fames ac venenatis.
-                                    Neque ornare ut viverra purus suscipit morbi.
-                                    Lorem pretium purus sagittis congue rhoncus et mi lacus duis ut.</p>
+                                <p>A private philanthropic foundation backing practical ideas, trusted local organizations, and communities working toward progress that lasts.</p>
                             </div>
                         </div>
-                        <div class="col col-lg-3 col-md-6 col-12 col-md-6 col-sm-12 col-12">
+                        <div class="col col-lg-3 col-md-6 col-sm-12 col-12">
                             <div class="widget link-widget">
                                 <div class="widget-title">
-                                    <h3>Quick Links</h3>
+                                    <h3>Explore</h3>
                                 </div>
                                 <ul>
                                     <li><a href="index.html">Home</a></li>
                                     <li><a href="about.html">About Us</a></li>
-                                    <li><a href="about.html">Mission & Vision</a></li>
-                                    <li><a href="about.html">Team</a></li>
-                                    <li><a href="about.html">Campaign</a></li>
+                                    <li><a href="our-work.html">Our Work</a></li>
+                                    <li><a href="how-we-work.html">How We Work</a></li>
+                                    <li><a href="event.html">Event</a></li>
+                                    <li><a href="donate.html">Funding Approach</a></li>
                                 </ul>
                             </div>
                         </div>
-                        <div class="col col-lg-3 col-md-6 col-12 col-md-6 col-sm-12 col-12">
+                        <div class="col col-lg-3 col-md-6 col-sm-12 col-12">
                             <div class="widget link-widget s2">
                                 <div class="widget-title">
-                                    <h3>Mission & Vision</h3>
+                                    <h3>Focus Areas</h3>
                                 </div>
                                 <ul>
-                                    <li><a href="about.html">Economic Estublishment</a></li>
-                                    <li><a href="about.html">Jobs & Unemployment</a></li>
-                                    <li><a href="about.html">Business & wpo</a></li>
-                                    <li><a href="about.html">Roads & Transport</a></li>
-                                    <li><a href="about.html">Culture and Recreation</a></li>
+                                    <li><a href="our-work.html#learning">Learning &amp; Opportunity</a></li>
+                                    <li><a href="our-work.html#climate">Climate &amp; Resilience</a></li>
+                                    <li><a href="our-work.html#health">Health &amp; Well-being</a></li>
+                                    <li><a href="our-work.html#arts">Arts &amp; Civic Life</a></li>
                                 </ul>
                             </div>
                         </div>
-                        <div class="col col-lg-3 col-md-6 col-12 col-md-6 col-sm-12 col-12">
+                        <div class="col col-lg-3 col-md-6 col-sm-12 col-12">
                             <div class="widget newsletter-widget">
                                 <div class="widget-title">
-                                    <h3>Contact Us</h3>
+                                    <h3>Contact</h3>
                                 </div>
-                                <p>Nulla nequeut molestie interdum nisl ut consequat. </p>
-                                <ul class="info">
-                                    <li><i class="flaticon-email"></i> nazmulhussain7969@gmail.com</li>
-                                    <li><i class="flaticon-telephone"></i> +8801747431882</li>
-                                    <li><i class="flaticon-location"></i> Gobindapur, Alamdanga, Chuadanga</li>
-                                </ul>
+                                <p>Contact details will be listed here once verified and approved for publication.</p>
                             </div>
                         </div>
                     </div>
-                </div> <!-- end container -->
+                </div>
             </div>
             <div class="wpo-lower-footer">
                 <div class="container">
                     <div class="row align-items-center">
-                        <div class="col col-lg-6 col-md-12 col-12">
+                        <div class="col col-lg-8 col-md-12 col-12">
                             <ul>
-                                <li>&copy; 2026 <a href="#">Developed by | Mr. Nazmul |</a>. All rights reserved.</li>
+                                <li>&copy; 2026 Anna Clerk Foundation. All rights reserved.</li>
                             </ul>
                         </div>
-                        <div class="col col-lg-6 col-md-12 col-12">
+                        <div class="col col-lg-4 col-md-12 col-12">
                             <div class="link">
                                 <ul>
-                                    <li><a href="#">Privace & Policy</a></li>
+                                    <li><a href="#">Privacy &amp; Policy</a></li>
                                     <li><a href="#">Terms</a></li>
-                                    <li><a href="about.html">About us</a></li>
-                                    <li><a href="about.html">FAQ</a></li>
-                                    <li><a href="about.html">Volunteer</a></li>
+                                    <li><a href="about.html">About</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -1105,3 +1006,6 @@
 
 
 </html>
+
+
+
