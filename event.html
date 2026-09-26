@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="author" content="wpOceans">
     <link rel="shortcut icon" type="image/png" href="assets/images/favicon.png">
-    <title>Charius - Charity Nonprofit HTML5 Template</title>
+    <title>Stories & Learning — Anna Clerk Foundation</title>
     <link href="assets/css/themify-icons.css" rel="stylesheet">
     <link href="assets/css/flaticon.css" rel="stylesheet">
     <link href="assets/css/font-awesome.min.css" rel="stylesheet">
@@ -23,10 +23,11 @@
     <link href="assets/css/jquery.fancybox.css" rel="stylesheet">
     <link href="assets/css/odometer-theme-default.css" rel="stylesheet">
     <link href="assets/sass/style.css" rel="stylesheet">
-    <link href="assets/css/ac-overrides.css?v=3" rel="stylesheet">
+    <link href="assets/css/ac-overrides.css?v=8" rel="stylesheet">
 </head>
 
 <body>
+    <a class="skip-link" href="#main">Skip to content</a>
 
     <!-- start page-wrapper -->
     <div class="page-wrapper">
@@ -45,6 +46,8 @@
         <!-- end preloader -->
 
         <!-- Start header -->
+                <!-- Start header -->
+                <!-- Start header -->
         <header id="header">
             <div class="wpo-site-header wpo-site-header-s1">
                 <nav class="navigation navbar navbar-expand-lg navbar-light">
@@ -52,7 +55,7 @@
                         <div class="row align-items-center">
                             <div class="col-lg-3 col-md-4 col-3 d-lg-none dl-block">
                                 <div class="mobail-menu">
-                                    <button type="button" class="navbar-toggler open-btn">
+                                    <button type="button" class="navbar-toggler open-btn" aria-expanded="false" aria-controls="navbar" aria-label="Open menu">
                                         <span class="sr-only">Toggle navigation</span>
                                         <span class="icon-bar first-angle"></span>
                                         <span class="icon-bar middle-angle"></span>
@@ -60,35 +63,33 @@
                                     </button>
                                 </div>
                             </div>
-                            <div class="col-lg-3 col-md-4 col-6">
+                            <div class="col-lg-2 col-md-4 col-6">
                                 <div class="navbar-header">
                                     <a class="navbar-brand" href="index.html" aria-label="Anna Clerk Foundation — Home">
-                                        <img src="assets/images/logo.png" style="height:55px;width:auto;object-fit:contain;" alt="Anna Clerk Foundation logo">
+                                        <img src="assets/images/logo.png" style="height:85px;width:auto;object-fit:contain;" alt="Anna Clerk Foundation logo">
                                     </a>
                                 </div>
                             </div>
-                            <div class="col-lg-6 col-md-1 col-1">
+                            <div class="col-lg-7 col-md-1 col-1">
                                 <div id="navbar" class="collapse navbar-collapse navigation-holder">
-                                    <button class="menu-close"><i class="ti-close"></i></button>
+                                    <button class="menu-close" aria-label="Close menu"><i class="ti-close"></i></button>
                                     <ul class="nav navbar-nav mb-2 mb-lg-0">
-                                        <li><a class="active" href="index.html">Home</a></li>
+                                        <li><a href="index.html">Home</a></li>
+                                        <li><a href="our-work.html">Our Work</a></li>
+                                        <li><a href="event.html">Stories</a></li>
+                                        <li class="has-dropdown">
+                                            <a href="our-funding.html" class="nav-dropdown-toggle">Funding</a>
+                                            <ul class="ac-dropdown">
+                                                <li><a href="our-funding.html">Funding Approach</a></li>
+                                                <li><a href="supporting-our-work.html">Supporting Our Work</a></li>
+                                            </ul>
+                                        </li>
                                         <li class="has-dropdown">
                                             <a href="about.html" class="nav-dropdown-toggle">About Us</a>
                                             <ul class="ac-dropdown">
                                                 <li><a href="about.html">About the Foundation</a></li>
-                                            <li><a href="faq.html">Foundation FAQ</a></li>
-                                                <li class="dropdown-divider"></li>
-                                                <li class="dropdown-label">Explore</li>
-                                                <li><a href="our-work.html">Our Work</a></li>
                                                 <li><a href="how-we-work.html">How We Work</a></li>
-                                                <li><a href="event.html">Event</a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="has-dropdown">
-                                            <a href="our-funding.html" class="nav-dropdown-toggle">Funding Approach</a>
-                                            <ul class="ac-dropdown">
-                                                <li><a href="our-funding.html">Our Funding</a></li>
-                                                <li><a href="supporting-our-work.html">Supporting Our Work</a></li>
+                                                <li><a href="faq.html">FAQ</a></li>
                                             </ul>
                                         </li>
                                     </ul>
@@ -97,9 +98,7 @@
                             <div class="col-lg-3 col-md-3 col-2">
                                 <div class="header-right">
                                     <div class="close-form">
-                                        <a class="theme-btn" href="our-work.html">
-                                            <span class="text">Explore our work</span>
-                                        </a>
+                                        <a class="theme-btn" href="our-work.html"><span class="text">Explore our work</span></a>
                                     </div>
                                 </div>
                             </div>
@@ -109,17 +108,19 @@
             </div>
         </header>
         <!-- end of header -->
+        <!-- end of header -->
+        <!-- end of header -->
 
         <!-- start wpo-page-title -->
-        <section class="wpo-page-title">
+        <section id="main"  class="wpo-page-title">
             <div class="container">
                 <div class="row">
                     <div class="col col-xs-12">
                         <div class="wpo-breadcumb-wrap">
-                            <h2>Events</h2>
+                            <h2>Stories & Learning</h2>
                             <ol class="wpo-breadcumb-wrap">
                                 <li><a href="index.html">Home</a></li>
-                                <li>Events</li>
+                                <li>Stories</li>
                             </ol>
                         </div>
                     </div>
@@ -135,8 +136,8 @@
                 <div class="row justify-content-center">
                     <div class="col-lg-8 col-md-12 col-12">
                         <div class="wpo-section-title">
-                            <span>H'Hen Nie's Charitable Journey</span>
-                            <h2>Featured Events & Community Projects</h2>
+                            <span>External stories & learning</span>
+                            <h2>Public Case Studies</h2>
                         </div>
                     </div>
                 </div>
@@ -146,17 +147,8 @@
                         <!-- Event 1 -->
                         <div class="col col-lg-6 col-md-6 col-12">
                             <div class="event-card">
-                                <div class="top-date">
-                                    <span>18</span>
-                                    Jun
-                                    <div class="shape">
-                                        <svg width="19" height="14" viewBox="0 0 19 14" fill="none">
-                                            <path d="M18.9999 14L0.5 14L18.9999 -3.6902e-05L18.9999 14Z" />
-                                        </svg>
-                                    </div>
-                                </div>
                                 <div class="image">
-                                    <img src="https://vcdn1-giaitri.vnecdn.net/2024/06/18/hoahuhhennie-1718697759-9507-1718697763.jpg?w=1200&h=675&q=100&dpr=1&fit=crop&s=tT9-Nyi4mXBOeWUSCs_xRg"
+                                    <img loading="lazy" src="https://vcdn1-giaitri.vnecdn.net/2024/06/18/hoahuhhennie-1718697759-9507-1718697763.jpg?w=1200&h=675&q=100&dpr=1&fit=crop&s=tT9-Nyi4mXBOeWUSCs_xRg"
                                         alt="H'Hen Niê thiện nguyện" style="width:100%;height:280px;object-fit:cover;">
                                 </div>
                                 <div class="text">
@@ -173,17 +165,8 @@
                         <!-- Event 2 -->
                         <div class="col col-lg-6 col-md-6 col-12">
                             <div class="event-card">
-                                <div class="top-date">
-                                    <span>18</span>
-                                    Jul
-                                    <div class="shape">
-                                        <svg width="19" height="14" viewBox="0 0 19 14" fill="none">
-                                            <path d="M18.9999 14L0.5 14L18.9999 -3.6902e-05L18.9999 14Z" />
-                                        </svg>
-                                    </div>
-                                </div>
                                 <div class="image">
-                                    <img src="https://static-images.vnncdn.net/vps_images_publish/000001/000003/2025/7/17/hoa-hau-hhen-nie-va-hanh-trinh-xay-dung-15-thu-vien-cho-tre-em-vung-cao-113164.jpg?width=0&s=4z1x21Oa7ivtS1quxEZG1g"
+                                    <img loading="lazy" src="https://static-images.vnncdn.net/vps_images_publish/000001/000003/2025/7/17/hoa-hau-hhen-nie-va-hanh-trinh-xay-dung-15-thu-vien-cho-tre-em-vung-cao-113164.jpg?width=0&s=4z1x21Oa7ivtS1quxEZG1g"
                                         alt="15 thư viện vùng cao" style="width:100%;height:280px;object-fit:cover;">
                                 </div>
                                 <div class="text">
@@ -200,17 +183,8 @@
                         <!-- Event 3 -->
                         <div class="col col-lg-6 col-md-6 col-12">
                             <div class="event-card">
-                                <div class="top-date">
-                                    <span>30</span>
-                                    Aug
-                                    <div class="shape">
-                                        <svg width="19" height="14" viewBox="0 0 19 14" fill="none">
-                                            <path d="M18.9999 14L0.5 14L18.9999 -3.6902e-05L18.9999 14Z" />
-                                        </svg>
-                                    </div>
-                                </div>
                                 <div class="image">
-                                    <img src="https://media-cdn-v2.laodong.vn/storage/newsportal/2024/8/30/1387186/_19A2856.jpeg?w=800&h=420&crop=auto&scale=both"
+                                    <img loading="lazy" src="https://media-cdn-v2.laodong.vn/storage/newsportal/2024/8/30/1387186/_19A2856.jpeg?w=800&h=420&crop=auto&scale=both"
                                         alt="Bảo tồn thiên nhiên" style="width:100%;height:280px;object-fit:cover;">
                                 </div>
                                 <div class="text">
@@ -227,17 +201,8 @@
                         <!-- Event 4 -->
                         <div class="col col-lg-6 col-md-6 col-12">
                             <div class="event-card">
-                                <div class="top-date">
-                                    <span>19</span>
-                                    Nov
-                                    <div class="shape">
-                                        <svg width="19" height="14" viewBox="0 0 19 14" fill="none">
-                                            <path d="M18.9999 14L0.5 14L18.9999 -3.6902e-05L18.9999 14Z" />
-                                        </svg>
-                                    </div>
-                                </div>
                                 <div class="image">
-                                    <img src="https://brandledsustainability.com/wp-content/uploads/2023/01/45718238811173415564248824081908181038730215n-1730915984839717465276.webp"
+                                    <img loading="lazy" src="https://brandledsustainability.com/wp-content/uploads/2023/01/45718238811173415564248824081908181038730215n-1730915984839717465276.webp"
                                         alt="Trồng rừng phủ xanh" style="width:100%;height:280px;object-fit:cover;">
                                 </div>
                                 <div class="text">
@@ -254,17 +219,8 @@
                         <!-- Event 5 -->
                         <div class="col col-lg-6 col-md-6 col-12">
                             <div class="event-card">
-                                <div class="top-date">
-                                    <span>01</span>
-                                    Jan
-                                    <div class="shape">
-                                        <svg width="19" height="14" viewBox="0 0 19 14" fill="none">
-                                            <path d="M18.9999 14L0.5 14L18.9999 -3.6902e-05L18.9999 14Z" />
-                                        </svg>
-                                    </div>
-                                </div>
                                 <div class="image">
-                                    <img src="https://icdn.dantri.com.vn/thumb_w/640/2023/01/01/hhen-nie-da-giup-nhieu-tre-em-vung-cao-co-duoc-co-hoi-tiep-can-tri-thuc-docx-1672560705618.jpeg"
+                                    <img loading="lazy" src="https://icdn.dantri.com.vn/thumb_w/640/2023/01/01/hhen-nie-da-giup-nhieu-tre-em-vung-cao-co-duoc-co-hoi-tiep-can-tri-thuc-docx-1672560705618.jpeg"
                                         alt="Giúp trẻ vùng cao" style="width:100%;height:280px;object-fit:cover;"
                                         onerror="this.src='assets/images/event/1.jpg'">
                                 </div>
@@ -282,17 +238,8 @@
                         <!-- Event 6 -->
                         <div class="col col-lg-6 col-md-6 col-12">
                             <div class="event-card">
-                                <div class="top-date">
-                                    <span>15</span>
-                                    Mar
-                                    <div class="shape">
-                                        <svg width="19" height="14" viewBox="0 0 19 14" fill="none">
-                                            <path d="M18.9999 14L0.5 14L18.9999 -3.6902e-05L18.9999 14Z" />
-                                        </svg>
-                                    </div>
-                                </div>
                                 <div class="image">
-                                    <img src="https://cdn.petrotimes.vn/stores/news_dataimages/vuphong/122019/23/23/5435_Hoa_hau_HHen_Nie_Xay_dung_thu_vien_Room_To_Read_tai_Lam_Dong_9_resize.jpg"
+                                    <img loading="lazy" src="https://cdn.petrotimes.vn/stores/news_dataimages/vuphong/122019/23/23/5435_Hoa_hau_HHen_Nie_Xay_dung_thu_vien_Room_To_Read_tai_Lam_Dong_9_resize.jpg"
                                         alt="Gây quỹ 22000 USD" style="width:100%;height:280px;object-fit:cover;">
                                 </div>
                                 <div class="text">
@@ -309,17 +256,8 @@
                         <!-- Event 7 -->
                         <div class="col col-lg-6 col-md-6 col-12">
                             <div class="event-card">
-                                <div class="top-date">
-                                    <span>10</span>
-                                    Sep
-                                    <div class="shape">
-                                        <svg width="19" height="14" viewBox="0 0 19 14" fill="none">
-                                            <path d="M18.9999 14L0.5 14L18.9999 -3.6902e-05L18.9999 14Z" />
-                                        </svg>
-                                    </div>
-                                </div>
                                 <div class="image">
-                                    <img src="https://static-images.vnncdn.net/vps_images_publish/000001/000003/2025/7/17/hoa-hau-hhen-nie-va-hanh-trinh-xay-dung-15-thu-vien-cho-tre-em-vung-cao-113163.jpg?width=800"
+                                    <img loading="lazy" src="https://static-images.vnncdn.net/vps_images_publish/000001/000003/2025/7/17/hoa-hau-hhen-nie-va-hanh-trinh-xay-dung-15-thu-vien-cho-tre-em-vung-cao-113163.jpg?width=800"
                                         alt="Giải chạy vì trẻ em" style="width:100%;height:280px;object-fit:cover;">
                                 </div>
                                 <div class="text">
@@ -336,17 +274,8 @@
                         <!-- Event 8 -->
                         <div class="col col-lg-6 col-md-6 col-12">
                             <div class="event-card">
-                                <div class="top-date">
-                                    <span>22</span>
-                                    May
-                                    <div class="shape">
-                                        <svg width="19" height="14" viewBox="0 0 19 14" fill="none">
-                                            <path d="M18.9999 14L0.5 14L18.9999 -3.6902e-05L18.9999 14Z" />
-                                        </svg>
-                                    </div>
-                                </div>
                                 <div class="image">
-                                    <img src="https://media-cdn-v2.laodong.vn/storage/newsportal/2024/8/30/1387186/Hoa-Hau-Hhen-Nie_Tro.jpg"
+                                    <img loading="lazy" src="https://media-cdn-v2.laodong.vn/storage/newsportal/2024/8/30/1387186/Hoa-Hau-Hhen-Nie_Tro.jpg"
                                         alt="Cuộc đua kỳ thú từ thiện"
                                         style="width:100%;height:280px;object-fit:cover;">
                                 </div>
@@ -368,145 +297,103 @@
         <!-- end of wpo-event-section -->
 
         <!-- start of wpo-site-footer-section -->
+                        <!-- Stories CTA (replaces fake newsletter) -->
+        <section class="ac-stories-cta">
+            <div class="container">
+                <h3>Explore stories and learning notes</h3>
+                <p>Read about the people and organizations leading important work across Vietnam.</p>
+                <a href="event.html">Browse all stories</a>
+            </div>
+        </section>
+
+        <!-- Footer -->
         <footer class="wpo-site-footer">
-            <div class="wpo-top-footer">
+            <div class="wpo-upper-footer">
                 <div class="container">
                     <div class="row">
-                        <div class="col-lg-6 col-md-6 col-sm-6 col-12">
-                            <div class="widget">
-                                <div class="logo">
-                                    <a class="navbar-brand" href="index.html"><img src="https://scontent.fhph1-3.fna.fbcdn.net/v/t39.30808-6/774322659_2458904257950812_9130355363764638357_n.jpg?stp=dst-jpg_tt6&cstp=mx1254x1254&ctp=s1254x1254&_nc_cat=105&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeFvU2-Hq1trtXMCTaK5cXAb4_Fd9JzaaZTj8V30nNpplKHjb6eKYC2ePBlVHlgboL4EKNS067oZrFRqRhkbu_BU&_nc_ohc=hKt4xm0Jt58Q7kNvwHFsCAd&_nc_oc=Adp9-aW23cVjJlcz7ot_dfwJrvRyZz8ZeaRG2Ll_oK0jmN4OG75QzhiilWtstkvSfJuu_K0x54NOTsvUJtTh0sdS&_nc_zt=23&_nc_ht=scontent.fhph1-3.fna&_nc_gid=FXNjOL5glzcQxdp36uvnHw&_nc_ss=7b2a8&oh=00_AQJlAuinXCb16qU85fy_hrt-F4dlP4paBgG-rAzleKPKiQ&oe=6A9B30FB" style="height:55px;width:auto;object-fit:contain;border-radius:50%;"
-                                            alt=""></a>
+                        <div class="col col-lg-4 col-md-6 col-sm-12 col-12">
+                            <div class="widget about-widget">
+                                <div class="logo" style="margin-bottom: 20px;">
+                                    <a href="index.html" aria-label="Anna Clerk Foundation — Home">
+                                        <img src="assets/images/logo.png" style="height:60px;width:auto;object-fit:contain;" alt="Anna Clerk Foundation logo">
+                                    </a>
                                 </div>
+                                <p>A philanthropic concept exploring practical ideas, trusted local organizations, and communities working toward progress that lasts.</p>
+                                <p class="ac-project-note">Anna Clerk Foundation is a fictional philanthropy concept. External stories are shared as credited learning references.</p>
                             </div>
                         </div>
-                        <div class="col-lg-6 col-md-6 col-sm-6 col-12">
-                            <div class="widget">
-                                <div class="social">
-                                    <ul>
-                                        <li>
-                                            <a href="#">
-                                                <i class="fi flaticon-facebook-app-symbol"></i>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <i class="fi flaticon-twitter"></i>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <i class="fi flaticon-linkedin"></i>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <i class="fi flaticon-instagram"></i>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
+                        <div class="col col-lg-2 col-md-6 col-sm-12 col-12">
+                            <div class="widget link-widget">
+                                <div class="widget-title"><h3>Explore</h3></div>
+                                <ul>
+                                    <li><a href="index.html">Home</a></li>
+                                    <li><a href="our-work.html">Our Work</a></li>
+                                    <li><a href="event.html">Stories</a></li>
+                                    <li><a href="our-funding.html">Funding</a></li>
+                                    <li><a href="about.html">About Us</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col col-lg-3 col-md-6 col-sm-12 col-12">
+                            <div class="widget link-widget s2">
+                                <div class="widget-title"><h3>Focus Areas</h3></div>
+                                <ul>
+                                    <li><a href="our-work.html#learning">Learning &amp; Opportunity</a></li>
+                                    <li><a href="our-work.html#climate">Climate &amp; Resilience</a></li>
+                                    <li><a href="our-work.html#health">Health &amp; Well-being</a></li>
+                                    <li><a href="our-work.html#arts">Arts &amp; Civic Life</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col col-lg-3 col-md-6 col-sm-12 col-12">
+                            <div class="widget link-widget">
+                                <div class="widget-title"><h3>More</h3></div>
+                                <ul>
+                                    <li><a href="how-we-work.html">How We Work</a></li>
+                                    <li><a href="supporting-our-work.html">Supporting Our Work</a></li>
+                                    <li><a href="faq.html">FAQ</a></li>
+                                </ul>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="wpo-upper-footer">
-                <div class="container">
-                    <div class="row">
-                        <div class="col col-lg-3 col-md-6 col-12 col-md-6 col-sm-12 col-12">
-                            <div class="widget about-widget">
-                                <div class="widget-title">
-                                    <h3>About Charius</h3>
-                                </div>
-                                <p>Purus tellus arcu consequat neque nisl integer fames ac venenatis.
-                                    Neque ornare ut viverra purus suscipit morbi.
-                                    Lorem pretium purus sagittis congue rhoncus et mi lacus duis ut.</p>
-                            </div>
-                        </div>
-                        <div class="col col-lg-3 col-md-6 col-12 col-md-6 col-sm-12 col-12">
-                            <div class="widget link-widget">
-                                <div class="widget-title">
-                                    <h3>Quick Links</h3>
-                                </div>
-                                <ul>
-                                    <li><a href="index.html">Home</a></li>
-                                    <li><a href="about.html">About Us</a></li>
-                                    <li><a href="about.html">Mission & Vision</a></li>
-                                    <li><a href="about.html">Team</a></li>
-                                    <li><a href="about.html">Campaign</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col col-lg-3 col-md-6 col-12 col-md-6 col-sm-12 col-12">
-                            <div class="widget link-widget s2">
-                                <div class="widget-title">
-                                    <h3>Mission & Vision</h3>
-                                </div>
-                                <ul>
-                                    <li><a href="about.html">Economic Estublishment</a></li>
-                                    <li><a href="about.html">Jobs & Unemployment</a></li>
-                                    <li><a href="about.html">Business & wpo</a></li>
-                                    <li><a href="about.html">Roads & Transport</a></li>
-                                    <li><a href="about.html">Culture and Recreation</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col col-lg-3 col-md-6 col-12 col-md-6 col-sm-12 col-12">
-                            <div class="widget newsletter-widget">
-                                <div class="widget-title">
-                                    <h3>Contact Us</h3>
-                                </div>
-                                <p>Nulla nequeut molestie interdum nisl ut consequat. </p>
-                                <ul class="info">
-                                    <li><i class="flaticon-email"></i> charius@gmail.com</li>
-                                    <li><i class="flaticon-telephone"></i> + 8 (123) 123 - 456 - 789</li>
-                                    <li><i class="flaticon-location"></i> 19 Thordge Shiloh,Hawai 863</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div> <!-- end container -->
-            </div>
             <div class="wpo-lower-footer">
                 <div class="container">
                     <div class="row align-items-center">
-                        <div class="col col-lg-6 col-md-12 col-12">
-                            <ul>
-                                <li>&copy; 2023 <a href="#">charius</a>. All rights reserved.</li>
+                        <div class="col col-lg-12 col-md-12 col-12">
+                            <ul style="text-align: center;">
+                                <li>&copy; 2026 Anna Clerk Foundation. This is a fictional philanthropy concept.</li>
                             </ul>
-                        </div>
-                        <div class="col col-lg-6 col-md-12 col-12">
-                            <div class="link">
-                                <ul>
-                                    <li><a href="#">Privace & Policy</a></li>
-                                    <li><a href="#">Terms</a></li>
-                                    <li><a href="about.html">About us</a></li>
-                                    <li><a href="about.html">FAQ</a></li>
-                                    <li><a href="about.html">Volunteer</a></li>
-                                </ul>
-                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </footer>
-        <!-- end of wpo-site-footer-section -->
-
-
     </div>
-    <!-- end of page-wrapper -->
 
-    <!-- All JavaScript files
-    ================================================== -->
+    <!-- Back to top -->
+    <button class="ac-back-to-top" aria-label="Back to top">↑</button>
+
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/bootstrap.bundle.min.js"></script>
-    <!-- Plugins for this template -->
     <script src="assets/js/modernizr.custom.js"></script>
     <script src="assets/js/jquery.dlmenu.js"></script>
     <script src="assets/js/jquery-plugin-collection.js"></script>
-    <!-- Custom script for this template -->
     <script src="assets/js/script.js"></script>
+    <script>
+        // Back to top
+        (function() {
+            var btn = document.querySelector('.ac-back-to-top');
+            if (!btn) return;
+            window.addEventListener('scroll', function() {
+                btn.classList.toggle('visible', window.scrollY > 400);
+            });
+            btn.addEventListener('click', function() {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        })();
+    </script>
 </body>
 
 

@@ -22,7 +22,7 @@
     <link href="assets/css/jquery.fancybox.css" rel="stylesheet">
     <link href="assets/css/odometer-theme-default.css" rel="stylesheet">
     <link href="assets/sass/style.css" rel="stylesheet">
-    <link href="assets/css/ac-overrides.css?v=3" rel="stylesheet">
+    <link href="assets/css/ac-overrides.css?v=8" rel="stylesheet">
     <style>
         /* Page-specific styles */
         .ac-funding-hero {
@@ -127,6 +127,7 @@
     </style>
 </head>
 <body>
+    <a class="skip-link" href="#main">Skip to content</a>
     <div class="page-wrapper">
         <!-- preloader -->
         <div class="preloader">
@@ -140,14 +141,16 @@
         </div>
 
         <!-- Header -->
+                <!-- Start header -->
+                <!-- Start header -->
         <header id="header">
-            <div class="wpo-site-header wpo-site-header-s5">
+            <div class="wpo-site-header wpo-site-header-s1">
                 <nav class="navigation navbar navbar-expand-lg navbar-light">
                     <div class="container-fluid">
                         <div class="row align-items-center">
                             <div class="col-lg-3 col-md-4 col-3 d-lg-none dl-block">
                                 <div class="mobail-menu">
-                                    <button type="button" class="navbar-toggler open-btn">
+                                    <button type="button" class="navbar-toggler open-btn" aria-expanded="false" aria-controls="navbar" aria-label="Open menu">
                                         <span class="sr-only">Toggle navigation</span>
                                         <span class="icon-bar first-angle"></span>
                                         <span class="icon-bar middle-angle"></span>
@@ -155,35 +158,33 @@
                                     </button>
                                 </div>
                             </div>
-                            <div class="col-lg-3 col-md-4 col-6">
+                            <div class="col-lg-2 col-md-4 col-6">
                                 <div class="navbar-header">
                                     <a class="navbar-brand" href="index.html" aria-label="Anna Clerk Foundation — Home">
-                                        <img src="assets/images/logo.png" style="height:55px;width:auto;object-fit:contain;" alt="Anna Clerk Foundation logo">
+                                        <img src="assets/images/logo.png" style="height:85px;width:auto;object-fit:contain;" alt="Anna Clerk Foundation logo">
                                     </a>
                                 </div>
                             </div>
-                            <div class="col-lg-6 col-md-1 col-1">
+                            <div class="col-lg-7 col-md-1 col-1">
                                 <div id="navbar" class="collapse navbar-collapse navigation-holder">
-                                    <button class="menu-close"><i class="ti-close"></i></button>
+                                    <button class="menu-close" aria-label="Close menu"><i class="ti-close"></i></button>
                                     <ul class="nav navbar-nav mb-2 mb-lg-0">
                                         <li><a href="index.html">Home</a></li>
+                                        <li><a href="our-work.html">Our Work</a></li>
+                                        <li><a href="event.html">Stories</a></li>
+                                        <li class="has-dropdown">
+                                            <a href="our-funding.html" class="nav-dropdown-toggle">Funding</a>
+                                            <ul class="ac-dropdown">
+                                                <li><a href="our-funding.html">Funding Approach</a></li>
+                                                <li><a href="supporting-our-work.html">Supporting Our Work</a></li>
+                                            </ul>
+                                        </li>
                                         <li class="has-dropdown">
                                             <a href="about.html" class="nav-dropdown-toggle">About Us</a>
                                             <ul class="ac-dropdown">
                                                 <li><a href="about.html">About the Foundation</a></li>
-                                            <li><a href="faq.html">Foundation FAQ</a></li>
-                                                <li class="dropdown-divider"></li>
-                                                <li class="dropdown-label">Explore</li>
-                                                <li><a href="our-work.html">Our Work</a></li>
                                                 <li><a href="how-we-work.html">How We Work</a></li>
-                                                <li><a href="event.html">Event</a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="has-dropdown">
-                                            <a href="our-funding.html" class="active nav-dropdown-toggle">Funding Approach</a>
-                                            <ul class="ac-dropdown">
-                                                <li><a href="our-funding.html">Our Funding</a></li>
-                                                <li><a href="supporting-our-work.html">Supporting Our Work</a></li>
+                                                <li><a href="faq.html">FAQ</a></li>
                                             </ul>
                                         </li>
                                     </ul>
@@ -201,43 +202,27 @@
                 </nav>
             </div>
         </header>
+        <!-- end of header -->
+        <!-- end of header -->
 
         <!-- Hero -->
-        <section class="ac-funding-hero">
+        <section id="main"  class="ac-funding-hero">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-8 col-md-10 col-12">
                         <span class="eyebrow">Funding Approach</span>
-                        <h1>Our Funding</h1>
-                        <p>How we make grants, what we look for in partners, and how our grantmaking decisions are made. We aim to be transparent about our process so that any organization considering a relationship with us can make an informed decision.</p>
+                        <h1>Funding Approach</h1>
+                        <p>How we would evaluate thoughtful support. We aim to be transparent about our thinking.</p>
+                        
+                        <div class="ac-callout" style="background: rgba(255,255,255,0.1); border-left-color: var(--ac-teal-light); margin-top: 24px; padding: 16px 20px;">
+                            <p style="color: var(--ac-ivory); font-weight: 600;">Notice: Anna Clerk Foundation is a fictional philanthropy concept and is not currently accepting donations or unsolicited grant applications.</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Stats bar -->
-        <div class="ac-funding-bar">
-            <div class="container">
-                <div class="stat-row">
-                    <div class="stat">
-                        <div class="num">4</div>
-                        <div class="label">Focus Areas</div>
-                    </div>
-                    <div class="stat">
-                        <div class="num">Multi-year</div>
-                        <div class="label">Typical commitment</div>
-                    </div>
-                    <div class="stat">
-                        <div class="num">Relationship-first</div>
-                        <div class="label">Our process</div>
-                    </div>
-                    <div class="stat">
-                        <div class="num">No cold apps</div>
-                        <div class="label">How we start</div>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <!-- Removed unverified stats bar -->
 
         <!-- What we fund -->
         <section class="ac-section">
@@ -274,94 +259,47 @@
             </div>
         </section>
 
-        <!-- Our process -->
+        <!-- Proposed Evaluation Questions -->
         <section class="ac-section-alt">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-7 col-md-10 col-12">
-                        <span class="ac-eyebrow">Our process</span>
-                        <h2>How decisions get made.</h2>
-                        <p>We do not accept unsolicited grant applications. All of our funding relationships begin with a conversation. Here is how a relationship typically develops.</p>
+                        <span class="ac-eyebrow">Proposed Evaluation</span>
+                        <h2>Questions we would ask.</h2>
+                        <p>Rather than a rigid operational application process, we propose evaluating support based on the following questions:</p>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-lg-8 col-12">
                         <div class="ac-process">
                             <div class="ac-step">
-                                <div class="ac-step-num">1</div>
+                                <div class="ac-step-num">?</div>
                                 <div>
-                                    <h4>We identify or are introduced to an organization.</h4>
-                                    <p>We discover potential partners through field work, peer networks, and trusted referrals. Occasionally, an organization working in our focus areas will reach out directly — those introductions are welcomed, though they do not guarantee funding consideration.</p>
+                                    <h4>Alignment</h4>
+                                    <p>Does the proposed work align with our defined focus areas (Learning, Climate, Health, Arts)?</p>
                                 </div>
                             </div>
                             <div class="ac-step">
-                                <div class="ac-step-num">2</div>
+                                <div class="ac-step-num">?</div>
                                 <div>
-                                    <h4>We have a conversation.</h4>
-                                    <p>Before anything else, we want to understand an organization's mission, approach, and what they are learning. We listen first. We ask questions. We may visit in person if the relationship has depth.</p>
+                                    <h4>Community Trust</h4>
+                                    <p>Is the organization trusted by the community it serves? Is community voice included in their planning?</p>
                                 </div>
                             </div>
                             <div class="ac-step">
-                                <div class="ac-step-num">3</div>
+                                <div class="ac-step-num">?</div>
                                 <div>
-                                    <h4>We assess alignment and capacity.</h4>
-                                    <p>We consider: Does this work align with our focus areas? Does this organization have the operational capacity to use support well? Is there a clear and honest theory of change? Are they learning from what they do?</p>
+                                    <h4>Capacity and Honesty</h4>
+                                    <p>Does the organization have the capacity to deliver, and are they honest about what they do not know or what hasn't worked?</p>
                                 </div>
                             </div>
                             <div class="ac-step">
-                                <div class="ac-step-num">4</div>
+                                <div class="ac-step-num">?</div>
                                 <div>
-                                    <h4>We make a commitment — usually multi-year.</h4>
-                                    <p>Our grants are typically structured as multi-year commitments. We prefer this because meaningful progress takes time and because we want partners to plan with stability. Grants include an expectation of regular, honest dialogue about progress.</p>
+                                    <h4>Learning Potential</h4>
+                                    <p>Are they committed to learning and sharing evidence from their work?</p>
                                 </div>
                             </div>
-                            <div class="ac-step">
-                                <div class="ac-step-num">5</div>
-                                <div>
-                                    <h4>We learn together and publish what we find.</h4>
-                                    <p>We share what we learn from partnerships — including what worked, what did not, and what surprised us. We do not publish partner information without consent.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Eligibility -->
-        <section class="ac-section">
-            <div class="container">
-                <div class="row g-5">
-                    <div class="col-lg-6 col-12">
-                        <span class="ac-eyebrow">What we look for</span>
-                        <h2>Partner criteria.</h2>
-                        <p>We look for organizations that meet these conditions:</p>
-                        <ul class="ac-check-list">
-                            <li>Registered nonprofit, social enterprise, or equivalent legal structure</li>
-                            <li>Operating in Vietnam or with direct programming in Vietnam</li>
-                            <li>Working within one of our four focus areas</li>
-                            <li>Demonstrated track record of work in community (any scale)</li>
-                            <li>Clear, honest accounting of program costs and outcomes</li>
-                            <li>Willingness to share learning openly — including failures</li>
-                            <li>Local community trust — not just local presence</li>
-                        </ul>
-                    </div>
-                    <div class="col-lg-6 col-12">
-                        <span class="ac-eyebrow">What we do not fund</span>
-                        <h2>Outside our scope.</h2>
-                        <p>We are not the right funder for every good organization. We do not fund:</p>
-                        <ul class="ac-no-list">
-                            <li>Individual scholarships or personal grants</li>
-                            <li>Organizations based outside Vietnam (unless programming is directly in Vietnam)</li>
-                            <li>Political campaigns, advocacy for specific political parties, or lobbying</li>
-                            <li>Religious organizations for religious activities (we may fund non-sectarian programs)</li>
-                            <li>Capital construction projects as a primary use of funds</li>
-                            <li>Emergency relief or disaster response</li>
-                            <li>Organizations that have not yet operated for at least one full year</li>
-                        </ul>
-
-                        <div class="ac-callout">
-                            <p>"We are a small foundation with limited capacity. We are selective not because we doubt the value of work outside our scope — but because focusing well means saying no to many good things."</p>
                         </div>
                     </div>
                 </div>
@@ -370,13 +308,13 @@
 
         <!-- CTA -->
         <section class="wpo-cta-section">
-            <div class="shape-1"><img src="assets/images/cta/shape-1.png" alt=""></div>
+            <div class="shape-1"><img loading="lazy" src="assets/images/cta/shape-1.png" alt=""></div>
             <div class="bg-overlay">
                 <div class="container">
                     <div class="row justify-content-center">
                         <div class="col-lg-8">
                             <div class="cta-wrap">
-                                <div class="icon"><img src="assets/images/cta/top-icon.png" alt=""></div>
+                                <div class="icon"><img loading="lazy" src="assets/images/cta/top-icon.png" alt=""></div>
                                 <span>Want to support this work?</span>
                                 <h2>Learn how individuals and organizations can partner with or contribute to our mission.</h2>
                                 <a href="supporting-our-work.html" class="theme-btn-cta">Supporting our work</a>
@@ -385,75 +323,66 @@
                     </div>
                 </div>
             </div>
-            <div class="shape-2"><img src="assets/images/cta/shape-2.png" alt=""></div>
+            <div class="shape-2"><img loading="lazy" src="assets/images/cta/shape-2.png" alt=""></div>
+        </section>
+
+        <!-- Footer -->
+                        <!-- Stories CTA (replaces fake newsletter) -->
+        <section class="ac-stories-cta">
+            <div class="container">
+                <h3>Explore stories and learning notes</h3>
+                <p>Read about the people and organizations leading important work across Vietnam.</p>
+                <a href="event.html">Browse all stories</a>
+            </div>
         </section>
 
         <!-- Footer -->
         <footer class="wpo-site-footer">
-            <div class="wpo-top-footer">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-6 col-md-6 col-sm-6 col-12">
-                            <div class="widget">
-                                <div class="logo">
-                                    <a class="navbar-brand" href="index.html" aria-label="Anna Clerk Foundation — Home">
-                                        <img src="assets/images/logo.png" style="height:55px;width:auto;object-fit:contain;" alt="Anna Clerk Foundation logo">
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 col-md-6 col-sm-6 col-12">
-                            <div class="widget">
-                                <div class="social">
-                                    <ul>
-                                        <li><a href="#" aria-label="Facebook"><i class="fi flaticon-facebook-app-symbol"></i></a></li>
-                                        <li><a href="#" aria-label="Twitter"><i class="fi flaticon-twitter"></i></a></li>
-                                        <li><a href="#" aria-label="LinkedIn"><i class="fi flaticon-linkedin"></i></a></li>
-                                        <li><a href="#" aria-label="Instagram"><i class="fi flaticon-instagram"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
             <div class="wpo-upper-footer">
                 <div class="container">
                     <div class="row">
-                        <div class="col col-lg-3 col-md-6 col-sm-12 col-12">
+                        <div class="col col-lg-4 col-md-6 col-sm-12 col-12">
                             <div class="widget about-widget">
-                                <div class="widget-title"><h3>Anna Clerk Foundation</h3></div>
-                                <p>A private philanthropic foundation backing practical ideas, trusted local organizations, and communities working toward progress that lasts.</p>
+                                <div class="logo" style="margin-bottom: 20px;">
+                                    <a href="index.html" aria-label="Anna Clerk Foundation — Home">
+                                        <img src="assets/images/logo.png" style="height:60px;width:auto;object-fit:contain;" alt="Anna Clerk Foundation logo">
+                                    </a>
+                                </div>
+                                <p>A philanthropic concept exploring practical ideas, trusted local organizations, and communities working toward progress that lasts.</p>
+                                <p class="ac-project-note">Anna Clerk Foundation is a fictional philanthropy concept. External stories are shared as credited learning references.</p>
                             </div>
                         </div>
-                        <div class="col col-lg-3 col-md-6 col-sm-12 col-12">
+                        <div class="col col-lg-2 col-md-6 col-sm-12 col-12">
                             <div class="widget link-widget">
                                 <div class="widget-title"><h3>Explore</h3></div>
                                 <ul>
                                     <li><a href="index.html">Home</a></li>
-                                    <li><a href="about.html">About Us</a></li>
                                     <li><a href="our-work.html">Our Work</a></li>
-                                    <li><a href="how-we-work.html">How We Work</a></li>
-                                    <li><a href="event.html">Event</a></li>
+                                    <li><a href="event.html">Stories</a></li>
+                                    <li><a href="our-funding.html">Funding</a></li>
+                                    <li><a href="about.html">About Us</a></li>
                                 </ul>
                             </div>
                         </div>
                         <div class="col col-lg-3 col-md-6 col-sm-12 col-12">
                             <div class="widget link-widget s2">
-                                <div class="widget-title"><h3>Funding</h3></div>
+                                <div class="widget-title"><h3>Focus Areas</h3></div>
                                 <ul>
-                                    <li><a href="our-funding.html">Our Funding</a></li>
-                                    <li><a href="supporting-our-work.html">Supporting Our Work</a></li>
                                     <li><a href="our-work.html#learning">Learning &amp; Opportunity</a></li>
                                     <li><a href="our-work.html#climate">Climate &amp; Resilience</a></li>
                                     <li><a href="our-work.html#health">Health &amp; Well-being</a></li>
+                                    <li><a href="our-work.html#arts">Arts &amp; Civic Life</a></li>
                                 </ul>
                             </div>
                         </div>
                         <div class="col col-lg-3 col-md-6 col-sm-12 col-12">
-                            <div class="widget newsletter-widget">
-                                <div class="widget-title"><h3>Contact</h3></div>
-                                <p>Contact details will be listed here once verified and approved for publication.</p>
+                            <div class="widget link-widget">
+                                <div class="widget-title"><h3>More</h3></div>
+                                <ul>
+                                    <li><a href="how-we-work.html">How We Work</a></li>
+                                    <li><a href="supporting-our-work.html">Supporting Our Work</a></li>
+                                    <li><a href="faq.html">FAQ</a></li>
+                                </ul>
                             </div>
                         </div>
                     </div>
@@ -462,17 +391,10 @@
             <div class="wpo-lower-footer">
                 <div class="container">
                     <div class="row align-items-center">
-                        <div class="col col-lg-8 col-md-12 col-12">
-                            <ul><li>&copy; 2026 Anna Clerk Foundation. All rights reserved.</li></ul>
-                        </div>
-                        <div class="col col-lg-4 col-md-12 col-12">
-                            <div class="link">
-                                <ul>
-                                    <li><a href="#">Privacy &amp; Policy</a></li>
-                                    <li><a href="#">Terms</a></li>
-                                    <li><a href="about.html">About</a></li>
-                                </ul>
-                            </div>
+                        <div class="col col-lg-12 col-md-12 col-12">
+                            <ul style="text-align: center;">
+                                <li>&copy; 2026 Anna Clerk Foundation. This is a fictional philanthropy concept.</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
@@ -480,12 +402,28 @@
         </footer>
     </div>
 
+    <!-- Back to top -->
+    <button class="ac-back-to-top" aria-label="Back to top">↑</button>
+
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/modernizr.custom.js"></script>
     <script src="assets/js/jquery.dlmenu.js"></script>
     <script src="assets/js/jquery-plugin-collection.js"></script>
     <script src="assets/js/script.js"></script>
+    <script>
+        // Back to top
+        (function() {
+            var btn = document.querySelector('.ac-back-to-top');
+            if (!btn) return;
+            window.addEventListener('scroll', function() {
+                btn.classList.toggle('visible', window.scrollY > 400);
+            });
+            btn.addEventListener('click', function() {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        })();
+    </script>
 </body>
 </html>
 

@@ -1076,21 +1076,20 @@
 
 })(window.jQuery);
 
-
-
-
-
-function rotate() {
-    var lastChild = $('.manroted div:last-child').clone();
-   /*  $('#test').html(lastChild) */
-    $('.manroted div').removeClass('firstSlide')
-    $('.manroted div:last-child').remove();
-    $('.manroted').prepend(lastChild)
-  }
-  
-  window.setInterval(function(){
-    rotate()
-  }, 4000);
-
-
-  
+/* Anna Clerk Foundation — Cookie preference banner
+   This site does not use analytics or tracking cookies.
+   The banner stores a display preference only. */
+document.addEventListener("DOMContentLoaded", function() {
+    if (!localStorage.getItem('ac_cookie_accepted')) {
+        var bannerHTML = '<div class="ac-cookie-banner" id="acCookieBanner">' +
+            '<p>This site uses essential cookies for basic functionality. No analytics or tracking cookies are used.</p>' +
+            '<button id="acCookieAcceptBtn">OK</button>' +
+            '</div>';
+        document.body.insertAdjacentHTML('beforeend', bannerHTML);
+        
+        document.getElementById('acCookieAcceptBtn').addEventListener('click', function() {
+            localStorage.setItem('ac_cookie_accepted', 'true');
+            document.getElementById('acCookieBanner').style.display = 'none';
+        });
+    }
+});

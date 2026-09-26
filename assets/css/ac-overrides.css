@@ -1,46 +1,58 @@
 /* ============================================================
-   Anna Clerk Foundation — Design Override System
-   Layer over existing Charius template without breaking it.
+   Anna Clerk Foundation — Design System v5
+   Based on AC brand identity + editorial principles.
    ============================================================ */
 
-:root {
-  /* Established Anna Clerk palette */
-  --ac-navy: #142b35;
-  --ac-deep-blue: #010038;
-  --ac-ivory: #f4f0e7;
-  --ac-white: #ffffff;
-  --ac-teal: #2d7d78;
-  --ac-teal-light: #78d0c7;
-  --ac-orange: #f99126;
-  --ac-ink: #17262d;
-  --ac-muted: #667277;
-  --ac-border: #d7d8d3;
+/* Google Fonts — editorial serif + clean sans */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Noto+Serif:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&display=swap');
 
-  /* Typography */
+:root {
+  /* ── Official Anna Clerk palette (from brand kit) ── */
+  --ac-navy: #102D3D;
+  --ac-deep-blue: #0A1F2E;
+  --ac-teal: #177C7B;
+  --ac-teal-light: #77D1C6;
+  --ac-ivory: #F4F0E8;
+  --ac-paper: #E7E0D5;
+  --ac-white: #FFFDF8;
+  --ac-orange: #f99126;
+  --ac-ink: #1A2E37;
+  --ac-muted: #5E7078;
+  --ac-border: #D2CFC7;
+
+  /* ── Typography (Gates Foundation editorial style) ── */
   --font-display: "Noto Serif", Georgia, "Times New Roman", serif;
-  --font-body: "Noto Sans", Inter, Arial, sans-serif;
+  --font-body: "Noto Sans", "Helvetica Neue", Arial, sans-serif;
 
   --text-xs: 0.75rem;
   --text-sm: 0.875rem;
   --text-base: 1rem;
-  --text-lg: 1.25rem;
-  --text-xl: clamp(1.5rem, 2vw, 2rem);
-  --text-2xl: clamp(2rem, 4vw, 3.5rem);
-  --text-hero: clamp(2.75rem, 7vw, 6.5rem);
+  --text-lg: 1.125rem;
+  --text-xl: clamp(1.5rem, 2.5vw, 2rem);
+  --text-2xl: clamp(2rem, 4vw, 3rem);
+  --text-3xl: clamp(2.5rem, 5vw, 4rem);
+  --text-hero: clamp(2.75rem, 7vw, 5.5rem);
 
-  --leading-tight: 1.05;
-  --leading-heading: 1.15;
-  --leading-body: 1.65;
+  --leading-tight: 1.08;
+  --leading-heading: 1.18;
+  --leading-body: 1.7;
 
-  --space-section: clamp(4rem, 8vw, 8rem);
-  --shadow-soft: 0 1rem 3rem rgba(1, 0, 56, 0.08);
-  --transition: 180ms ease;
+  /* ── Spacing (Gates Foundation: generous whitespace) ── */
+  --space-section: clamp(3rem, 6vw, 6rem);
+  --space-block: clamp(2rem, 4vw, 3.5rem);
+
+  /* ── Effects ── */
+  --shadow-soft: 0 1rem 3rem rgba(16, 45, 61, 0.07);
+  --shadow-card: 0 4px 20px rgba(16, 45, 61, 0.06);
+  --shadow-hover: 0 12px 40px rgba(16, 45, 61, 0.12);
+  --radius: 10px;
+  --transition: 220ms ease;
+  --transition-slow: 400ms ease;
 }
 
 /* ============================================================
    GLOBAL FIXES
    ============================================================ */
-/* Ensure header is always above page content (fixes dropdown overlap on inner pages) */
 #header {
   position: relative;
   z-index: 9999 !important;
@@ -53,26 +65,247 @@ body {
   color: var(--ac-ink);
   background: var(--ac-white);
   font-family: var(--font-body);
-  font-size: var(--text-base);
-  line-height: var(--leading-body);
+  font-size: 17px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-h1, h2, h3, .display {
+h1, h2, h3, h4, .display {
   color: var(--ac-navy);
   font-family: var(--font-display);
   line-height: var(--leading-heading);
 }
 
+p {
+  line-height: var(--leading-body);
+}
+
 :focus-visible {
-  outline: 3px solid var(--ac-orange);
+  outline: 3px solid var(--ac-teal-light);
   outline-offset: 3px;
 }
 
 /* ============================================================
+   BUTTONS — Theme button override
+   ============================================================ */
+.theme-btn,
+a.theme-btn {
+  background: var(--ac-teal) !important;
+  color: var(--ac-white) !important;
+  border: 2px solid var(--ac-teal) !important;
+  font-family: var(--font-body) !important;
+  font-weight: 600 !important;
+  font-size: 0.88rem !important;
+  letter-spacing: 0.02em !important;
+  padding: 12px 28px !important;
+  border-radius: 3px !important;
+  transition: all var(--transition) !important;
+  text-decoration: none !important;
+  z-index: 1;
+  position: relative;
+  overflow: hidden;
+}
+.theme-btn::before,
+.theme-btn::after,
+a.theme-btn::before,
+a.theme-btn::after {
+  display: none !important;
+  background: none !important;
+  content: none !important;
+}
+.theme-btn:hover,
+a.theme-btn:hover {
+  background: var(--ac-navy) !important;
+  border-color: var(--ac-navy) !important;
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-card);
+}
+
+/* CTA variant */
+.theme-btn-cta,
+a.theme-btn-cta {
+  background: var(--ac-orange) !important;
+  color: var(--ac-navy) !important;
+  border: 2px solid var(--ac-orange) !important;
+  font-family: var(--font-body) !important;
+  font-weight: 700 !important;
+  font-size: 0.88rem !important;
+  padding: 14px 32px !important;
+  border-radius: 3px !important;
+  transition: all var(--transition) !important;
+  text-decoration: none !important;
+  display: inline-block;
+  z-index: 1;
+  position: relative;
+  overflow: hidden;
+}
+.theme-btn-cta::before,
+.theme-btn-cta::after,
+a.theme-btn-cta::before,
+a.theme-btn-cta::after {
+  display: none !important;
+  background: none !important;
+  content: none !important;
+}
+.theme-btn-cta:hover,
+a.theme-btn-cta:hover {
+  background: transparent !important;
+  color: var(--ac-orange) !important;
+  transform: translateY(-1px);
+}
+
+/* Ghost button */
+.theme-btn-ghost,
+a.theme-btn-ghost {
+  background: transparent !important;
+  color: var(--ac-navy) !important;
+  border: 2px solid var(--ac-navy) !important;
+  font-family: var(--font-body) !important;
+  font-weight: 600 !important;
+  font-size: 0.88rem !important;
+  padding: 12px 28px !important;
+  border-radius: 3px !important;
+  transition: all var(--transition) !important;
+  text-decoration: none !important;
+}
+.theme-btn-ghost:hover,
+a.theme-btn-ghost:hover {
+  background: var(--ac-navy) !important;
+  color: var(--ac-white) !important;
+}
+
+/* ============================================================
+   ARROW LINK — Gates Foundation editorial style
+   ============================================================ */
+.ac-arrow-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--ac-navy);
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-decoration: none;
+  transition: all var(--transition);
+  border-bottom: 2px solid transparent;
+  padding-bottom: 2px;
+}
+.ac-arrow-link::after {
+  content: '→';
+  font-size: 1.1em;
+  transition: transform var(--transition);
+}
+.ac-arrow-link:hover {
+  color: var(--ac-teal);
+  border-bottom-color: var(--ac-teal);
+}
+.ac-arrow-link:hover::after {
+  transform: translateX(4px);
+}
+
+/* Arrow link on dark background */
+.ac-arrow-link--light {
+  color: var(--ac-ivory);
+}
+.ac-arrow-link--light:hover {
+  color: var(--ac-teal-light);
+  border-bottom-color: var(--ac-teal-light);
+}
+
+/* ============================================================
+   EYEBROW / Label — GF style uppercase marker
+   ============================================================ */
+.ac-eyebrow {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--ac-teal);
+  margin-bottom: 16px;
+}
+
+.ac-eyebrow--light {
+  color: var(--ac-teal-light);
+}
+
+.ac-eyebrow--bar {
+  border-left: 3px solid var(--ac-teal);
+  padding-left: 10px;
+}
+
+/* ============================================================
+   SECTION RHYTHM — alternating backgrounds (GF-inspired)
+   ============================================================ */
+.ac-section-ivory {
+  background: var(--ac-ivory);
+}
+.ac-section-navy {
+  background: var(--ac-navy);
+  color: var(--ac-ivory);
+}
+.ac-section-navy h2,
+.ac-section-navy h3 {
+  color: var(--ac-ivory);
+}
+.ac-section-navy p {
+  color: rgba(244, 240, 232, 0.82);
+}
+.ac-section-white {
+  background: var(--ac-white);
+}
+
+/* ============================================================
+   CARD — Generic lift-on-hover (GF editorial cards)
+   ============================================================ */
+.ac-card {
+  background: var(--ac-white);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-card);
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+.ac-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-hover);
+}
+.ac-card img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  display: block;
+  transition: transform var(--transition-slow);
+}
+.ac-card:hover img {
+  transform: scale(1.03);
+}
+.ac-card .ac-card-body {
+  padding: 24px;
+}
+.ac-card .ac-card-body h3 {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  line-height: 1.35;
+  color: var(--ac-navy);
+  margin-bottom: 8px;
+}
+.ac-card .ac-card-body h3 a {
+  color: inherit;
+  text-decoration: none;
+}
+.ac-card .ac-card-body h3 a:hover {
+  color: var(--ac-teal);
+}
+.ac-card .ac-card-body p {
+  font-size: 0.92rem;
+  color: var(--ac-muted);
+  line-height: 1.6;
+}
+
+/* ============================================================
    EVENT CARD FIX — .top-date badge overflow
-   The template's badge is fixed-width triangle designed for
-   "25 Jun" 2-char numbers. Our text labels overflow it.
-   Override: make badge auto-height, left-aligned, readable.
    ============================================================ */
 body .page-wrapper .event-wrap .col .event-card .top-date,
 body .page-wrapper .event-wrap .col:nth-child(n) .event-card .top-date {
@@ -109,13 +342,11 @@ body .page-wrapper .event-wrap .col:nth-child(n) .event-card .top-date span {
   display: inline !important;
 }
 
-/* Hide the SVG shape triangle — was causing the clipping */
 body .page-wrapper .event-wrap .col .event-card .top-date .shape,
 body .page-wrapper .event-wrap .col:nth-child(n) .event-card .top-date .shape {
   display: none !important;
 }
 
-/* Image must not overlap badge */
 body .page-wrapper .event-card .image {
   position: relative !important;
   overflow: hidden !important;
@@ -129,20 +360,17 @@ body .page-wrapper .event-card .image img {
   object-position: center !important;
 }
 
-/* Card text block — ensure no overflow */
 body .page-wrapper .event-card .text {
-  padding: 16px 20px 20px !important;
-  /* Add text shadow for legibility over images */
-  text-shadow: 0 2px 4px rgba(0,0,0,0.8);
+  padding: 20px 24px 24px !important;
+  background: var(--ac-white) !important;
 }
 
 body .page-wrapper .event-card .text h3 {
-  font-size: 1rem !important;
+  font-size: clamp(1.1rem, 2vw, 1.4rem) !important;
   line-height: 1.35 !important;
   margin-bottom: 10px !important;
   font-family: var(--font-display) !important;
-  color: #ffffff !important;
-  /* Prevent overflow */
+  color: var(--ac-navy) !important;
   overflow-wrap: break-word !important;
   word-break: break-word !important;
   hyphens: auto !important;
@@ -151,6 +379,9 @@ body .page-wrapper .event-card .text h3 {
 body .page-wrapper .event-card .text h3 a {
   color: inherit !important;
   text-decoration: none !important;
+}
+body .page-wrapper .event-card .text h3 a:hover {
+  color: var(--ac-teal) !important;
 }
 
 .event-card .event-info {
@@ -171,8 +402,6 @@ body .page-wrapper .event-card .text h3 a {
 /* ============================================================
    NAVIGATION — Dropdown menus
    ============================================================ */
-
-/* Main nav items */
 .navigation .nav.navbar-nav > li > a {
   font-size: 0.88rem;
   font-weight: 600;
@@ -191,7 +420,6 @@ body .page-wrapper .event-card .text h3 a {
   color: var(--ac-teal);
 }
 
-/* Dropdown caret */
 .navigation .nav.navbar-nav > li > a.nav-dropdown-toggle::after {
   content: "▾";
   font-size: 0.65rem;
@@ -200,7 +428,6 @@ body .page-wrapper .event-card .text h3 a {
   vertical-align: middle;
 }
 
-/* Dropdown container */
 .navigation .has-dropdown {
   position: relative;
 }
@@ -211,10 +438,10 @@ body .page-wrapper .event-card .text h3 a {
   top: calc(100% + 4px);
   left: 0;
   min-width: 220px;
-  background: #fff;
+  background: var(--ac-white);
   border: 1px solid var(--ac-border);
-  border-radius: 6px;
-  box-shadow: 0 8px 32px rgba(20,43,53,0.13);
+  border-radius: var(--radius);
+  box-shadow: 0 8px 32px rgba(16,45,61,0.13);
   padding: 8px 0;
   z-index: 9999;
   list-style: none;
@@ -226,7 +453,6 @@ body .page-wrapper .event-card .text h3 a {
   display: block;
 }
 
-/* Override any inline/float from template */
 .navigation .has-dropdown .ac-dropdown li {
   display: block !important;
   float: none !important;
@@ -271,7 +497,6 @@ body .page-wrapper .event-card .text h3 a {
   pointer-events: none !important;
 }
 
-/* Mobile: show dropdown inline */
 @media (max-width: 991px) {
   .has-dropdown .ac-dropdown {
     display: block;
@@ -289,17 +514,17 @@ body .page-wrapper .event-card .text h3 a {
 }
 
 /* ============================================================
-   Blog card type labels — color coordination
+   Blog card type labels
    ============================================================ */
 .blog-single-card .top-content span[style*="ac-teal"] {
   display: inline-block;
   padding: 3px 8px;
-  background: rgba(45,125,120,0.08);
+  background: rgba(23,124,123,0.08);
   border-radius: 3px;
 }
 
 /* ============================================================
-   Causes / Featured story image — ensure no crop issues
+   Causes / Featured story image
    ============================================================ */
 .wpo-causes-section .image img,
 .causes-top .image img {
@@ -312,7 +537,7 @@ body .page-wrapper .event-card .text h3 a {
 }
 
 /* ============================================================
-   Service item — prevent text overflow in focus area cards
+   Service item — focus area cards
    ============================================================ */
 body .page-wrapper .service-item .text h2 {
   font-size: 1rem !important;
@@ -328,10 +553,18 @@ body .page-wrapper .service-item .text p {
   overflow-wrap: break-word !important;
 }
 
+/* Service item hover effect */
+.service-item {
+  transition: transform var(--transition), box-shadow var(--transition) !important;
+}
+.service-item:hover {
+  transform: translateY(-4px) !important;
+  box-shadow: var(--shadow-hover) !important;
+}
+
 /* ============================================================
-   Stats section fix — Gates Foundation style card layout
+   Stats section — Gates Foundation style card layout
    ============================================================ */
-/* Remove old background and overlay */
 body .page-wrapper .wpo-fun-fact-section {
   background: transparent !important;
   padding: 80px 0 !important;
@@ -416,11 +649,11 @@ body .page-wrapper .wpo-fun-fact-section::before {
    FAQ Section Styles
    ============================================================ */
 .ac-faq-wrapper {
-  border-top: 1px solid #e0e0e0;
+  border-top: 1px solid var(--ac-border);
 }
 
 .ac-faq-item {
-  border-bottom: 1px solid #e0e0e0;
+  border-bottom: 1px solid var(--ac-border);
 }
 
 .ac-faq-question {
@@ -460,7 +693,6 @@ body .page-wrapper .wpo-fun-fact-section::before {
   transition: transform 0.3s ease;
 }
 
-/* Horizontal line */
 .ac-faq-icon::before {
   top: 7px;
   left: 0;
@@ -468,7 +700,6 @@ body .page-wrapper .wpo-fun-fact-section::before {
   height: 2px;
 }
 
-/* Vertical line */
 .ac-faq-icon::after {
   top: 0;
   left: 7px;
@@ -476,7 +707,6 @@ body .page-wrapper .wpo-fun-fact-section::before {
   height: 16px;
 }
 
-/* Rotate and hide vertical line when expanded */
 .ac-faq-question[aria-expanded="true"] .ac-faq-icon::after {
   transform: rotate(90deg) scaleY(0);
 }
@@ -498,3 +728,319 @@ body .page-wrapper .wpo-fun-fact-section::before {
   font-size: 1rem;
   line-height: 1.6;
 }
+
+/* ============================================================
+   STORIES CTA BANNER — replaces fake newsletter
+   ============================================================ */
+.ac-stories-cta {
+  background: var(--ac-navy);
+  padding: 48px 0;
+  text-align: center;
+}
+.ac-stories-cta h3 {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  color: var(--ac-ivory);
+  margin: 0 0 8px 0;
+}
+.ac-stories-cta p {
+  font-size: 0.95rem;
+  color: rgba(244,240,232,0.7);
+  margin: 0 0 24px 0;
+}
+.ac-stories-cta a {
+  display: inline-block;
+  background: var(--ac-teal);
+  color: var(--ac-white);
+  padding: 14px 32px;
+  border-radius: var(--radius);
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.88rem;
+  text-decoration: none;
+  transition: all var(--transition);
+}
+.ac-stories-cta a:hover {
+  background: var(--ac-teal-light);
+  color: var(--ac-navy);
+}
+
+/* ============================================================
+   BACK TO TOP BUTTON
+   ============================================================ */
+.ac-back-to-top {
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  width: 44px;
+  height: 44px;
+  background: var(--ac-navy);
+  color: var(--ac-ivory);
+  border: none;
+  border-radius: 50%;
+  font-size: 1.1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(12px);
+  transition: all var(--transition);
+  z-index: 9990;
+  box-shadow: 0 4px 16px rgba(16,45,61,0.2);
+}
+.ac-back-to-top.visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+.ac-back-to-top:hover {
+  background: var(--ac-teal);
+  transform: translateY(-2px);
+}
+
+/* ============================================================
+   COOKIE CONSENT BANNER
+   ============================================================ */
+.ac-cookie-banner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: var(--ac-navy);
+  color: var(--ac-ivory);
+  padding: 16px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  z-index: 99999;
+  font-size: 0.88rem;
+  box-shadow: 0 -4px 20px rgba(0,0,0,0.15);
+  flex-wrap: wrap;
+}
+.ac-cookie-banner.hidden {
+  display: none;
+}
+.ac-cookie-banner p {
+  margin: 0;
+  color: rgba(244,240,232,0.85);
+}
+.ac-cookie-banner a {
+  color: var(--ac-teal-light);
+  text-decoration: underline;
+}
+.ac-cookie-banner button {
+  padding: 8px 20px;
+  background: var(--ac-teal);
+  color: var(--ac-white);
+  border: none;
+  border-radius: 3px;
+  font-weight: 600;
+  font-size: 0.82rem;
+  cursor: pointer;
+  transition: background var(--transition);
+}
+.ac-cookie-banner button:hover {
+  background: var(--ac-teal-light);
+  color: var(--ac-navy);
+}
+
+/* ============================================================
+   DIVIDER — Teal rule (from brand kit)
+   ============================================================ */
+.ac-divider {
+  width: 80px;
+  height: 3px;
+  background: var(--ac-teal);
+  border: none;
+  margin: 24px 0;
+}
+
+/* ============================================================
+   SECTION TITLE OVERRIDE — Consistent styling
+   ============================================================ */
+.wpo-section-title span {
+  color: var(--ac-teal) !important;
+  font-family: var(--font-body) !important;
+  font-size: 0.75rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.12em !important;
+  text-transform: uppercase !important;
+}
+
+.wpo-section-title h2 {
+  font-family: var(--font-display) !important;
+  color: var(--ac-navy) !important;
+  line-height: var(--leading-heading) !important;
+}
+
+/* ============================================================
+   FOOTER OVERRIDE — Clean, unified footer across all pages
+   ============================================================ */
+.wpo-site-footer {
+  background: var(--ac-navy) !important;
+}
+
+.wpo-site-footer .wpo-top-footer {
+  border-bottom: 1px solid rgba(244,240,232,0.12) !important;
+}
+
+.wpo-site-footer .widget-title h3 {
+  color: var(--ac-ivory) !important;
+  font-family: var(--font-display) !important;
+}
+
+.wpo-site-footer .about-widget p,
+.wpo-site-footer .newsletter-widget p {
+  color: rgba(244,240,232,0.7) !important;
+}
+
+.wpo-site-footer .link-widget ul li a {
+  color: rgba(244,240,232,0.65) !important;
+  transition: color var(--transition) !important;
+}
+
+.wpo-site-footer .link-widget ul li a:hover {
+  color: var(--ac-teal-light) !important;
+}
+
+.wpo-site-footer .wpo-lower-footer {
+  border-top: 1px solid rgba(244,240,232,0.1) !important;
+}
+
+.wpo-site-footer .wpo-lower-footer ul li {
+  color: rgba(244,240,232,0.5) !important;
+}
+
+.wpo-site-footer .wpo-lower-footer .link ul li a {
+  color: rgba(244,240,232,0.5) !important;
+}
+
+.wpo-site-footer .wpo-lower-footer .link ul li a:hover {
+  color: var(--ac-teal-light) !important;
+}
+
+/* ============================================================
+   IMAGE ASPECT RATIO HELPERS
+   ============================================================ */
+.ac-img-16-10 {
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  width: 100%;
+  display: block;
+  border-radius: var(--radius);
+}
+
+.ac-img-3-2 {
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  width: 100%;
+  display: block;
+  border-radius: var(--radius);
+}
+
+.ac-img-1-1 {
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  width: 100%;
+  display: block;
+  border-radius: var(--radius);
+}
+
+/* ============================================================
+   SMOOTH SCROLL
+   ============================================================ */
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ============================================================
+   SELECTION COLOR
+   ============================================================ */
+::selection {
+  background: var(--ac-teal-light);
+  color: var(--ac-navy);
+}
+
+/* ============================================================
+   SKIP LINK
+   ============================================================ */
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 16px;
+  background: var(--ac-navy);
+  color: var(--ac-ivory);
+  padding: 12px 24px;
+  z-index: 100000;
+  font-family: var(--font-body);
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 0 0 var(--radius) var(--radius);
+}
+.skip-link:focus {
+  top: 0;
+}
+
+/* ============================================================
+   PROJECT NOTE (footer disclaimer)
+   ============================================================ */
+.ac-project-note {
+  font-size: 0.78rem;
+  color: rgba(244,240,232,0.45);
+  font-style: italic;
+  margin-top: 16px;
+  line-height: 1.5;
+}
+
+/* ============================================================
+   ARTICLE SHARED STYLES (for events/ detail pages)
+   ============================================================ */
+.ac-article { max-width: 720px; margin: 0 auto; padding: 0 20px; }
+.ac-article-breadcrumb { font-size: 0.82rem; color: var(--ac-muted); margin-bottom: 24px; }
+.ac-article-breadcrumb a { color: var(--ac-teal); text-decoration: none; }
+.ac-article-breadcrumb a:hover { text-decoration: underline; }
+.ac-article-label { display: inline-block; font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--ac-teal); background: rgba(23,124,123,0.08); padding: 4px 10px; border-radius: 3px; margin-bottom: 16px; }
+.ac-article h1 { font-family: var(--font-display); font-size: clamp(1.8rem, 4vw, 2.6rem); line-height: 1.2; color: var(--ac-navy); margin-bottom: 16px; }
+.ac-article-summary { font-size: 1.1rem; line-height: 1.6; color: var(--ac-muted); margin-bottom: 16px; }
+.ac-article-meta { display: flex; gap: 20px; flex-wrap: wrap; font-size: 0.82rem; color: var(--ac-muted); margin-bottom: 32px; padding-bottom: 20px; border-bottom: 1px solid var(--ac-border); }
+.ac-article-meta span { display: inline-flex; align-items: center; gap: 6px; }
+.ac-article-hero { width: 100%; aspect-ratio: 16/9; object-fit: cover; border-radius: var(--radius); margin-bottom: 8px; }
+.ac-article-hero-cap { font-size: 0.78rem; color: var(--ac-muted); text-align: center; margin-bottom: 32px; font-style: italic; }
+.ac-article-body { font-size: 17px; line-height: 1.75; color: var(--ac-ink); }
+.ac-article-body p { margin-bottom: 1.4em; max-width: 65ch; }
+.ac-article-body h2 { font-family: var(--font-display); font-size: 1.4rem; color: var(--ac-navy); margin: 2em 0 0.6em; }
+.ac-article-body h3 { font-family: var(--font-display); font-size: 1.15rem; color: var(--ac-navy); margin: 1.8em 0 0.6em; }
+.ac-article-body blockquote { border-left: 4px solid var(--ac-teal); padding: 16px 24px; margin: 28px 0; background: var(--ac-ivory); font-style: italic; color: var(--ac-ink); border-radius: 0 var(--radius) var(--radius) 0; }
+.ac-article-body blockquote p { margin: 0; }
+.ac-article-body figure { margin: 32px 0; }
+.ac-article-body figure img { width: 100%; border-radius: var(--radius); display: block; }
+.ac-article-body figcaption { font-size: 0.78rem; color: var(--ac-muted); text-align: center; margin-top: 8px; font-style: italic; }
+.ac-article-note { background: var(--ac-ivory); border-left: 4px solid var(--ac-teal); padding: 20px 24px; margin: 32px 0; border-radius: 0 var(--radius) var(--radius) 0; font-size: 0.9rem; color: var(--ac-muted); line-height: 1.6; }
+.ac-article-sources { margin-top: 40px; padding-top: 24px; border-top: 1px solid var(--ac-border); }
+.ac-article-sources h3 { font-family: var(--font-display); font-size: 1rem; margin-bottom: 12px; }
+.ac-article-sources ul { list-style: none; padding: 0; }
+.ac-article-sources ul li { margin-bottom: 8px; font-size: 0.85rem; }
+.ac-article-sources ul li a { color: var(--ac-teal); text-decoration: underline; text-underline-offset: 3px; }
+.ac-article-related { margin-top: 48px; padding-top: 32px; border-top: 1px solid var(--ac-border); }
+
+/* ============================================================
+   COMMITMENTS SECTION (replaces Foundation facts)
+   ============================================================ */
+.ac-commitments { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 32px; margin-top: 32px; }
+.ac-commitment-item { text-align: center; padding: 32px 20px; }
+.ac-commitment-item .ac-commitment-icon { font-size: 2rem; color: var(--ac-teal); margin-bottom: 16px; }
+.ac-commitment-item h3 { font-family: var(--font-display); font-size: 1.15rem; color: var(--ac-navy); margin-bottom: 8px; }
+.ac-commitment-item p { font-size: 0.9rem; color: var(--ac-muted); line-height: 1.6; }

@@ -22,7 +22,7 @@
     <link href="assets/css/jquery.fancybox.css" rel="stylesheet">
     <link href="assets/css/odometer-theme-default.css" rel="stylesheet">
     <link href="assets/sass/style.css" rel="stylesheet">
-    <link href="assets/css/ac-overrides.css?v=3" rel="stylesheet">
+    <link href="assets/css/ac-overrides.css?v=8" rel="stylesheet">
     <style>
         .ac-sow-hero {
             background: var(--ac-ivory);
@@ -105,6 +105,7 @@
     </style>
 </head>
 <body>
+    <a class="skip-link" href="#main">Skip to content</a>
     <div class="page-wrapper">
         <!-- preloader -->
         <div class="preloader">
@@ -118,14 +119,16 @@
         </div>
 
         <!-- Header -->
+                <!-- Start header -->
+                <!-- Start header -->
         <header id="header">
-            <div class="wpo-site-header wpo-site-header-s5">
+            <div class="wpo-site-header wpo-site-header-s1">
                 <nav class="navigation navbar navbar-expand-lg navbar-light">
                     <div class="container-fluid">
                         <div class="row align-items-center">
                             <div class="col-lg-3 col-md-4 col-3 d-lg-none dl-block">
                                 <div class="mobail-menu">
-                                    <button type="button" class="navbar-toggler open-btn">
+                                    <button type="button" class="navbar-toggler open-btn" aria-expanded="false" aria-controls="navbar" aria-label="Open menu">
                                         <span class="sr-only">Toggle navigation</span>
                                         <span class="icon-bar first-angle"></span>
                                         <span class="icon-bar middle-angle"></span>
@@ -133,35 +136,33 @@
                                     </button>
                                 </div>
                             </div>
-                            <div class="col-lg-3 col-md-4 col-6">
+                            <div class="col-lg-2 col-md-4 col-6">
                                 <div class="navbar-header">
                                     <a class="navbar-brand" href="index.html" aria-label="Anna Clerk Foundation — Home">
-                                        <img src="assets/images/logo.png" style="height:55px;width:auto;object-fit:contain;" alt="Anna Clerk Foundation logo">
+                                        <img src="assets/images/logo.png" style="height:85px;width:auto;object-fit:contain;" alt="Anna Clerk Foundation logo">
                                     </a>
                                 </div>
                             </div>
-                            <div class="col-lg-6 col-md-1 col-1">
+                            <div class="col-lg-7 col-md-1 col-1">
                                 <div id="navbar" class="collapse navbar-collapse navigation-holder">
-                                    <button class="menu-close"><i class="ti-close"></i></button>
+                                    <button class="menu-close" aria-label="Close menu"><i class="ti-close"></i></button>
                                     <ul class="nav navbar-nav mb-2 mb-lg-0">
                                         <li><a href="index.html">Home</a></li>
+                                        <li><a href="our-work.html">Our Work</a></li>
+                                        <li><a href="event.html">Stories</a></li>
+                                        <li class="has-dropdown">
+                                            <a href="our-funding.html" class="nav-dropdown-toggle">Funding</a>
+                                            <ul class="ac-dropdown">
+                                                <li><a href="our-funding.html">Funding Approach</a></li>
+                                                <li><a href="supporting-our-work.html">Supporting Our Work</a></li>
+                                            </ul>
+                                        </li>
                                         <li class="has-dropdown">
                                             <a href="about.html" class="nav-dropdown-toggle">About Us</a>
                                             <ul class="ac-dropdown">
                                                 <li><a href="about.html">About the Foundation</a></li>
-                                            <li><a href="faq.html">Foundation FAQ</a></li>
-                                                <li class="dropdown-divider"></li>
-                                                <li class="dropdown-label">Explore</li>
-                                                <li><a href="our-work.html">Our Work</a></li>
                                                 <li><a href="how-we-work.html">How We Work</a></li>
-                                                <li><a href="event.html">Event</a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="has-dropdown">
-                                            <a href="our-funding.html" class="active nav-dropdown-toggle">Funding Approach</a>
-                                            <ul class="ac-dropdown">
-                                                <li><a href="our-funding.html">Our Funding</a></li>
-                                                <li><a href="supporting-our-work.html">Supporting Our Work</a></li>
+                                                <li><a href="faq.html">FAQ</a></li>
                                             </ul>
                                         </li>
                                     </ul>
@@ -179,9 +180,11 @@
                 </nav>
             </div>
         </header>
+        <!-- end of header -->
+        <!-- end of header -->
 
         <!-- Hero -->
-        <section class="ac-sow-hero">
+        <section id="main"  class="ac-sow-hero">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-8 col-md-10 col-12">
@@ -215,8 +218,8 @@
                     <div class="ac-support-card">
                         <div class="icon">❤️</div>
                         <h4>Individual Supporters</h4>
-                        <p>We currently do not accept individual donations to the Foundation directly. However, many of the partner organizations we fund do accept public donations. If you are looking for a way to contribute, we encourage you to explore them directly through our Event section.</p>
-                        <a href="event.html" class="ac-card-link">Explore partner organizations</a>
+                        <p>If you are looking for a way to contribute to the causes discussed in our stories, we encourage you to explore the credited learning references and find out more about the organizations doing the work.</p>
+                        <a href="event.html" class="ac-card-link">Explore stories &amp; learning</a>
                     </div>
                 </div>
             </div>
@@ -249,100 +252,75 @@
             </div>
         </section>
 
-        <!-- Pull quote -->
-        <section class="ac-feature-quote">
+        <!-- Shared Principles -->
+        <section class="ac-feature-quote" style="text-align: center;">
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-lg-8 col-12 text-center">
-                        <blockquote>"The best thing we can do as funders is stay honest, stay engaged, and get out of the way of the people who actually know how to do the work."</blockquote>
-                        <cite>— Anna Clerk, Founder</cite>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Contact anchor -->
-        <section class="ac-section" id="contact">
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-lg-7 col-12">
-                        <span class="ac-eyebrow">Get in touch</span>
-                        <h2>Start a conversation.</h2>
-                        <p style="color: var(--ac-muted);">If you are a funder, researcher, or practitioner interested in connecting with us, we welcome your message. Please include a brief description of your work or the nature of your interest — we read everything, though we cannot promise a quick response.</p>
-
-                        <div class="ac-contact-bar">
-                            <h4>Contact information coming soon.</h4>
-                            <p>Our contact details are being finalized. Once confirmed, they will appear here. In the meantime, if you know someone connected to the Foundation, a warm introduction is the best way to reach us.</p>
-                            <a href="about.html" class="theme-btn">Learn more about us</a>
-                        </div>
+                        <h2 style="font-family: var(--font-display); color: var(--ac-ivory); margin-bottom: 24px;">The best thing we can do is stay honest, stay engaged, and learn from the people who actually know how to do the work.</h2>
+                        <a href="event.html" class="theme-btn" style="margin-top: 24px;">Read the stories</a>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Footer -->
-        <footer class="wpo-site-footer">
-            <div class="wpo-top-footer">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-6 col-md-6 col-sm-6 col-12">
-                            <div class="widget">
-                                <div class="logo">
-                                    <a class="navbar-brand" href="index.html" aria-label="Anna Clerk Foundation — Home">
-                                        <img src="assets/images/logo.png" style="height:55px;width:auto;object-fit:contain;" alt="Anna Clerk Foundation logo">
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 col-md-6 col-sm-6 col-12">
-                            <div class="widget">
-                                <div class="social">
-                                    <ul>
-                                        <li><a href="#" aria-label="Facebook"><i class="fi flaticon-facebook-app-symbol"></i></a></li>
-                                        <li><a href="#" aria-label="Twitter"><i class="fi flaticon-twitter"></i></a></li>
-                                        <li><a href="#" aria-label="LinkedIn"><i class="fi flaticon-linkedin"></i></a></li>
-                                        <li><a href="#" aria-label="Instagram"><i class="fi flaticon-instagram"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                        <!-- Stories CTA (replaces fake newsletter) -->
+        <section class="ac-stories-cta">
+            <div class="container">
+                <h3>Explore stories and learning notes</h3>
+                <p>Read about the people and organizations leading important work across Vietnam.</p>
+                <a href="event.html">Browse all stories</a>
             </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="wpo-site-footer">
             <div class="wpo-upper-footer">
                 <div class="container">
                     <div class="row">
-                        <div class="col col-lg-3 col-md-6 col-sm-12 col-12">
+                        <div class="col col-lg-4 col-md-6 col-sm-12 col-12">
                             <div class="widget about-widget">
-                                <div class="widget-title"><h3>Anna Clerk Foundation</h3></div>
-                                <p>A private philanthropic foundation backing practical ideas, trusted local organizations, and communities working toward progress that lasts.</p>
+                                <div class="logo" style="margin-bottom: 20px;">
+                                    <a href="index.html" aria-label="Anna Clerk Foundation — Home">
+                                        <img src="assets/images/logo.png" style="height:60px;width:auto;object-fit:contain;" alt="Anna Clerk Foundation logo">
+                                    </a>
+                                </div>
+                                <p>A philanthropic concept exploring practical ideas, trusted local organizations, and communities working toward progress that lasts.</p>
+                                <p class="ac-project-note">Anna Clerk Foundation is a fictional philanthropy concept. External stories are shared as credited learning references.</p>
                             </div>
                         </div>
-                        <div class="col col-lg-3 col-md-6 col-sm-12 col-12">
+                        <div class="col col-lg-2 col-md-6 col-sm-12 col-12">
                             <div class="widget link-widget">
                                 <div class="widget-title"><h3>Explore</h3></div>
                                 <ul>
                                     <li><a href="index.html">Home</a></li>
-                                    <li><a href="about.html">About Us</a></li>
                                     <li><a href="our-work.html">Our Work</a></li>
-                                    <li><a href="how-we-work.html">How We Work</a></li>
-                                    <li><a href="event.html">Event</a></li>
+                                    <li><a href="event.html">Stories</a></li>
+                                    <li><a href="our-funding.html">Funding</a></li>
+                                    <li><a href="about.html">About Us</a></li>
                                 </ul>
                             </div>
                         </div>
                         <div class="col col-lg-3 col-md-6 col-sm-12 col-12">
                             <div class="widget link-widget s2">
-                                <div class="widget-title"><h3>Funding</h3></div>
+                                <div class="widget-title"><h3>Focus Areas</h3></div>
                                 <ul>
-                                    <li><a href="our-funding.html">Our Funding</a></li>
-                                    <li><a href="supporting-our-work.html">Supporting Our Work</a></li>
+                                    <li><a href="our-work.html#learning">Learning &amp; Opportunity</a></li>
+                                    <li><a href="our-work.html#climate">Climate &amp; Resilience</a></li>
+                                    <li><a href="our-work.html#health">Health &amp; Well-being</a></li>
+                                    <li><a href="our-work.html#arts">Arts &amp; Civic Life</a></li>
                                 </ul>
                             </div>
                         </div>
                         <div class="col col-lg-3 col-md-6 col-sm-12 col-12">
-                            <div class="widget newsletter-widget">
-                                <div class="widget-title"><h3>Contact</h3></div>
-                                <p>Contact details will be listed here once verified and approved for publication.</p>
+                            <div class="widget link-widget">
+                                <div class="widget-title"><h3>More</h3></div>
+                                <ul>
+                                    <li><a href="how-we-work.html">How We Work</a></li>
+                                    <li><a href="supporting-our-work.html">Supporting Our Work</a></li>
+                                    <li><a href="faq.html">FAQ</a></li>
+                                </ul>
                             </div>
                         </div>
                     </div>
@@ -351,17 +329,10 @@
             <div class="wpo-lower-footer">
                 <div class="container">
                     <div class="row align-items-center">
-                        <div class="col col-lg-8 col-md-12 col-12">
-                            <ul><li>&copy; 2026 Anna Clerk Foundation. All rights reserved.</li></ul>
-                        </div>
-                        <div class="col col-lg-4 col-md-12 col-12">
-                            <div class="link">
-                                <ul>
-                                    <li><a href="#">Privacy &amp; Policy</a></li>
-                                    <li><a href="#">Terms</a></li>
-                                    <li><a href="about.html">About</a></li>
-                                </ul>
-                            </div>
+                        <div class="col col-lg-12 col-md-12 col-12">
+                            <ul style="text-align: center;">
+                                <li>&copy; 2026 Anna Clerk Foundation. This is a fictional philanthropy concept.</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
@@ -369,12 +340,28 @@
         </footer>
     </div>
 
+    <!-- Back to top -->
+    <button class="ac-back-to-top" aria-label="Back to top">↑</button>
+
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/modernizr.custom.js"></script>
     <script src="assets/js/jquery.dlmenu.js"></script>
     <script src="assets/js/jquery-plugin-collection.js"></script>
     <script src="assets/js/script.js"></script>
+    <script>
+        // Back to top
+        (function() {
+            var btn = document.querySelector('.ac-back-to-top');
+            if (!btn) return;
+            window.addEventListener('scroll', function() {
+                btn.classList.toggle('visible', window.scrollY > 400);
+            });
+            btn.addEventListener('click', function() {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        })();
+    </script>
 </body>
 </html>
 

@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="author" content="wpOceans">
     <link rel="shortcut icon" type="image/png" href="assets/images/favicon.png">
-    <title>Charius - Charity Nonprofit HTML5 Template</title>
+    <title>404 Not Found — Anna Clerk Foundation</title>
     <link href="assets/css/themify-icons.css" rel="stylesheet">
     <link href="assets/css/flaticon.css" rel="stylesheet">
     <link href="assets/css/font-awesome.min.css" rel="stylesheet">
@@ -23,10 +23,11 @@
     <link href="assets/css/jquery.fancybox.css" rel="stylesheet">
     <link href="assets/css/odometer-theme-default.css" rel="stylesheet">
     <link href="assets/sass/style.css" rel="stylesheet">
-    <link href="assets/css/ac-overrides.css?v=3" rel="stylesheet">
+    <link href="assets/css/ac-overrides.css?v=8" rel="stylesheet">
 </head>
 
 <body>
+    <a class="skip-link" href="#main">Skip to content</a>
 
     <!-- start page-wrapper -->
     <div class="page-wrapper">
@@ -43,8 +44,9 @@
             </div>
         </div>
         <!-- end preloader -->
-
         <!-- Start header -->
+                <!-- Start header -->
+                <!-- Start header -->
         <header id="header">
             <div class="wpo-site-header wpo-site-header-s1">
                 <nav class="navigation navbar navbar-expand-lg navbar-light">
@@ -52,7 +54,7 @@
                         <div class="row align-items-center">
                             <div class="col-lg-3 col-md-4 col-3 d-lg-none dl-block">
                                 <div class="mobail-menu">
-                                    <button type="button" class="navbar-toggler open-btn">
+                                    <button type="button" class="navbar-toggler open-btn" aria-expanded="false" aria-controls="navbar" aria-label="Open menu">
                                         <span class="sr-only">Toggle navigation</span>
                                         <span class="icon-bar first-angle"></span>
                                         <span class="icon-bar middle-angle"></span>
@@ -60,35 +62,33 @@
                                     </button>
                                 </div>
                             </div>
-                            <div class="col-lg-3 col-md-4 col-6">
+                            <div class="col-lg-2 col-md-4 col-6">
                                 <div class="navbar-header">
                                     <a class="navbar-brand" href="index.html" aria-label="Anna Clerk Foundation — Home">
-                                        <img src="assets/images/logo.png" style="height:55px;width:auto;object-fit:contain;" alt="Anna Clerk Foundation logo">
+                                        <img src="assets/images/logo.png" style="height:85px;width:auto;object-fit:contain;" alt="Anna Clerk Foundation logo">
                                     </a>
                                 </div>
                             </div>
-                            <div class="col-lg-6 col-md-1 col-1">
+                            <div class="col-lg-7 col-md-1 col-1">
                                 <div id="navbar" class="collapse navbar-collapse navigation-holder">
-                                    <button class="menu-close"><i class="ti-close"></i></button>
+                                    <button class="menu-close" aria-label="Close menu"><i class="ti-close"></i></button>
                                     <ul class="nav navbar-nav mb-2 mb-lg-0">
-                                        <li><a class="active" href="index.html">Home</a></li>
+                                        <li><a href="index.html">Home</a></li>
+                                        <li><a href="our-work.html">Our Work</a></li>
+                                        <li><a href="event.html">Stories</a></li>
+                                        <li class="has-dropdown">
+                                            <a href="our-funding.html" class="nav-dropdown-toggle">Funding</a>
+                                            <ul class="ac-dropdown">
+                                                <li><a href="our-funding.html">Funding Approach</a></li>
+                                                <li><a href="supporting-our-work.html">Supporting Our Work</a></li>
+                                            </ul>
+                                        </li>
                                         <li class="has-dropdown">
                                             <a href="about.html" class="nav-dropdown-toggle">About Us</a>
                                             <ul class="ac-dropdown">
                                                 <li><a href="about.html">About the Foundation</a></li>
-                                            <li><a href="faq.html">Foundation FAQ</a></li>
-                                                <li class="dropdown-divider"></li>
-                                                <li class="dropdown-label">Explore</li>
-                                                <li><a href="our-work.html">Our Work</a></li>
                                                 <li><a href="how-we-work.html">How We Work</a></li>
-                                                <li><a href="event.html">Event</a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="has-dropdown">
-                                            <a href="our-funding.html" class="nav-dropdown-toggle">Funding Approach</a>
-                                            <ul class="ac-dropdown">
-                                                <li><a href="our-funding.html">Our Funding</a></li>
-                                                <li><a href="supporting-our-work.html">Supporting Our Work</a></li>
+                                                <li><a href="faq.html">FAQ</a></li>
                                             </ul>
                                         </li>
                                     </ul>
@@ -97,9 +97,7 @@
                             <div class="col-lg-3 col-md-3 col-2">
                                 <div class="header-right">
                                     <div class="close-form">
-                                        <a class="theme-btn" href="our-work.html">
-                                            <span class="text">Explore our work</span>
-                                        </a>
+                                        <a class="theme-btn" href="our-work.html"><span class="text">Explore our work</span></a>
                                     </div>
                                 </div>
                             </div>
@@ -109,9 +107,11 @@
             </div>
         </header>
         <!-- end of header -->
+        <!-- end of header -->
+        <!-- end of header -->
 
         <!-- start wpo-page-title -->
-        <section class="wpo-page-title">
+        <section id="main"  class="wpo-page-title">
             <div class="container">
                 <div class="row">
                     <div class="col col-xs-12">
@@ -135,13 +135,14 @@
                     <div class="col col-xs-12">
                         <div class="content clearfix">
                             <div class="error">
-                                <img src="assets/images/error-404.png" alt>
+                                <img loading="lazy" src="assets/images/error-404.png" alt>
                             </div>
                             <div class="error-message">
-                                <h3>Oops! Page Not Found!</h3>
+                                <h1>Oops! Page Not Found!</h1>
                                 <p>We’re sorry but we can’t seem to find the page you requested. This might be because
                                     you have typed the web address incorrectly.</p>
-                                <a href="index.html" class="theme-btn">Back to home</a>
+                                <a href="/index.html" class="theme-btn">Back to Home</a>
+                                <a href="/our-work.html" class="theme-btn-ghost" style="margin-left: 10px;">Explore Our Work</a>
                             </div>
                         </div>
                     </div>
@@ -149,146 +150,103 @@
             </div> <!-- end container -->
         </section>
         <!-- end error-404-section -->
+                        <!-- Stories CTA (replaces fake newsletter) -->
+        <section class="ac-stories-cta">
+            <div class="container">
+                <h3>Explore stories and learning notes</h3>
+                <p>Read about the people and organizations leading important work across Vietnam.</p>
+                <a href="event.html">Browse all stories</a>
+            </div>
+        </section>
 
-        <!-- start of wpo-site-footer-section -->
+        <!-- Footer -->
         <footer class="wpo-site-footer">
-            <div class="wpo-top-footer">
+            <div class="wpo-upper-footer">
                 <div class="container">
                     <div class="row">
-                        <div class="col-lg-6 col-md-6 col-sm-6 col-12">
-                            <div class="widget">
-                                <div class="logo">
-                                    <a class="navbar-brand" href="index.html"><img src="https://scontent.fhph1-3.fna.fbcdn.net/v/t39.30808-6/774322659_2458904257950812_9130355363764638357_n.jpg?stp=dst-jpg_tt6&cstp=mx1254x1254&ctp=s1254x1254&_nc_cat=105&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeFvU2-Hq1trtXMCTaK5cXAb4_Fd9JzaaZTj8V30nNpplKHjb6eKYC2ePBlVHlgboL4EKNS067oZrFRqRhkbu_BU&_nc_ohc=hKt4xm0Jt58Q7kNvwHFsCAd&_nc_oc=Adp9-aW23cVjJlcz7ot_dfwJrvRyZz8ZeaRG2Ll_oK0jmN4OG75QzhiilWtstkvSfJuu_K0x54NOTsvUJtTh0sdS&_nc_zt=23&_nc_ht=scontent.fhph1-3.fna&_nc_gid=FXNjOL5glzcQxdp36uvnHw&_nc_ss=7b2a8&oh=00_AQJlAuinXCb16qU85fy_hrt-F4dlP4paBgG-rAzleKPKiQ&oe=6A9B30FB" style="height:55px;width:auto;object-fit:contain;border-radius:50%;"
-                                            alt=""></a>
+                        <div class="col col-lg-4 col-md-6 col-sm-12 col-12">
+                            <div class="widget about-widget">
+                                <div class="logo" style="margin-bottom: 20px;">
+                                    <a href="index.html" aria-label="Anna Clerk Foundation — Home">
+                                        <img src="assets/images/logo.png" style="height:60px;width:auto;object-fit:contain;" alt="Anna Clerk Foundation logo">
+                                    </a>
                                 </div>
+                                <p>A philanthropic concept exploring practical ideas, trusted local organizations, and communities working toward progress that lasts.</p>
+                                <p class="ac-project-note">Anna Clerk Foundation is a fictional philanthropy concept. External stories are shared as credited learning references.</p>
                             </div>
                         </div>
-                        <div class="col-lg-6 col-md-6 col-sm-6 col-12">
-                            <div class="widget">
-                                <div class="social">
-                                    <ul>
-                                        <li>
-                                            <a href="#">
-                                                <i class="fi flaticon-facebook-app-symbol"></i>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <i class="fi flaticon-twitter"></i>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <i class="fi flaticon-linkedin"></i>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <i class="fi flaticon-instagram"></i>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
+                        <div class="col col-lg-2 col-md-6 col-sm-12 col-12">
+                            <div class="widget link-widget">
+                                <div class="widget-title"><h3>Explore</h3></div>
+                                <ul>
+                                    <li><a href="index.html">Home</a></li>
+                                    <li><a href="our-work.html">Our Work</a></li>
+                                    <li><a href="event.html">Stories</a></li>
+                                    <li><a href="our-funding.html">Funding</a></li>
+                                    <li><a href="about.html">About Us</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col col-lg-3 col-md-6 col-sm-12 col-12">
+                            <div class="widget link-widget s2">
+                                <div class="widget-title"><h3>Focus Areas</h3></div>
+                                <ul>
+                                    <li><a href="our-work.html#learning">Learning &amp; Opportunity</a></li>
+                                    <li><a href="our-work.html#climate">Climate &amp; Resilience</a></li>
+                                    <li><a href="our-work.html#health">Health &amp; Well-being</a></li>
+                                    <li><a href="our-work.html#arts">Arts &amp; Civic Life</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col col-lg-3 col-md-6 col-sm-12 col-12">
+                            <div class="widget link-widget">
+                                <div class="widget-title"><h3>More</h3></div>
+                                <ul>
+                                    <li><a href="how-we-work.html">How We Work</a></li>
+                                    <li><a href="supporting-our-work.html">Supporting Our Work</a></li>
+                                    <li><a href="faq.html">FAQ</a></li>
+                                </ul>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="wpo-upper-footer">
-                <div class="container">
-                    <div class="row">
-                        <div class="col col-lg-3 col-md-6 col-12 col-md-6 col-sm-12 col-12">
-                            <div class="widget about-widget">
-                                <div class="widget-title">
-                                    <h3>About Charius</h3>
-                                </div>
-                                <p>Purus tellus arcu consequat neque nisl integer fames ac venenatis.
-                                    Neque ornare ut viverra purus suscipit morbi.
-                                    Lorem pretium purus sagittis congue rhoncus et mi lacus duis ut.</p>
-                            </div>
-                        </div>
-                        <div class="col col-lg-3 col-md-6 col-12 col-md-6 col-sm-12 col-12">
-                            <div class="widget link-widget">
-                                <div class="widget-title">
-                                    <h3>Quick Links</h3>
-                                </div>
-                                <ul>
-                                    <li><a href="index.html">Home</a></li>
-                                    <li><a href="about.html">About Us</a></li>
-                                    <li><a href="about.html">Mission & Vision</a></li>
-                                    <li><a href="about.html">Team</a></li>
-                                    <li><a href="about.html">Campaign</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col col-lg-3 col-md-6 col-12 col-md-6 col-sm-12 col-12">
-                            <div class="widget link-widget s2">
-                                <div class="widget-title">
-                                    <h3>Mission & Vision</h3>
-                                </div>
-                                <ul>
-                                    <li><a href="about.html">Economic Estublishment</a></li>
-                                    <li><a href="about.html">Jobs & Unemployment</a></li>
-                                    <li><a href="about.html">Business & wpo</a></li>
-                                    <li><a href="about.html">Roads & Transport</a></li>
-                                    <li><a href="about.html">Culture and Recreation</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col col-lg-3 col-md-6 col-12 col-md-6 col-sm-12 col-12">
-                            <div class="widget newsletter-widget">
-                                <div class="widget-title">
-                                    <h3>Contact Us</h3>
-                                </div>
-                                <p>Nulla nequeut molestie interdum nisl ut consequat. </p>
-                                <ul class="info">
-                                    <li><i class="flaticon-email"></i> charius@gmail.com</li>
-                                    <li><i class="flaticon-telephone"></i> + 8 (123) 123 - 456 - 789</li>
-                                    <li><i class="flaticon-location"></i> 19 Thordge Shiloh,Hawai 863</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div> <!-- end container -->
-            </div>
             <div class="wpo-lower-footer">
                 <div class="container">
                     <div class="row align-items-center">
-                        <div class="col col-lg-6 col-md-12 col-12">
-                            <ul>
-                                <li>&copy; 2023 <a href="#">charius</a>. All rights reserved.</li>
+                        <div class="col col-lg-12 col-md-12 col-12">
+                            <ul style="text-align: center;">
+                                <li>&copy; 2026 Anna Clerk Foundation. This is a fictional philanthropy concept.</li>
                             </ul>
-                        </div>
-                        <div class="col col-lg-6 col-md-12 col-12">
-                            <div class="link">
-                                <ul>
-                                    <li><a href="#">Privace & Policy</a></li>
-                                    <li><a href="#">Terms</a></li>
-                                    <li><a href="about.html">About us</a></li>
-                                    <li><a href="about.html">FAQ</a></li>
-                                    <li><a href="about.html">Volunteer</a></li>
-                                </ul>
-                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </footer>
-        <!-- end of wpo-site-footer-section -->
-
     </div>
-    <!-- end of page-wrapper -->
 
-    <!-- All JavaScript files
-    ================================================== -->
+    <!-- Back to top -->
+    <button class="ac-back-to-top" aria-label="Back to top">↑</button>
+
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/bootstrap.bundle.min.js"></script>
-    <!-- Plugins for this template -->
     <script src="assets/js/modernizr.custom.js"></script>
     <script src="assets/js/jquery.dlmenu.js"></script>
     <script src="assets/js/jquery-plugin-collection.js"></script>
-    <!-- Custom script for this template -->
     <script src="assets/js/script.js"></script>
+    <script>
+        // Back to top
+        (function() {
+            var btn = document.querySelector('.ac-back-to-top');
+            if (!btn) return;
+            window.addEventListener('scroll', function() {
+                btn.classList.toggle('visible', window.scrollY > 400);
+            });
+            btn.addEventListener('click', function() {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        })();
+    </script>
 </body>
 
 

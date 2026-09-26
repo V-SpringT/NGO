@@ -1,15 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 
-
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="author" content="Anna Clerk Foundation">
     <link rel="shortcut icon" type="image/png" href="assets/images/favicon.png">
-    <meta name="description" content="About the Anna Clerk Foundation — our belief, our role, and our approach to supporting trusted partners and communities.">
+    <meta name="description" content="About the Anna Clerk Foundation — our belief, our role, and our partnership-led approach to backing progress that lasts.">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="About Us — Anna Clerk Foundation">
+    <meta property="og:description" content="A private philanthropic foundation backing practical ideas, committed partners, and communities building a more hopeful future.">
+
     <title>About Us — Anna Clerk Foundation</title>
+
     <link href="assets/css/themify-icons.css" rel="stylesheet">
     <link href="assets/css/flaticon.css" rel="stylesheet">
     <link href="assets/css/font-awesome.min.css" rel="stylesheet">
@@ -24,10 +29,198 @@
     <link href="assets/css/jquery.fancybox.css" rel="stylesheet">
     <link href="assets/css/odometer-theme-default.css" rel="stylesheet">
     <link href="assets/sass/style.css" rel="stylesheet">
-    <link href="assets/css/ac-overrides.css?v=3" rel="stylesheet">
+    <link href="assets/css/ac-overrides.css?v=8" rel="stylesheet">
+
+    <style>
+        /* About page specific styles */
+        .ac-about-hero {
+            padding: 100px 0 70px;
+            background: var(--ac-navy);
+            color: var(--ac-ivory);
+        }
+        .ac-about-hero .ac-eyebrow { color: var(--ac-teal-light); }
+        .ac-about-hero h1 {
+            font-family: var(--font-display);
+            font-size: clamp(2.2rem, 5vw, 3.8rem);
+            color: var(--ac-ivory);
+            line-height: 1.1;
+            margin-bottom: 24px;
+        }
+        .ac-about-hero p {
+            font-size: 1.15rem;
+            line-height: 1.75;
+            color: rgba(244,240,232,0.82);
+            max-width: 600px;
+        }
+
+        /* Belief section */
+        .ac-belief-section {
+            padding: 80px 0;
+        }
+        .ac-belief-section .belief-quote {
+            font-family: var(--font-display);
+            font-size: clamp(1.6rem, 3vw, 2.4rem);
+            color: var(--ac-navy);
+            line-height: 1.25;
+            border-left: 4px solid var(--ac-teal);
+            padding-left: 32px;
+            margin-bottom: 32px;
+        }
+        .ac-belief-section .belief-body {
+            font-size: 1.05rem;
+            line-height: 1.8;
+            color: var(--ac-muted);
+        }
+
+        /* Values grid */
+        .ac-values-section {
+            padding: 80px 0;
+            background: var(--ac-ivory);
+        }
+        .ac-value-card {
+            padding: 32px;
+            background: var(--ac-white);
+            border-radius: var(--radius);
+            border-top: 3px solid var(--ac-teal);
+            height: 100%;
+            transition: transform var(--transition), box-shadow var(--transition);
+        }
+        .ac-value-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-hover);
+        }
+        .ac-value-card .value-num {
+            font-family: var(--font-display);
+            font-size: 2.5rem;
+            color: var(--ac-teal);
+            opacity: 0.3;
+            line-height: 1;
+            margin-bottom: 16px;
+        }
+        .ac-value-card h3 {
+            font-family: var(--font-display);
+            font-size: 1.2rem;
+            color: var(--ac-navy);
+            margin-bottom: 12px;
+        }
+        .ac-value-card p {
+            font-size: 0.92rem;
+            color: var(--ac-muted);
+            line-height: 1.65;
+        }
+
+        /* Role section */
+        .ac-role-section {
+            padding: 80px 0;
+        }
+        .ac-role-item {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 32px;
+            align-items: flex-start;
+        }
+        .ac-role-icon {
+            width: 48px;
+            height: 48px;
+            background: rgba(23,124,123,0.08);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            color: var(--ac-teal);
+            font-size: 1.1rem;
+        }
+        .ac-role-text h4 {
+            font-family: var(--font-display);
+            font-size: 1.05rem;
+            color: var(--ac-navy);
+            margin-bottom: 6px;
+        }
+        .ac-role-text p {
+            font-size: 0.92rem;
+            color: var(--ac-muted);
+            line-height: 1.65;
+        }
+
+        /* Learning section */
+        .ac-learning-section {
+            padding: 80px 0;
+            background: var(--ac-navy);
+            color: var(--ac-ivory);
+        }
+        .ac-learning-section h2 {
+            color: var(--ac-ivory);
+            font-family: var(--font-display);
+            font-size: clamp(1.5rem, 3vw, 2rem);
+            margin-bottom: 40px;
+        }
+        .ac-learning-card {
+            border-top: 2px solid var(--ac-teal);
+            padding-top: 24px;
+        }
+        .ac-learning-card h4 {
+            color: var(--ac-teal-light);
+            font-family: var(--font-body);
+            font-size: 0.82rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            margin-bottom: 10px;
+        }
+        .ac-learning-card p {
+            color: rgba(244,240,232,0.8);
+            font-size: 0.95rem;
+            line-height: 1.65;
+        }
+
+        /* Focus areas grid */
+        .ac-focus-grid {
+            padding: 80px 0;
+            background: var(--ac-ivory);
+        }
+        .ac-focus-card {
+            background: var(--ac-white);
+            border-radius: var(--radius);
+            overflow: hidden;
+            transition: transform var(--transition), box-shadow var(--transition);
+            height: 100%;
+        }
+        .ac-focus-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-hover);
+        }
+        .ac-focus-card .icon-wrap {
+            padding: 32px 28px 0;
+        }
+        .ac-focus-card .icon-wrap img {
+            height: 56px;
+        }
+        .ac-focus-card .card-text {
+            padding: 20px 28px 28px;
+        }
+        .ac-focus-card h3 {
+            font-family: var(--font-display);
+            font-size: 1.1rem;
+            color: var(--ac-navy);
+            margin-bottom: 10px;
+        }
+        .ac-focus-card h3 a {
+            color: inherit;
+            text-decoration: none;
+        }
+        .ac-focus-card h3 a:hover {
+            color: var(--ac-teal);
+        }
+        .ac-focus-card p {
+            font-size: 0.88rem;
+            color: var(--ac-muted);
+            line-height: 1.6;
+        }
+    </style>
 </head>
 
 <body>
+    <a class="skip-link" href="#main">Skip to content</a>
 
     <!-- start page-wrapper -->
     <div class="page-wrapper">
@@ -46,6 +239,7 @@
         <!-- end preloader -->
 
         <!-- Start header -->
+                <!-- Start header -->
         <header id="header">
             <div class="wpo-site-header wpo-site-header-s1">
                 <nav class="navigation navbar navbar-expand-lg navbar-light">
@@ -53,7 +247,7 @@
                         <div class="row align-items-center">
                             <div class="col-lg-3 col-md-4 col-3 d-lg-none dl-block">
                                 <div class="mobail-menu">
-                                    <button type="button" class="navbar-toggler open-btn">
+                                    <button type="button" class="navbar-toggler open-btn" aria-expanded="false" aria-controls="navbar" aria-label="Open menu">
                                         <span class="sr-only">Toggle navigation</span>
                                         <span class="icon-bar first-angle"></span>
                                         <span class="icon-bar middle-angle"></span>
@@ -61,35 +255,33 @@
                                     </button>
                                 </div>
                             </div>
-                            <div class="col-lg-3 col-md-4 col-6">
+                            <div class="col-lg-2 col-md-4 col-6">
                                 <div class="navbar-header">
                                     <a class="navbar-brand" href="index.html" aria-label="Anna Clerk Foundation — Home">
-                                        <img src="assets/images/logo.png" style="height:55px;width:auto;object-fit:contain;" alt="Anna Clerk Foundation logo">
+                                        <img src="assets/images/logo.png" style="height:85px;width:auto;object-fit:contain;" alt="Anna Clerk Foundation logo">
                                     </a>
                                 </div>
                             </div>
-                            <div class="col-lg-6 col-md-1 col-1">
+                            <div class="col-lg-7 col-md-1 col-1">
                                 <div id="navbar" class="collapse navbar-collapse navigation-holder">
-                                    <button class="menu-close"><i class="ti-close"></i></button>
+                                    <button class="menu-close" aria-label="Close menu"><i class="ti-close"></i></button>
                                     <ul class="nav navbar-nav mb-2 mb-lg-0">
-                                        <li><a class="active" href="index.html">Home</a></li>
+                                        <li><a href="index.html">Home</a></li>
+                                        <li><a href="our-work.html">Our Work</a></li>
+                                        <li><a href="event.html">Stories</a></li>
+                                        <li class="has-dropdown">
+                                            <a href="our-funding.html" class="nav-dropdown-toggle">Funding</a>
+                                            <ul class="ac-dropdown">
+                                                <li><a href="our-funding.html">Funding Approach</a></li>
+                                                <li><a href="supporting-our-work.html">Supporting Our Work</a></li>
+                                            </ul>
+                                        </li>
                                         <li class="has-dropdown">
                                             <a href="about.html" class="nav-dropdown-toggle">About Us</a>
                                             <ul class="ac-dropdown">
                                                 <li><a href="about.html">About the Foundation</a></li>
-                                            <li><a href="faq.html">Foundation FAQ</a></li>
-                                                <li class="dropdown-divider"></li>
-                                                <li class="dropdown-label">Explore</li>
-                                                <li><a href="our-work.html">Our Work</a></li>
                                                 <li><a href="how-we-work.html">How We Work</a></li>
-                                                <li><a href="event.html">Event</a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="has-dropdown">
-                                            <a href="our-funding.html" class="nav-dropdown-toggle">Funding Approach</a>
-                                            <ul class="ac-dropdown">
-                                                <li><a href="our-funding.html">Our Funding</a></li>
-                                                <li><a href="supporting-our-work.html">Supporting Our Work</a></li>
+                                                <li><a href="faq.html">FAQ</a></li>
                                             </ul>
                                         </li>
                                     </ul>
@@ -98,9 +290,7 @@
                             <div class="col-lg-3 col-md-3 col-2">
                                 <div class="header-right">
                                     <div class="close-form">
-                                        <a class="theme-btn" href="our-work.html">
-                                            <span class="text">Explore our work</span>
-                                        </a>
+                                        <a class="theme-btn" href="our-work.html"><span class="text">Explore our work</span></a>
                                     </div>
                                 </div>
                             </div>
@@ -110,554 +300,337 @@
             </div>
         </header>
         <!-- end of header -->
+        <!-- end of header -->
 
-        <!-- start wpo-page-title -->
-        <section class="wpo-page-title">
+        <!-- About Hero -->
+        <section id="main"  class="ac-about-hero">
             <div class="container">
                 <div class="row">
-                    <div class="col col-xs-12">
-                        <div class="wpo-breadcumb-wrap">
-                            <h2>About Us</h2>
-                            <ol class="wpo-breadcumb-wrap">
-                                <li><a href="index.html">Home</a></li>
-                                <li>About</li>
-                            </ol>
-                        </div>
+                    <div class="col-lg-8 col-md-10 col-12">
+                        <span class="ac-eyebrow">About the Foundation</span>
+                        <h1>Opportunity should not depend on where someone is born.</h1>
+                        <p>The Anna Clerk Foundation is a private philanthropic organization backing practical ideas, committed partners, and communities building a more hopeful future.</p>
                     </div>
-                </div> <!-- end row -->
-            </div> <!-- end container -->
+                </div>
+            </div>
         </section>
-        <!-- end page-title -->
 
-        <!-- start of wpo-about-section -->
-        <section class="wpo-about-section section-padding">
+        <!-- Belief Section -->
+        <section class="ac-belief-section">
             <div class="container">
-                <div class="wpo-about-wrap">
-                    <div class="row align-items-center">
-                        <div class="col-lg-6 col-md-12 col-12">
-                            <div class="wpo-about-img">
-                                <div class="wpo-about-left">
-                                    <img src="assets/images/about/img-2.jpg" alt="">
-                                </div>
-                                <div class="wpo-about-right">
-                                    <img src="assets/images/about/img-1.jpg" alt="">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 col-md-12 col-12">
-                            <div class="wpo-about-text">
-                                <div class="wpo-section-title">
-                                    <span>Welcome to Charius</span>
-                                    <h2>You’re the Hope of Others.</h2>
-                                </div>
-                                <p>Lorem ipsum dolor sit amet consectetur. Volutpat proin id turpis eu neque sit etiam
-                                    nec quisque. Cras quam dignissim blandit metus laoreet mi ut. Eget diam volutpat
-                                    ultrices massa morbi sed nibh. Sodales diam eu etiam eu quam nisl viverra. Eget
-                                    egestas orci felis nisl. Sit diam morbi amet viverra auctor nunc. Feugiat ac amet
-                                    aliquet euismod ut vel. Mi lectus nisl augue commodo vitae nisi blandit. Venenatis
-                                    netus suscipit tempus fringilla varius feugiat nulla proin.</p>
-
-                                <div class="about-info-wrap">
-                                    <div class="about-info-item">
-                                        <div class="about-info-icon">
-                                            <div class="icon">
-                                                <i class="fi flaticon-target"></i>
-                                            </div>
-                                        </div>
-                                        <div class="about-info-text">
-                                            <h4>Our Mission</h4>
-                                            <p>We believe charity is a lifetime investment.</p>
-                                        </div>
-                                    </div>
-                                    <div class="about-info-item">
-                                        <div class="about-info-icon">
-                                            <div class="icon">
-                                                <i class="fi flaticon-mountain"></i>
-                                            </div>
-                                        </div>
-                                        <div class="about-info-text">
-                                            <h4>Our Vision</h4>
-                                            <p>We believe charity is a lifetime investment.</p>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <a href="about.html" class="theme-btn">Discover More</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- end of wpo-about-section -->
-
-        <!-- start of wpo-causes-section -->
-        <section class="wpo-causes-section">
-            <div class="causes-top">
-                <div class="container-fluid">
-                    <div class="row g-0">
-                        <div class="col-lg-6 col-12">
-                            <div class="image">
-                                <img src="assets/images/causes/left-img.jpg" alt="">
-                            </div>
-                        </div>
-                        <div class="col-lg-6 col-12">
-                            <div class="campaign-card">
-                                <div class="text">
-                                    <h2><a href="donate.html">Promoting The Safety and Rights of Children</a></h2>
-                                    <p>Metus consequat vulputate ullamcorper sit blandit arcu pulvinar mauris.
-                                        Tortor duis cum adipiscing egestas nunc.
-                                        Feugiat lobortis commodo ut nulla velit. A auctor nisl ipsum gravida tristique
-                                        eget vulputate ut.
-                                        Non commodo sit purus parturient.</p>
-                                </div>
-                                <div class="progress-item">
-                                    <div class="progress">
-                                        <div class="bar wow fadeInLeft"
-                                            style="width: 90%; visibility: visible; animation-name: fadeInLeft;">
-                                        </div>
-                                    </div>
-                                    <span class="cssProgress-label">90%</span>
-                                    <div class="progres-label">
-                                        <div class="label-on">
-                                            <p>Raised:<span>$24,808.00</span></p>
-                                        </div>
-                                        <div class="label-two">
-                                            <p>Goal:<span>$26,000.00</span></p>
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="causes-wrap">
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col col-lg-4 col-md-6 col-12">
-                            <div class="causes-item">
-                                <div class="image">
-                                    <img src="assets/images/causes/1.jpg" alt="">
-                                </div>
-                                <div class="content">
-                                    <h2><a href="donate.html">The Thirsty are Waiting For Your Help.</a></h2>
-                                    <p>Leoardo et nisl mi at at blandit.
-                                        Mauris nulla nec iaculis ultrices egestas consequat vitae facilisi dui.</p>
-                                    <div class="progress-item">
-                                        <div class="progress">
-                                            <div class="bar wow fadeInLeft"
-                                                style="width: 90%; visibility: visible; animation-name: fadeInLeft;">
-                                            </div>
-                                        </div>
-                                        <span class="cssProgress-label">90%</span>
-                                        <div class="progres-label">
-                                            <div class="label-on">
-                                                <p>Raised:<span>$24,808.00</span></p>
-                                            </div>
-                                            <div class="label-two">
-                                                <p>Goal:<span>$26,000.00</span></p>
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col col-lg-4 col-md-6 col-12">
-                            <div class="causes-item">
-                                <div class="image">
-                                    <img src="assets/images/causes/2.jpg" alt="">
-                                </div>
-                                <div class="content">
-                                   <h2><a href="donate.html">Changing a lives one meal at a time.</a></h2>
-                                    <p>Leoardo et nisl mi at at blandit.
-                                        Mauris nulla nec iaculis ultrices egestas consequat vitae facilisi dui.</p>
-                                    <div class="progress-item">
-                                        <div class="progress">
-                                            <div class="bar wow fadeInLeft"
-                                                style="width: 90%; visibility: visible; animation-name: fadeInLeft;">
-                                            </div>
-                                        </div>
-                                        <span class="cssProgress-label">90%</span>
-                                        <div class="progres-label">
-                                            <div class="label-on">
-                                                <p>Raised:<span>$24,808.00</span></p>
-                                            </div>
-                                            <div class="label-two">
-                                                <p>Goal:<span>$26,000.00</span></p>
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col col-lg-4 col-md-6 col-12">
-                            <div class="causes-item">
-                                <div class="image">
-                                    <img src="assets/images/causes/3.jpg" alt="">
-                                </div>
-                                <div class="content">
-                                    <h2><a href="donate.html">Let’s be one community in this cause.</a></h2>
-                                    <p>Leoardo et nisl mi at at blandit.
-                                        Mauris nulla nec iaculis ultrices egestas consequat vitae facilisi dui.</p>
-                                    <div class="progress-item">
-                                        <div class="progress">
-                                            <div class="bar wow fadeInLeft"
-                                                style="width: 90%; visibility: visible; animation-name: fadeInLeft;">
-                                            </div>
-                                        </div>
-                                        <span class="cssProgress-label">90%</span>
-                                        <div class="progres-label">
-                                            <div class="label-on">
-                                                <p>Raised:<span>$24,808.00</span></p>
-                                            </div>
-                                            <div class="label-two">
-                                                <p>Goal:<span>$26,000.00</span></p>
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- end of wpo-causes-section -->
-
-        <!-- start of wpo-service-section -->
-        <section class="wpo-service-section section-padding">
-            <div class="container">
-                <div class="row justify-content-center">
+                <div class="row align-items-center g-5">
                     <div class="col-lg-6 col-md-12 col-12">
-                        <div class="wpo-section-title">
-                            <span>What We Do</span>
-                            <h2>Your Donation Means
-                                Another Smile.</h2>
-                        </div>
-                    </div>
-                </div>
-                <div class="service-wrap">
-                    <div class="row">
-                        <div class="col col-lg-3 col-md-6 col-sm-6 col-12">
-                            <div class="service-item">
-                                <div class="icon">
-                                    <img src="assets/images/service/1.svg" alt="">
-                                </div>
-                                <div class="text">
-                                    <h2><a href="about.html">Kids Education</a></h2>
-                                    <p>Accumsan phallus lorem tortor koielit eget. Placat tortor sede pharetra eget.</p>
-                                </div>
+                        <div class="wpo-about-img">
+                            <div class="wpo-about-left">
+                                <img loading="lazy" src="https://afamilycdn.com/150157425591193600/2022/8/28/huong-den-tre-em-vung-cao-trong-chuyen-di-thien-nguyen-toi-diem-truong-ta-mieu-cung-uniqlo-va-quy-hy-vong-1661588165333956118358-1661671350387-16616713505001092030626.jpg"
+                                    alt="Trẻ em vùng cao" style="width:100%;height:100%;object-fit:cover;">
                             </div>
-                        </div>
-                        <div class="col col-lg-3 col-md-6 col-sm-6 col-12">
-                            <div class="service-item">
-                                <div class="icon">
-                                    <img src="assets/images/service/2.svg" alt="">
-                                </div>
-                                <div class="text">
-                                    <h2><a href="about.html">Pure Water</a></h2>
-                                    <p>Accumsan phallus lorem tortor koielit eget. Placat tortor sede pharetra eget.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col col-lg-3 col-md-6 col-sm-6 col-12">
-                            <div class="service-item">
-                                <div class="icon">
-                                    <img src="assets/images/service/3.svg" alt="">
-                                </div>
-                                <div class="text">
-                                    <h2><a href="about.html">Healthy Food</a></h2>
-                                    <p>Accumsan phallus lorem tortor koielit eget. Placat tortor sede pharetra eget.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col col-lg-3 col-md-6 col-sm-6 col-12">
-                            <div class="service-item">
-                                <div class="icon">
-                                    <img src="assets/images/service/4.svg" alt="">
-                                </div>
-                                <div class="text">
-                                    <h2><a href="about.html">Medical Care</a></h2>
-                                    <p>Accumsan phallus lorem tortor koielit eget. Placat tortor sede pharetra eget.</p>
-                                </div>
+                            <div class="wpo-about-right">
+                                <img loading="lazy" src="https://thanhnien.mediacdn.vn/uploaded/thanhlongn/2021_08_01/hhen_GVEL.jpg?width=500"
+                                    alt="Community leaders and advocates engaging with local projects" style="width:100%;height:100%;object-fit:cover;">
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
-        </section>
-        <!-- end of wpo-service-section -->
-
-        <!-- start of wpo-cta-section -->
-        <section class="wpo-cta-section">
-            <div class="shape-1">
-                <img src="assets/images/cta/shape-1.png" alt="">
-            </div>
-            <div class="bg-overlay">
-                <div class="container">
-                    <div class="row justify-content-center">
-                        <div class="col-lg-8">
-                            <div class="cta-wrap">
-                                <div class="icon">
-                                    <img src="assets/images/cta/top-icon.png" alt="">
-                                </div>
-                                <span>Help us raise them up.</span>
-                                <h2>Your donation means a lot to them.
-                                    Donate what you can.</h2>
-                                <a href="donate.html" class="theme-btn">Start Donating Them</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="shape-2">
-                <img src="assets/images/cta/shape-2.png" alt="">
-            </div>
-        </section>
-        <!-- end of wpo-cta-section -->
-
-        <!-- start of wpo-event-section -->
-        <section class="wpo-event-section section-padding">
-            <div class="container">
-                <div class="row justify-content-center">
                     <div class="col-lg-6 col-md-12 col-12">
-                        <div class="wpo-section-title">
-                            <span>Let’s Help Them together!</span>
-                            <h2>Join Our Upcoming
-                                Events</h2>
+                        <span class="ac-eyebrow ac-eyebrow--bar">Our Belief</span>
+                        <p class="belief-quote">We believe the people closest to a challenge should help shape the solution.</p>
+                        <p class="belief-body">Our role is to listen, support trusted partners, invest with patience, and share what the work teaches us. Lasting progress begins when communities have the resources, trust, and room to lead.</p>
+                        <p class="belief-body">Confidence is not something a girl should have to prove before she is given an opportunity. It often grows because someone created room for her to participate, make choices, be heard and try again.</p>
+                        <hr class="ac-divider">
+                        <a href="how-we-work.html" class="ac-arrow-link">How we make decisions</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Values Section -->
+        <section class="ac-values-section">
+            <div class="container">
+                <div class="row justify-content-center" style="margin-bottom: 48px;">
+                    <div class="col-lg-7 col-md-10 col-12 text-center">
+                        <span class="ac-eyebrow">What Guides Us</span>
+                        <h2 style="font-family: var(--font-display); font-size: clamp(1.6rem, 3vw, 2.2rem); color: var(--ac-navy); margin-bottom: 16px;">Four commitments shape how we work.</h2>
+                        <p style="color: var(--ac-muted); font-size: 1.05rem;">They are not rules — they are the discipline we hold ourselves to.</p>
+                    </div>
+                </div>
+                <div class="row g-4">
+                    <div class="col-lg-3 col-md-6 col-12">
+                        <div class="ac-value-card">
+                            <div class="value-num">01</div>
+                            <h3>Listen locally</h3>
+                            <p>The people closest to a challenge understand its context, constraints, and possibilities better than anyone working from a distance.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-12">
+                        <div class="ac-value-card">
+                            <div class="value-num">02</div>
+                            <h3>Partner thoughtfully</h3>
+                            <p>We look for organizations already trusted by the communities they serve — with operational depth and honesty about what they do not know.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-12">
+                        <div class="ac-value-card">
+                            <div class="value-num">03</div>
+                            <h3>Follow evidence</h3>
+                            <p>Data, lived experience, and continuous learning. Measure carefully. Adapt when needed. Share what we find — including what did not work.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-12">
+                        <div class="ac-value-card">
+                            <div class="value-num">04</div>
+                            <h3>Invest for the long term</h3>
+                            <p>Stronger systems and community capacity take time. We try to make commitments that reflect that reality — multi-year, patient, and present.</p>
                         </div>
                     </div>
                 </div>
-                <div class="event-wrap">
-                    <div class="row">
-                        <div class="col col-lg-4 col-md-6 col-12">
-                            <div class="event-card">
-                                <div class="top-date">
-                                    <span>25</span>
-                                    jun
-                                    <div class="shape">
-                                        <svg width="19" height="14" viewBox="0 0 19 14" fill="none">
-                                            <path d="M18.9999 14L0.5 14L18.9999 -3.6902e-05L18.9999 14Z" />
-                                        </svg>
-                                    </div>
-                                </div>
-                                <div class="image">
-                                    <img src="assets/images/event/1.jpg" alt="">
-                                </div>
-                                <div class="text">
-                                    <h3><a href="event-single.html">School For African Poor
-                                            Children</a></h3>
-                                    <div class="event-info">
-                                        <span><i class="ti-time"></i>4:00pm-6:00pm</span>
-                                        <span><i class="ti-location-pin"></i>New York</span>
-                                    </div>
-                                </div>
+            </div>
+        </section>
+
+        <!-- Our Role Section -->
+        <section class="ac-role-section">
+            <div class="container">
+                <div class="row align-items-start g-5">
+                    <div class="col-lg-5 col-md-12 col-12">
+                        <span class="ac-eyebrow ac-eyebrow--bar">Our Intended Role</span>
+                        <h2 style="font-family: var(--font-display); font-size: clamp(1.6rem, 3vw, 2.2rem); color: var(--ac-navy); margin-bottom: 24px;">We do not intend to implement programs ourselves.</h2>
+                        <p style="color: var(--ac-muted); font-size: 1.05rem; line-height: 1.75;">Our proposed approach is to fund, connect, and learn alongside the organizations and communities doing the work. This model is guided by humility, evidence, and the recognition that we are not the experts — our partners are.</p>
+                    </div>
+                    <div class="col-lg-6 offset-lg-1 col-md-12 col-12">
+                        <div class="ac-role-item">
+                            <div class="ac-role-icon"><i class="fi flaticon-target"></i></div>
+                            <div class="ac-role-text">
+                                <h4>Fund with patience</h4>
+                                <p>Multi-year commitments that give partners the flexibility to adapt as conditions change, not one-off grants tied to rigid deliverables.</p>
                             </div>
                         </div>
-                        <div class="col col-lg-4 col-md-6 col-12">
-                            <div class="event-card">
-                                <div class="top-date">
-                                    <span>05</span>
-                                    Sep
-                                    <div class="shape">
-                                        <svg width="19" height="14" viewBox="0 0 19 14" fill="none">
-                                            <path d="M18.9999 14L0.5 14L18.9999 -3.6902e-05L18.9999 14Z" />
-                                        </svg>
-                                    </div>
-                                </div>
-                                <div class="image">
-                                    <img src="assets/images/event/2.jpg" alt="">
-                                </div>
-                                <div class="text">
-                                    <h3><a href="event-single.html">Solve the Water Problem
-                                            of World </a></h3>
-                                    <div class="event-info">
-                                        <span><i class="ti-time"></i>4:00pm-6:00pm</span>
-                                        <span><i class="ti-location-pin"></i>New York</span>
-                                    </div>
-                                </div>
+                        <div class="ac-role-item">
+                            <div class="ac-role-icon"><i class="fi flaticon-solidarity"></i></div>
+                            <div class="ac-role-text">
+                                <h4>Connect and convene</h4>
+                                <p>Bring together people and organizations working on related challenges — creating space for shared learning and coordination.</p>
                             </div>
                         </div>
-                        <div class="col col-lg-4 col-md-6 col-12">
-                            <div class="event-card">
-                                <div class="top-date">
-                                    <span>12</span>
-                                    Jan
-                                    <div class="shape">
-                                        <svg width="19" height="14" viewBox="0 0 19 14" fill="none">
-                                            <path d="M18.9999 14L0.5 14L18.9999 -3.6902e-05L18.9999 14Z" />
-                                        </svg>
-                                    </div>
-                                </div>
-                                <div class="image">
-                                    <img src="assets/images/event/3.jpg" alt="">
-                                </div>
-                                <div class="text">
-                                    <h3><a href="event-single.html">Your Old Clothes are
-                                            Their Happiness.</a></h3>
-                                    <div class="event-info">
-                                        <span><i class="ti-time"></i>4:00pm-6:00pm</span>
-                                        <span><i class="ti-location-pin"></i>New York</span>
-                                    </div>
-                                </div>
+                        <div class="ac-role-item">
+                            <div class="ac-role-icon"><i class="fi flaticon-volunteer"></i></div>
+                            <div class="ac-role-text">
+                                <h4>Advocate and amplify</h4>
+                                <p>Use our platform to highlight the work of partners and communities — ensuring their voices and evidence reach wider audiences.</p>
+                            </div>
+                        </div>
+                        <div class="ac-role-item">
+                            <div class="ac-role-icon"><i class="fi flaticon-mountain"></i></div>
+                            <div class="ac-role-text">
+                                <h4>Learn and share publicly</h4>
+                                <p>Publish what we learn — including what did not work — so that it might be useful to others in the field.</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        <!-- end of wpo-event-section -->
 
-        <!-- start of wpo-site-footer-section -->
+        <!-- Focus Areas -->
+        <section class="ac-focus-grid">
+            <div class="container">
+                <div class="row justify-content-center" style="margin-bottom: 48px;">
+                    <div class="col-lg-7 col-md-10 col-12 text-center">
+                        <span class="ac-eyebrow">Our Focus Areas</span>
+                        <h2 style="font-family: var(--font-display); font-size: clamp(1.5rem, 3vw, 2rem); color: var(--ac-navy);">Where we direct our attention and resources.</h2>
+                    </div>
+                </div>
+                <div class="row g-4">
+                    <div class="col-lg-3 col-md-6 col-12">
+                        <div class="ac-focus-card">
+                            <div class="icon-wrap">
+                                <img loading="lazy" src="assets/images/service/1.svg" alt="Learning and Opportunity icon">
+                            </div>
+                            <div class="card-text">
+                                <h3><a href="our-work.html#learning">Learning &amp; Opportunity</a></h3>
+                                <p>Books, spaces, educators, and the confidence to ask questions and share ideas.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-12">
+                        <div class="ac-focus-card">
+                            <div class="icon-wrap">
+                                <img loading="lazy" src="assets/images/service/2.svg" alt="Climate and Community icon">
+                            </div>
+                            <div class="card-text">
+                                <h3><a href="our-work.html#climate">Climate &amp; Community Resilience</a></h3>
+                                <p>Restoration, monitoring, clean water, and long-term stewardship.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-12">
+                        <div class="ac-focus-card">
+                            <div class="icon-wrap">
+                                <img loading="lazy" src="assets/images/service/3.svg" alt="Health and Wellbeing icon">
+                            </div>
+                            <div class="card-text">
+                                <h3><a href="our-work.html#health">Health &amp; Well-being</a></h3>
+                                <p>Listening to families, connecting local expertise and practical support.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-12">
+                        <div class="ac-focus-card">
+                            <div class="icon-wrap">
+                                <img loading="lazy" src="assets/images/service/4.svg" alt="Arts and Civic Life icon">
+                            </div>
+                            <div class="card-text">
+                                <h3><a href="our-work.html#arts">Arts &amp; Civic Life</a></h3>
+                                <p>Room for culture, identity, and community voice — exploratory.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- What We Are Learning -->
+        <section class="ac-learning-section">
+            <div class="container">
+                <h2>What we are learning along the way</h2>
+                <div class="row g-4">
+                    <div class="col-lg-3 col-md-6 col-12">
+                        <div class="ac-learning-card">
+                            <h4>Confidence &amp; opportunity</h4>
+                            <p>Confidence is not something a girl should have to prove. It grows when someone creates room for her to participate, make choices, be heard and try again.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-12">
+                        <div class="ac-learning-card">
+                            <h4>Community-owned learning</h4>
+                            <p>Access to books and a quiet place to read changes how children think about their own potential. Learning spaces work best when communities design and maintain them.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-12">
+                        <div class="ac-learning-card">
+                            <h4>Sustained reforestation</h4>
+                            <p>Reforestation that sticks requires long-term monitoring, adapted species, and years of engagement — not just planting days.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-12">
+                        <div class="ac-learning-card">
+                            <h4>Relationship-first care</h4>
+                            <p>Families navigating rare diseases rarely need a single intervention. A steady contact who listens, connects, and follows through is what helps most.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="ac-cross-cutting" style="margin-bottom:0; padding-bottom:96px;">
+            <div class="container">
+                <div class="row justify-content-center text-center">
+                    <div class="col-lg-8">
+                        <span class="ac-eyebrow ac-eyebrow--light" style="margin-bottom: 20px;">Our Approach</span>
+                        <h2 style="font-family: var(--font-display); font-size: var(--text-2xl); color: var(--ac-ivory); margin-bottom: 24px; line-height: 1.2;">Good intentions need a way of working.</h2>
+                        <p style="color: rgba(244,240,232,0.75); margin-bottom: 32px; max-width: 600px; margin-left: auto; margin-right: auto;">See how listening, partnership, evidence, and long-term commitment guide our proposed decisions.</p>
+                        <a href="how-we-work.html" class="theme-btn-cta">Explore how we work</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+                <!-- Stories CTA (replaces fake newsletter) -->
+        <section class="ac-stories-cta">
+            <div class="container">
+                <h3>Explore stories and learning notes</h3>
+                <p>Read about the people and organizations leading important work across Vietnam.</p>
+                <a href="event.html">Browse all stories</a>
+            </div>
+        </section>
+
+        <!-- Footer -->
         <footer class="wpo-site-footer">
-            <div class="wpo-top-footer">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-6 col-md-6 col-sm-6 col-12">
-                            <div class="widget">
-                                <div class="logo">
-                                    <a class="navbar-brand" href="index.html"><img src="https://scontent.fhph1-3.fna.fbcdn.net/v/t39.30808-6/774322659_2458904257950812_9130355363764638357_n.jpg?stp=dst-jpg_tt6&cstp=mx1254x1254&ctp=s1254x1254&_nc_cat=105&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeFvU2-Hq1trtXMCTaK5cXAb4_Fd9JzaaZTj8V30nNpplKHjb6eKYC2ePBlVHlgboL4EKNS067oZrFRqRhkbu_BU&_nc_ohc=hKt4xm0Jt58Q7kNvwHFsCAd&_nc_oc=Adp9-aW23cVjJlcz7ot_dfwJrvRyZz8ZeaRG2Ll_oK0jmN4OG75QzhiilWtstkvSfJuu_K0x54NOTsvUJtTh0sdS&_nc_zt=23&_nc_ht=scontent.fhph1-3.fna&_nc_gid=FXNjOL5glzcQxdp36uvnHw&_nc_ss=7b2a8&oh=00_AQJlAuinXCb16qU85fy_hrt-F4dlP4paBgG-rAzleKPKiQ&oe=6A9B30FB" style="height:55px;width:auto;object-fit:contain;border-radius:50%;"
-                                            alt=""></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 col-md-6 col-sm-6 col-12">
-                            <div class="widget">
-                                <div class="social">
-                                    <ul>
-                                        <li>
-                                            <a href="#">
-                                                <i class="fi flaticon-facebook-app-symbol"></i>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <i class="fi flaticon-twitter"></i>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <i class="fi flaticon-linkedin"></i>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <i class="fi flaticon-instagram"></i>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
             <div class="wpo-upper-footer">
                 <div class="container">
                     <div class="row">
-                        <div class="col col-lg-3 col-md-6 col-12 col-md-6 col-sm-12 col-12">
+                        <div class="col col-lg-4 col-md-6 col-sm-12 col-12">
                             <div class="widget about-widget">
-                                <div class="widget-title">
-                                    <h3>About Charius</h3>
+                                <div class="logo" style="margin-bottom: 20px;">
+                                    <a href="index.html" aria-label="Anna Clerk Foundation — Home">
+                                        <img src="assets/images/logo.png" style="height:60px;width:auto;object-fit:contain;" alt="Anna Clerk Foundation logo">
+                                    </a>
                                 </div>
-                                <p>Purus tellus arcu consequat neque nisl integer fames ac venenatis.
-                                    Neque ornare ut viverra purus suscipit morbi.
-                                    Lorem pretium purus sagittis congue rhoncus et mi lacus duis ut.</p>
+                                <p>A philanthropic concept exploring practical ideas, trusted local organizations, and communities working toward progress that lasts.</p>
+                                <p class="ac-project-note">Anna Clerk Foundation is a fictional philanthropy concept. External stories are shared as credited learning references.</p>
                             </div>
                         </div>
-                        <div class="col col-lg-3 col-md-6 col-12 col-md-6 col-sm-12 col-12">
+                        <div class="col col-lg-2 col-md-6 col-sm-12 col-12">
                             <div class="widget link-widget">
-                                <div class="widget-title">
-                                    <h3>Quick Links</h3>
-                                </div>
+                                <div class="widget-title"><h3>Explore</h3></div>
                                 <ul>
                                     <li><a href="index.html">Home</a></li>
+                                    <li><a href="our-work.html">Our Work</a></li>
+                                    <li><a href="event.html">Stories</a></li>
+                                    <li><a href="our-funding.html">Funding</a></li>
                                     <li><a href="about.html">About Us</a></li>
-                                    <li><a href="about.html">Mission & Vision</a></li>
-                                    <li><a href="about.html">Team</a></li>
-                                    <li><a href="about.html">Campaign</a></li>
                                 </ul>
                             </div>
                         </div>
-                        <div class="col col-lg-3 col-md-6 col-12 col-md-6 col-sm-12 col-12">
+                        <div class="col col-lg-3 col-md-6 col-sm-12 col-12">
                             <div class="widget link-widget s2">
-                                <div class="widget-title">
-                                    <h3>Mission & Vision</h3>
-                                </div>
+                                <div class="widget-title"><h3>Focus Areas</h3></div>
                                 <ul>
-                                    <li><a href="about.html">Economic Estublishment</a></li>
-                                    <li><a href="about.html">Jobs & Unemployment</a></li>
-                                    <li><a href="about.html">Business & wpo</a></li>
-                                    <li><a href="about.html">Roads & Transport</a></li>
-                                    <li><a href="about.html">Culture and Recreation</a></li>
+                                    <li><a href="our-work.html#learning">Learning &amp; Opportunity</a></li>
+                                    <li><a href="our-work.html#climate">Climate &amp; Resilience</a></li>
+                                    <li><a href="our-work.html#health">Health &amp; Well-being</a></li>
+                                    <li><a href="our-work.html#arts">Arts &amp; Civic Life</a></li>
                                 </ul>
                             </div>
                         </div>
-                        <div class="col col-lg-3 col-md-6 col-12 col-md-6 col-sm-12 col-12">
-                            <div class="widget newsletter-widget">
-                                <div class="widget-title">
-                                    <h3>Contact Us</h3>
-                                </div>
-                                <p>Nulla nequeut molestie interdum nisl ut consequat. </p>
-                                <ul class="info">
-                                    <li><i class="flaticon-email"></i> charius@gmail.com</li>
-                                    <li><i class="flaticon-telephone"></i> + 8 (123) 123 - 456 - 789</li>
-                                    <li><i class="flaticon-location"></i> 19 Thordge Shiloh,Hawai 863</li>
+                        <div class="col col-lg-3 col-md-6 col-sm-12 col-12">
+                            <div class="widget link-widget">
+                                <div class="widget-title"><h3>More</h3></div>
+                                <ul>
+                                    <li><a href="how-we-work.html">How We Work</a></li>
+                                    <li><a href="supporting-our-work.html">Supporting Our Work</a></li>
+                                    <li><a href="faq.html">FAQ</a></li>
                                 </ul>
                             </div>
                         </div>
                     </div>
-                </div> <!-- end container -->
+                </div>
             </div>
             <div class="wpo-lower-footer">
                 <div class="container">
                     <div class="row align-items-center">
-                        <div class="col col-lg-6 col-md-12 col-12">
-                            <ul>
-                                <li>&copy; 2023 <a href="#">charius</a>. All rights reserved.</li>
+                        <div class="col col-lg-12 col-md-12 col-12">
+                            <ul style="text-align: center;">
+                                <li>&copy; 2026 Anna Clerk Foundation. This is a fictional philanthropy concept.</li>
                             </ul>
-                        </div>
-                        <div class="col col-lg-6 col-md-12 col-12">
-                            <div class="link">
-                                <ul>
-                                    <li><a href="#">Privace & Policy</a></li>
-                                    <li><a href="#">Terms</a></li>
-                                    <li><a href="about.html">About us</a></li>
-                                    <li><a href="about.html">FAQ</a></li>
-                                    <li><a href="about.html">Volunteer</a></li>
-                                </ul>
-                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </footer>
-        <!-- end of wpo-site-footer-section -->
-
-
     </div>
-    <!-- end of page-wrapper -->
 
-    <!-- All JavaScript files
-    ================================================== -->
+    <!-- Back to top -->
+    <button class="ac-back-to-top" aria-label="Back to top">↑</button>
+
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/bootstrap.bundle.min.js"></script>
-    <!-- Plugins for this template -->
     <script src="assets/js/modernizr.custom.js"></script>
     <script src="assets/js/jquery.dlmenu.js"></script>
     <script src="assets/js/jquery-plugin-collection.js"></script>
-    <!-- Custom script for this template -->
     <script src="assets/js/script.js"></script>
+    <script>
+        // Back to top
+        (function() {
+            var btn = document.querySelector('.ac-back-to-top');
+            if (!btn) return;
+            window.addEventListener('scroll', function() {
+                btn.classList.toggle('visible', window.scrollY > 400);
+            });
+            btn.addEventListener('click', function() {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        })();
+    </script>
 </body>
 
-
 </html>
-
-
-
-
