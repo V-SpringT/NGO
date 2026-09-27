@@ -58,6 +58,28 @@
   z-index: 9999 !important;
 }
 
+/* Fix: theme CSS sets wpo-site-header-s1 to position:absolute,
+   which makes it float/overlap content on inner pages.
+   Force it to be a normal block so layout is consistent everywhere. */
+.wpo-site-header-s1,
+.wpo-site-header-s3,
+.wpo-site-header-s5 {
+  position: relative !important;
+  top: auto !important;
+  left: auto !important;
+  width: 100% !important;
+  background: #FBF8F2 !important;
+  box-shadow: 0 1px 0 rgba(0,0,0,0.06);
+}
+
+/* Header logo — override inline height (85px → 42px) */
+.navbar-brand img,
+.navbar-header .navbar-brand img {
+  height: 42px !important;
+  width: auto !important;
+}
+
+
 /* ============================================================
    Global base
    ============================================================ */
@@ -95,31 +117,40 @@ a.theme-btn {
   color: var(--ac-white) !important;
   border: 2px solid var(--ac-teal) !important;
   font-family: var(--font-body) !important;
-  font-weight: 600 !important;
-  font-size: 0.88rem !important;
-  letter-spacing: 0.02em !important;
-  padding: 12px 28px !important;
-  border-radius: 3px !important;
-  transition: all var(--transition) !important;
+  font-weight: 700 !important;
+  font-size: 0.92rem !important;
+  letter-spacing: 0.06em !important;
+  text-transform: uppercase !important;
+  padding: 16px 36px !important;
+  border-radius: 6px !important;
+  transition: all 250ms cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
   text-decoration: none !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 8px !important;
   z-index: 1;
   position: relative;
   overflow: hidden;
+  box-shadow: 0 4px 16px rgba(23, 124, 123, 0.3) !important;
 }
 .theme-btn::before,
-.theme-btn::after,
-a.theme-btn::before,
-a.theme-btn::after {
+a.theme-btn::before {
   display: none !important;
   background: none !important;
   content: none !important;
+}
+.theme-btn::after,
+a.theme-btn::after {
+  content: none !important;
+  display: none !important;
 }
 .theme-btn:hover,
 a.theme-btn:hover {
   background: var(--ac-navy) !important;
   border-color: var(--ac-navy) !important;
-  transform: translateY(-1px);
-  box-shadow: var(--shadow-card);
+  color: var(--ac-white) !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 10px 32px rgba(10, 31, 46, 0.3) !important;
 }
 
 /* CTA variant */
@@ -129,30 +160,40 @@ a.theme-btn-cta {
   color: var(--ac-navy) !important;
   border: 2px solid var(--ac-orange) !important;
   font-family: var(--font-body) !important;
-  font-weight: 700 !important;
-  font-size: 0.88rem !important;
-  padding: 14px 32px !important;
-  border-radius: 3px !important;
-  transition: all var(--transition) !important;
+  font-weight: 800 !important;
+  font-size: 0.95rem !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.06em !important;
+  padding: 18px 44px !important;
+  border-radius: 6px !important;
+  transition: all 250ms cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
   text-decoration: none !important;
-  display: inline-block;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 8px !important;
   z-index: 1;
   position: relative;
   overflow: hidden;
+  box-shadow: 0 6px 24px rgba(249, 145, 38, 0.4) !important;
 }
 .theme-btn-cta::before,
-.theme-btn-cta::after,
-a.theme-btn-cta::before,
-a.theme-btn-cta::after {
+a.theme-btn-cta::before {
   display: none !important;
   background: none !important;
   content: none !important;
 }
+.theme-btn-cta::after,
+a.theme-btn-cta::after {
+  content: none !important;
+  display: none !important;
+}
 .theme-btn-cta:hover,
 a.theme-btn-cta:hover {
-  background: transparent !important;
-  color: var(--ac-orange) !important;
-  transform: translateY(-1px);
+  background: var(--ac-navy) !important;
+  border-color: var(--ac-navy) !important;
+  color: var(--ac-white) !important;
+  transform: translateY(-2px) scale(1.02) !important;
+  box-shadow: 0 14px 40px rgba(10, 31, 46, 0.3) !important;
 }
 
 /* Ghost button */
@@ -162,18 +203,33 @@ a.theme-btn-ghost {
   color: var(--ac-navy) !important;
   border: 2px solid var(--ac-navy) !important;
   font-family: var(--font-body) !important;
-  font-weight: 600 !important;
-  font-size: 0.88rem !important;
-  padding: 12px 28px !important;
-  border-radius: 3px !important;
-  transition: all var(--transition) !important;
+  font-weight: 700 !important;
+  font-size: 0.92rem !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.06em !important;
+  padding: 16px 36px !important;
+  border-radius: 6px !important;
+  transition: all 250ms cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
   text-decoration: none !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+}
+.theme-btn-ghost::after,
+a.theme-btn-ghost::after {
+  content: none !important;
+  display: none !important;
 }
 .theme-btn-ghost:hover,
 a.theme-btn-ghost:hover {
   background: var(--ac-navy) !important;
   color: var(--ac-white) !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 10px 28px rgba(10, 31, 46, 0.2) !important;
 }
+
+
+
 
 /* ============================================================
    ARROW LINK — Gates Foundation editorial style
@@ -1044,3 +1100,50 @@ html {
 .ac-commitment-item .ac-commitment-icon { font-size: 2rem; color: var(--ac-teal); margin-bottom: 16px; }
 .ac-commitment-item h3 { font-family: var(--font-display); font-size: 1.15rem; color: var(--ac-navy); margin-bottom: 8px; }
 .ac-commitment-item p { font-size: 0.9rem; color: var(--ac-muted); line-height: 1.6; }
+
+/* FAQ Hover Interaction */
+.ac-faq-hover-item {
+    border: 1px solid var(--ac-border, #e5e7eb);
+    border-radius: 4px;
+    padding: 16px;
+    background: #fff;
+    margin-bottom: 0;
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+.ac-faq-hover-question {
+    font-family: var(--font-display, inherit);
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: var(--ac-navy, #111827);
+    cursor: default;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+}
+
+.ac-faq-hover-answer {
+    max-height: 0;
+    opacity: 0;
+    margin-top: 0;
+    padding-top: 0;
+    color: #4b5563; /* Readable dark gray text */
+    line-height: 1.65;
+    transition: all 0.4s ease;
+    border-top: 1px solid transparent;
+}
+
+.ac-faq-hover-answer p {
+    margin: 0;
+    color: #4b5563;
+}
+
+.ac-faq-hover-item:hover .ac-faq-hover-answer {
+    max-height: 300px;
+    opacity: 1;
+    margin-top: 12px;
+    padding-top: 12px;
+    border-top-color: rgba(0,0,0,0.05);
+}

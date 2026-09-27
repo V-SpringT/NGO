@@ -24,6 +24,79 @@
     <link href="assets/css/odometer-theme-default.css" rel="stylesheet">
     <link href="assets/sass/style.css" rel="stylesheet">
     <link href="assets/css/ac-overrides.css?v=8" rel="stylesheet">
+
+    <style>
+        .ac-horizontal-card {
+            display: flex;
+            align-items: center;
+            background: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+            margin-bottom: 40px;
+            transition: transform 0.3s ease;
+        }
+        .ac-horizontal-card:hover {
+            transform: translateY(-5px);
+        }
+        .ac-hc-img {
+            flex: 0 0 50%;
+            max-width: 50%;
+        }
+        .ac-hc-img img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            display: block;
+        }
+        .ac-hc-text {
+            flex: 0 0 50%;
+            max-width: 50%;
+            padding: 50px;
+        }
+        .ac-hc-text h3 {
+            font-size: 1.5rem;
+            line-height: 1.4;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+        .ac-hc-text h3 a {
+            color: #222;
+            text-decoration: none;
+        }
+        .ac-hc-text h3 a:hover {
+            color: #177c7b;
+        }
+        .ac-hc-text .event-info {
+            display: flex;
+            gap: 20px;
+            color: #777;
+            font-size: 0.95rem;
+        }
+        .ac-hc-text .event-info span i {
+            margin-right: 8px;
+            color: #177c7b;
+        }
+        /* Alternating layout (so le) */
+        .col:nth-child(even) .ac-horizontal-card {
+            flex-direction: row-reverse;
+        }
+        @media (max-width: 991px) {
+            .ac-horizontal-card, .col:nth-child(even) .ac-horizontal-card {
+                flex-direction: column;
+            }
+            .ac-hc-img, .ac-hc-text {
+                flex: 0 0 100%;
+                max-width: 100%;
+            }
+            .ac-hc-text {
+                padding: 30px;
+            }
+            .ac-hc-img img {
+                height: 300px;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -45,9 +118,7 @@
         </div>
         <!-- end preloader -->
 
-        <!-- Start header -->
-                <!-- Start header -->
-                <!-- Start header -->
+        <!-- Header -->
         <header id="header">
             <div class="wpo-site-header wpo-site-header-s1">
                 <nav class="navigation navbar navbar-expand-lg navbar-light">
@@ -55,7 +126,8 @@
                         <div class="row align-items-center">
                             <div class="col-lg-3 col-md-4 col-3 d-lg-none dl-block">
                                 <div class="mobail-menu">
-                                    <button type="button" class="navbar-toggler open-btn" aria-expanded="false" aria-controls="navbar" aria-label="Open menu">
+                                    <button type="button" class="navbar-toggler open-btn" aria-expanded="false"
+                                        aria-controls="navbar" aria-label="Open menu">
                                         <span class="sr-only">Toggle navigation</span>
                                         <span class="icon-bar first-angle"></span>
                                         <span class="icon-bar middle-angle"></span>
@@ -66,7 +138,9 @@
                             <div class="col-lg-2 col-md-4 col-6">
                                 <div class="navbar-header">
                                     <a class="navbar-brand" href="index.html" aria-label="Anna Clerk Foundation — Home">
-                                        <img src="assets/images/logo.png" style="height:85px;width:auto;object-fit:contain;" alt="Anna Clerk Foundation logo">
+                                        <img src="assets/images/logo.png"
+                                            style="height:85px;width:auto;object-fit:contain;"
+                                            alt="Anna Clerk Foundation logo">
                                     </a>
                                 </div>
                             </div>
@@ -98,7 +172,7 @@
                             <div class="col-lg-3 col-md-3 col-2">
                                 <div class="header-right">
                                     <div class="close-form">
-                                        <a class="theme-btn" href="our-work.html"><span class="text">Explore our work</span></a>
+                                        <a class="theme-btn" href="our-work.html">Our Work</a>
                                     </div>
                                 </div>
                             </div>
@@ -107,30 +181,7 @@
                 </nav>
             </div>
         </header>
-        <!-- end of header -->
-        <!-- end of header -->
-        <!-- end of header -->
-
-        <!-- start wpo-page-title -->
-        <section id="main"  class="wpo-page-title">
-            <div class="container">
-                <div class="row">
-                    <div class="col col-xs-12">
-                        <div class="wpo-breadcumb-wrap">
-                            <h2>Stories & Learning</h2>
-                            <ol class="wpo-breadcumb-wrap">
-                                <li><a href="index.html">Home</a></li>
-                                <li>Stories</li>
-                            </ol>
-                        </div>
-                    </div>
-                </div> <!-- end row -->
-            </div> <!-- end container -->
-        </section>
-        <!-- end page-title -->
-
-
-        <!-- start of wpo-event-section -->
+<!-- start of wpo-event-section -->
         <section class="wpo-event-section section-padding">
             <div class="container">
                 <div class="row justify-content-center">
@@ -145,13 +196,13 @@
                     <div class="row">
 
                         <!-- Event 1 -->
-                        <div class="col col-lg-6 col-md-6 col-12">
-                            <div class="event-card">
-                                <div class="image">
+                        <div class="col col-12">
+                            <div class="ac-horizontal-card">
+                                <div class="ac-hc-img">
                                     <img loading="lazy" src="https://vcdn1-giaitri.vnecdn.net/2024/06/18/hoahuhhennie-1718697759-9507-1718697763.jpg?w=1200&h=675&q=100&dpr=1&fit=crop&s=tT9-Nyi4mXBOeWUSCs_xRg"
-                                        alt="H'Hen Niê thiện nguyện" style="width:100%;height:280px;object-fit:cover;">
+                                        alt="H'Hen Niê thiện nguyện" >
                                 </div>
-                                <div class="text">
+                                <div class="ac-hc-text">
                                     <h3><a href="events/event-1-nha-thue-thien-nguyen.html">'I Live in a Rented Home to Give
                                             More to Charity'</a></h3>
                                     <div class="event-info">
@@ -163,13 +214,13 @@
                         </div>
 
                         <!-- Event 2 -->
-                        <div class="col col-lg-6 col-md-6 col-12">
-                            <div class="event-card">
-                                <div class="image">
+                        <div class="col col-12">
+                            <div class="ac-horizontal-card">
+                                <div class="ac-hc-img">
                                     <img loading="lazy" src="https://static-images.vnncdn.net/vps_images_publish/000001/000003/2025/7/17/hoa-hau-hhen-nie-va-hanh-trinh-xay-dung-15-thu-vien-cho-tre-em-vung-cao-113164.jpg?width=0&s=4z1x21Oa7ivtS1quxEZG1g"
-                                        alt="15 thư viện vùng cao" style="width:100%;height:280px;object-fit:cover;">
+                                        alt="15 thư viện vùng cao" >
                                 </div>
-                                <div class="text">
+                                <div class="ac-hc-text">
                                     <h3><a href="events/event-2-15-thu-vien-vung-cao.html">15 Libraries for Highland Children —
                                             A Journey of Knowledge</a></h3>
                                     <div class="event-info">
@@ -181,13 +232,13 @@
                         </div>
 
                         <!-- Event 3 -->
-                        <div class="col col-lg-6 col-md-6 col-12">
-                            <div class="event-card">
-                                <div class="image">
+                        <div class="col col-12">
+                            <div class="ac-horizontal-card">
+                                <div class="ac-hc-img">
                                     <img loading="lazy" src="https://media-cdn-v2.laodong.vn/storage/newsportal/2024/8/30/1387186/_19A2856.jpeg?w=800&h=420&crop=auto&scale=both"
-                                        alt="Bảo tồn thiên nhiên" style="width:100%;height:280px;object-fit:cover;">
+                                        alt="Bảo tồn thiên nhiên" >
                                 </div>
-                                <div class="text">
+                                <div class="ac-hc-text">
                                     <h3><a href="events/event-3-bao-ton-thien-nhien.html">Joining Nature Conservation &
                                             Anti-Poaching Missions</a></h3>
                                     <div class="event-info">
@@ -199,13 +250,13 @@
                         </div>
 
                         <!-- Event 4 -->
-                        <div class="col col-lg-6 col-md-6 col-12">
-                            <div class="event-card">
-                                <div class="image">
+                        <div class="col col-12">
+                            <div class="ac-horizontal-card">
+                                <div class="ac-hc-img">
                                     <img loading="lazy" src="https://brandledsustainability.com/wp-content/uploads/2023/01/45718238811173415564248824081908181038730215n-1730915984839717465276.webp"
-                                        alt="Trồng rừng phủ xanh" style="width:100%;height:280px;object-fit:cover;">
+                                        alt="Trồng rừng phủ xanh" >
                                 </div>
-                                <div class="text">
+                                <div class="ac-hc-text">
                                     <h3><a href="events/event-4-trong-rung-phu-xanh.html">Green Reforestation Project:
                                             Spreading Sustainable Values</a></h3>
                                     <div class="event-info">
@@ -217,14 +268,13 @@
                         </div>
 
                         <!-- Event 5 -->
-                        <div class="col col-lg-6 col-md-6 col-12">
-                            <div class="event-card">
-                                <div class="image">
-                                    <img loading="lazy" src="https://icdn.dantri.com.vn/thumb_w/640/2023/01/01/hhen-nie-da-giup-nhieu-tre-em-vung-cao-co-duoc-co-hoi-tiep-can-tri-thuc-docx-1672560705618.jpeg"
-                                        alt="Giúp trẻ vùng cao" style="width:100%;height:280px;object-fit:cover;"
-                                        onerror="this.src='assets/images/event/1.jpg'">
+                        <div class="col col-12">
+                            <div class="ac-horizontal-card">
+                                <div class="ac-hc-img">
+                                    <img loading="lazy" src="https://image.vietnamnews.vn/MediaUpload/Org/2026/05/27/05202627170744_tx5.jpg"
+                                        alt="Giúp trẻ vùng cao">
                                 </div>
-                                <div class="text">
+                                <div class="ac-hc-text">
                                     <h3><a href="events/event-5-giup-tre-vung-cao-tri-thuc.html">Empowering Highland Children
                                             to Conquer Knowledge</a></h3>
                                     <div class="event-info">
@@ -236,13 +286,13 @@
                         </div>
 
                         <!-- Event 6 -->
-                        <div class="col col-lg-6 col-md-6 col-12">
-                            <div class="event-card">
-                                <div class="image">
+                        <div class="col col-12">
+                            <div class="ac-horizontal-card">
+                                <div class="ac-hc-img">
                                     <img loading="lazy" src="https://cdn.petrotimes.vn/stores/news_dataimages/vuphong/122019/23/23/5435_Hoa_hau_HHen_Nie_Xay_dung_thu_vien_Room_To_Read_tai_Lam_Dong_9_resize.jpg"
-                                        alt="Gây quỹ 22000 USD" style="width:100%;height:280px;object-fit:cover;">
+                                        alt="Gây quỹ 22000 USD" >
                                 </div>
-                                <div class="text">
+                                <div class="ac-hc-text">
                                     <h3><a href="events/event-6-gay-quy-22000-usd.html">Raising Over $22,000 USD for Education
                                             Projects with Room to Read</a></h3>
                                     <div class="event-info">
@@ -254,13 +304,13 @@
                         </div>
 
                         <!-- Event 7 -->
-                        <div class="col col-lg-6 col-md-6 col-12">
-                            <div class="event-card">
-                                <div class="image">
+                        <div class="col col-12">
+                            <div class="ac-horizontal-card">
+                                <div class="ac-hc-img">
                                     <img loading="lazy" src="https://static-images.vnncdn.net/vps_images_publish/000001/000003/2025/7/17/hoa-hau-hhen-nie-va-hanh-trinh-xay-dung-15-thu-vien-cho-tre-em-vung-cao-113163.jpg?width=800"
-                                        alt="Giải chạy vì trẻ em" style="width:100%;height:280px;object-fit:cover;">
+                                        alt="Giải chạy vì trẻ em" >
                                 </div>
-                                <div class="text">
+                                <div class="ac-hc-text">
                                     <h3><a href="events/event-7-giai-chay-tre-em-benh-hiem.html">'Run for Rare Kids' —
                                             Supporting Children with Rare Diseases</a></h3>
                                     <div class="event-info">
@@ -272,14 +322,14 @@
                         </div>
 
                         <!-- Event 8 -->
-                        <div class="col col-lg-6 col-md-6 col-12">
-                            <div class="event-card">
-                                <div class="image">
+                        <div class="col col-12">
+                            <div class="ac-horizontal-card">
+                                <div class="ac-hc-img">
                                     <img loading="lazy" src="https://media-cdn-v2.laodong.vn/storage/newsportal/2024/8/30/1387186/Hoa-Hau-Hhen-Nie_Tro.jpg"
                                         alt="Cuộc đua kỳ thú từ thiện"
-                                        style="width:100%;height:280px;object-fit:cover;">
+                                        >
                                 </div>
-                                <div class="text">
+                                <div class="ac-hc-text">
                                     <h3><a href="events/event-8-cuoc-dua-ky-thu-tu-thien.html">All 'Amazing Race Vietnam' Prize
                                             Money Goes to Charity</a></h3>
                                     <div class="event-info">
@@ -302,78 +352,74 @@
             <div class="container">
                 <h3>Explore stories and learning notes</h3>
                 <p>Read about the people and organizations leading important work across Vietnam.</p>
-                <a href="event.html">Browse all stories</a>
+                <a href="event.html">All Stories</a>
             </div>
         </section>
 
         <!-- Footer -->
-        <footer class="wpo-site-footer">
-            <div class="wpo-upper-footer">
-                <div class="container">
-                    <div class="row">
-                        <div class="col col-lg-4 col-md-6 col-sm-12 col-12">
-                            <div class="widget about-widget">
-                                <div class="logo" style="margin-bottom: 20px;">
-                                    <a href="index.html" aria-label="Anna Clerk Foundation — Home">
-                                        <img src="assets/images/logo.png" style="height:60px;width:auto;object-fit:contain;" alt="Anna Clerk Foundation logo">
-                                    </a>
-                                </div>
-                                <p>A philanthropic concept exploring practical ideas, trusted local organizations, and communities working toward progress that lasts.</p>
-                                <p class="ac-project-note">Anna Clerk Foundation is a fictional philanthropy concept. External stories are shared as credited learning references.</p>
-                            </div>
-                        </div>
-                        <div class="col col-lg-2 col-md-6 col-sm-12 col-12">
-                            <div class="widget link-widget">
-                                <div class="widget-title"><h3>Explore</h3></div>
-                                <ul>
-                                    <li><a href="index.html">Home</a></li>
-                                    <li><a href="our-work.html">Our Work</a></li>
-                                    <li><a href="event.html">Stories</a></li>
-                                    <li><a href="our-funding.html">Funding</a></li>
-                                    <li><a href="about.html">About Us</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col col-lg-3 col-md-6 col-sm-12 col-12">
-                            <div class="widget link-widget s2">
-                                <div class="widget-title"><h3>Focus Areas</h3></div>
-                                <ul>
-                                    <li><a href="our-work.html#learning">Learning &amp; Opportunity</a></li>
-                                    <li><a href="our-work.html#climate">Climate &amp; Resilience</a></li>
-                                    <li><a href="our-work.html#health">Health &amp; Well-being</a></li>
-                                    <li><a href="our-work.html#arts">Arts &amp; Civic Life</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col col-lg-3 col-md-6 col-sm-12 col-12">
-                            <div class="widget link-widget">
-                                <div class="widget-title"><h3>More</h3></div>
-                                <ul>
-                                    <li><a href="how-we-work.html">How We Work</a></li>
-                                    <li><a href="supporting-our-work.html">Supporting Our Work</a></li>
-                                    <li><a href="faq.html">FAQ</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="wpo-lower-footer">
-                <div class="container">
-                    <div class="row align-items-center">
-                        <div class="col col-lg-12 col-md-12 col-12">
-                            <ul style="text-align: center;">
-                                <li>&copy; 2026 Anna Clerk Foundation. This is a fictional philanthropy concept.</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </footer>
-    </div>
+        <footer class="ac-site-footer" style="background: #202b35; color: #fff; padding: 60px 0 40px;">
+    <div class="container">
+        <div class="row">
+            <!-- Left: Logo -->
+            <div class="col-lg-5 col-md-12 mb-4 mb-lg-0">
+                <a href="index.html" aria-label="Anna Clerk Foundation — Home" style="display: inline-block; margin-bottom: 24px;">
+                    <img src="assets/images/logo.png" style="height:65px;width:auto;object-fit:contain; filter: brightness(0) invert(1);" alt="Anna Clerk Foundation logo">
+                </a>
 
-    <!-- Back to top -->
-    <button class="ac-back-to-top" aria-label="Back to top">↑</button>
+            </div>
+            
+            <!-- Right: Content -->
+            <div class="col-lg-7 col-md-12">
+                <div class="row mb-5">
+                    <div class="col-md-7 mb-4 mb-md-0">
+                        <p style="font-size: 1.05rem; line-height: 1.6; color: #fff; margin-bottom:0;">
+                            A philanthropic concept exploring practical ideas, trusted local organizations, and communities working toward progress that lasts.
+                        </p>
+                    </div>
+                    <div class="col-md-5 d-flex align-items-center justify-content-md-end">
+                        <div style="text-align: right;">
+                            <span style="display: block; margin-bottom: 8px; font-size: 0.9rem; color: #ccc;">Discover us more on</span>
+                            <div style="display: flex; gap: 12px; justify-content: flex-end;">
+                                <a href="mailto:annaclerk.charity@gmail.com" title="Email Us" style="color: #fff; font-size: 16px; border: 1px solid #fff; border-radius: 50%; width: 36px; height: 36px; display: inline-flex; align-items: center; justify-content: center; text-decoration: none; transition: background 0.3s;" onmouseover="this.style.background='#fff'; this.style.color='#202b35'" onmouseout="this.style.background='transparent'; this.style.color='#fff'">
+                                    <i class="fa fa-envelope"></i>
+                                </a>
+                                <a href="https://www.facebook.com/profile.php?id=61593337952934" title="Facebook" target="_blank" rel="noopener" style="color: #fff; font-size: 18px; border: 1px solid #fff; border-radius: 50%; width: 36px; height: 36px; display: inline-flex; align-items: center; justify-content: center; text-decoration: none; transition: background 0.3s;" onmouseover="this.style.background='#fff'; this.style.color='#202b35'" onmouseout="this.style.background='transparent'; this.style.color='#fff'">
+                                    <i class="fa fa-facebook"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mb-4">
+                    <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: 24px; font-weight: 700; font-size: 1.05rem;">
+                        <li><a href="about.html" style="color: #fff; text-decoration: underline; text-underline-offset: 4px;">About Us</a></li>
+                        <li><a href="our-work.html" style="color: #fff; text-decoration: underline; text-underline-offset: 4px;">Our Work</a></li>
+                        <li><a href="event.html" style="color: #fff; text-decoration: underline; text-underline-offset: 4px;">Stories</a></li>
+                        <li><a href="our-funding.html" style="color: #fff; text-decoration: underline; text-underline-offset: 4px;">Funding</a></li>
+                    </ul>
+                </div>
+                
+                <hr style="border-top: 1px solid rgba(255,255,255,0.2); margin: 30px 0;">
+                
+                <div class="mb-4">
+                    <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: 16px; font-size: 0.95rem;">
+                        <li><a href="how-we-work.html" style="color: #fff; text-decoration: underline; text-underline-offset: 3px;">How We Work</a></li>
+                        <li><span style="color: rgba(255,255,255,0.5);">-</span></li>
+                        <li><a href="supporting-our-work.html" style="color: #fff; text-decoration: underline; text-underline-offset: 3px;">Supporting Our Work</a></li>
+                        <li><span style="color: rgba(255,255,255,0.5);">-</span></li>
+                        <li><a href="faq.html" style="color: #fff; text-decoration: underline; text-underline-offset: 3px;">FAQ</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <p style="font-size: 0.9rem; color: #aaa; margin: 0;">&copy; 2026 Anna Clerk Foundation. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+    </div>
 
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/bootstrap.bundle.min.js"></script>
@@ -381,19 +427,6 @@
     <script src="assets/js/jquery.dlmenu.js"></script>
     <script src="assets/js/jquery-plugin-collection.js"></script>
     <script src="assets/js/script.js"></script>
-    <script>
-        // Back to top
-        (function() {
-            var btn = document.querySelector('.ac-back-to-top');
-            if (!btn) return;
-            window.addEventListener('scroll', function() {
-                btn.classList.toggle('visible', window.scrollY > 400);
-            });
-            btn.addEventListener('click', function() {
-                window.scrollTo({ top: 0, behavior: 'smooth' });
-            });
-        })();
-    </script>
 </body>
 
 
